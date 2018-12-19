@@ -1,5 +1,5 @@
 # LaCompannia
-Proyecto para la asignatura de Ingenier√≠a del Software
+Proyecto para la asignatura de IngenierÌa del Software  
 [enlace](https://marvelapp.com/535d9ga) del diseÒo en marvelapp 
 
 #### Autores:
@@ -8,7 +8,7 @@ Proyecto para la asignatura de Ingenier√≠a del Software
 - Adrian Martin Tiscar
 - Luis Pozas
 - Daniel Alfaro Miranda
-- Ismail Azizi Gonz√°lez
+- Ismail Azizi Gonz·lez
 - Geraldyn Carrero
 - Mario D. Gallardo Cruzado
 
