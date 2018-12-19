@@ -1,5 +1,6 @@
 # LaCompannia
 Proyecto para la asignatura de Ingeniería del Software
+[enlace](https://marvelapp.com/535d9ga) del dise�o en marvelapp 
 
 #### Autores:
 - Youssef El Faqir El Rhazoui
@@ -9,7 +10,5 @@ Proyecto para la asignatura de Ingeniería del Software
 - Daniel Alfaro Miranda
 - Ismail Azizi González
 - Geraldyn Carrero
-- Mario Daniel Gallardo Cruzado
-
-
+- Mario D. Gallardo Cruzado
 
