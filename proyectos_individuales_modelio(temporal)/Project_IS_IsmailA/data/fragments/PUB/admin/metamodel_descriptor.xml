@@ -2532,7 +2532,7 @@
       </enumeration>
     </enumerations>
   </fragment>
-  <fragment name="Standard" version="2.2.00" provider="Modeliosoft" providerVersion="3.7.00">
+  <fragment name="Standard" version="2.2.01" provider="Modeliosoft" providerVersion="3.7.01">
     <dependencies>
       <metamodel_fragment name="modelio.kernel" version="1.0.00"/>
       <metamodel_fragment name="Infrastructure" version="2.1.00"/>
@@ -3016,6 +3016,10 @@
           <target fragment="Standard" name="BpmnMessageFlow"/>
           <opposite name="SourceRef"/>
         </dependency>
+        <dependency name="PartitionedLaneRefs" min="0" max="-1" navigate="false">
+          <target fragment="Standard" name="BpmnLane"/>
+          <opposite name="BpmnPartitionElementRef"/>
+        </dependency>
       </metaclass>
       <metaclass name="BpmnBoundaryEvent" version="0.0.9054">
         <parent fragment="Standard" name="BpmnCatchEvent"/>
@@ -3418,6 +3422,10 @@
         <dependency name="LaneSet" min="1" max="1" navigate="false">
           <target fragment="Standard" name="BpmnLaneSet"/>
           <opposite name="Lane"/>
+        </dependency>
+        <dependency name="BpmnPartitionElementRef" min="0" max="1" navigate="true">
+          <target fragment="Standard" name="BpmnBaseElement"/>
+          <opposite name="PartitionedLaneRefs"/>
         </dependency>
       </metaclass>
       <metaclass name="BpmnLaneSet" version="0.0.9054">
@@ -4951,11 +4959,12 @@
           <dep name="UtilizedElement"/>
         </targets>
       </link_metaclass>
-      <link_metaclass name="Message" version="0.0.9054">
+      <link_metaclass name="Message" version="2.2.01">
         <parent fragment="Standard" name="UmlModelElement"/>
         <attribute name="Argument" type="java.lang.String"></attribute>
         <attribute name="KindOfMessage" type="java.lang.Enum" enumType="org.modelio.metamodel.uml.behavior.interactionModel.MessageKind"></attribute>
         <attribute name="SortOfMessage" type="java.lang.Enum" enumType="org.modelio.metamodel.uml.behavior.interactionModel.MessageSort"></attribute>
+        <attribute name="Sequence" type="java.lang.String"></attribute>
         <dependency name="SignalSignature" min="0" max="1" navigate="true">
           <target fragment="Standard" name="Signal"/>
           <opposite name="Usage"/>
