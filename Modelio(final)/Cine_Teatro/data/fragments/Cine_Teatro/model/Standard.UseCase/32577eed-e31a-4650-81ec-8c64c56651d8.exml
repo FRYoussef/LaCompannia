@@ -1,70 +1,23 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Anulación de reservas" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Listar lugares disponibles" version="4">
   <OBJECT>
-    <ID name="Anulación de reservas" mc="Standard.UseCase" uid="06585ea8-0951-4a92-acdb-e95e45da6d05"/>
-    <PID name="Diagrama de CU" mc="Standard.Package" uid="91b8dd95-98b3-4a7c-a070-20330a48478e"/>
+    <ID name="Listar lugares disponibles" mc="Standard.UseCase" uid="32577eed-e31a-4650-81ec-8c64c56651d8"/>
+    <PID name="Subsistema Reserva de lugar" mc="Standard.Package" uid="437febd4-5f51-4e29-92db-88103c6ff2d8"/>
     <ATTRIBUTES>
       <ATT name="IsElementary">false</ATT>
       <ATT name="IsAbstract">false</ATT>
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[Anulación de reservas]]></ATT>
+      <ATT name="Name"><![CDATA[Listar lugares disponibles]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
-      <COMP relation="Used">
-        <OBJECT>
-          <ID name="UseCaseDependency" mc="Standard.UseCaseDependency" uid="0e755601-c3a8-4666-a5a8-66a0c854cf27"/>
-          <ATTRIBUTES>
-            <ATT name="Name"><![CDATA[UseCaseDependency]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="Target">
-              <ID name="Listado de reservas" mc="Standard.UseCase" uid="e3727fa2-8a9f-4a23-ace8-73f65d3587c0"/>
-            </LINK>
-            <LINK relation="Extension">
-              <FOREIGNID name="extend" mc="Infrastructure.Stereotype" uid="00000000-0000-9c48-0000-000000000000"/>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="UseCaseDependency" mc="Standard.UseCaseDependency" uid="a3a9eee4-214d-49ca-942c-d2a021e9c552"/>
-          <ATTRIBUTES>
-            <ATT name="Name"><![CDATA[UseCaseDependency]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="Target">
-              <ID name="Actualización/consulta de BD" mc="Standard.UseCase" uid="1edecc79-575b-4c56-a486-22df1f301d11"/>
-            </LINK>
-            <LINK relation="Extension">
-              <FOREIGNID name="include" mc="Infrastructure.Stereotype" uid="00000000-0000-9c49-0000-000000000000"/>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="UseCaseDependency" mc="Standard.UseCaseDependency" uid="d5ea3257-381e-4e9c-ae1f-24425bf21cf2"/>
-          <ATTRIBUTES>
-            <ATT name="Name"><![CDATA[UseCaseDependency]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="Target">
-              <ID name="Pago/devoluciones" mc="Standard.UseCase" uid="afa50fc0-076c-4be5-a6d1-28e9e86a87ed"/>
-            </LINK>
-            <LINK relation="Extension">
-              <FOREIGNID name="include" mc="Infrastructure.Stereotype" uid="00000000-0000-9c49-0000-000000000000"/>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-      </COMP>
       <COMP relation="Descriptor">
         <OBJECT>
-          <ID name="" mc="Infrastructure.Note" uid="340c193c-0817-4168-8814-ce539f43b63a"/>
+          <ID name="" mc="Infrastructure.Note" uid="f0ed89d1-9c42-4e2e-a022-a7c20a4d7a00"/>
           <ATTRIBUTES>
-            <ATT name="Content"><![CDATA[Anulacion de una reserva seleccionada]]></ATT>
+            <ATT name="Content"><![CDATA[Se listan los lugares almacenados en la base de datos]]></ATT>
             <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
@@ -76,7 +29,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="" mc="Infrastructure.Note" uid="03cff5c3-0b03-4904-91af-467a0cf9d43c"/>
+          <ID name="" mc="Infrastructure.Note" uid="7ebc2aca-e644-40ca-bba8-5fceaa48c681"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
             <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -90,7 +43,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="" mc="Infrastructure.Note" uid="5e34d077-ac24-45e6-85ef-52a834ed524a"/>
+          <ID name="" mc="Infrastructure.Note" uid="11a9e809-6673-4cde-95ca-269b266cb288"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
             <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -104,7 +57,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="" mc="Infrastructure.Note" uid="69a5a572-7167-495e-8ba0-2eea61bc8c58"/>
+          <ID name="" mc="Infrastructure.Note" uid="a1470eb0-53b1-406f-836c-ad9d2107a338"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
             <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -118,7 +71,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="" mc="Infrastructure.Note" uid="f0583a69-b88d-4c8a-bb42-580927bc6a7f"/>
+          <ID name="" mc="Infrastructure.Note" uid="283b09d6-31b0-46fb-b416-cf2d03411e83"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
             <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -132,7 +85,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="" mc="Infrastructure.Note" uid="72355274-8ee4-4bfd-84f8-b8d6e188cefe"/>
+          <ID name="" mc="Infrastructure.Note" uid="330eaa9f-e094-437e-a20e-f0807dec97bd"/>
           <ATTRIBUTES>
             <ATT name="Content"><![CDATA[...]]></ATT>
             <ATT name="MimeType"><![CDATA[text/plain]]></ATT>

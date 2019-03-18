@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Diagrama de actividades" version="4">
   <OBJECT>
-    <ID name="Diagrama de actividades" mc="Standard.Activity" uid="eb83390a-4cd9-45f0-9509-f2369f0f5bbf"/>
-    <PID name="Diagrama de actividad" mc="Standard.Package" uid="4771c618-ca9f-4dda-8173-64d564def09f"/>
+    <ID name="Diagrama de actividades" mc="Standard.Activity" uid="e9227721-282b-4b1e-a61e-683beccc79d2"/>
+    <PID name="Reserva general del lugar" mc="Standard.UseCase" uid="f86c6e07-810b-41bb-af52-938476d7be22"/>
     <ATTRIBUTES>
       <ATT name="IsSingleExecution">false</ATT>
       <ATT name="IsReadOnly">false</ATT>
@@ -13,7 +13,7 @@
     <DEPENDENCIES>
       <COMP relation="OwnedNode">
         <OBJECT>
-          <ID name="Initial Node" mc="Standard.InitialNode" uid="7dca9600-7380-440c-b55f-56b69897a81a"/>
+          <ID name="Initial Node" mc="Standard.InitialNode" uid="4ce12f70-92e1-4ab0-b1b5-099b649a9876"/>
           <ATTRIBUTES>
             <ATT name="Name"><![CDATA[Initial Node]]></ATT>
             <ATT name="status">1970354901745664</ATT>
@@ -21,7 +21,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="62e2129d-9dc1-425c-adb5-ab1198c9fe03"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="9d516b75-62aa-4f61-9866-7745f9861bd7"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -31,7 +31,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Introducción de datos de busqueda" mc="Standard.OpaqueAction" uid="40bbf64f-5753-435e-9185-42afec43cc90"/>
+                      <ID name="Introducción de datos de busqueda" mc="Standard.OpaqueAction" uid="50dbc2d3-ad55-40a1-9289-48626a149040"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -40,7 +40,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Introducción de datos de busqueda" mc="Standard.OpaqueAction" uid="40bbf64f-5753-435e-9185-42afec43cc90"/>
+          <ID name="Introducción de datos de busqueda" mc="Standard.OpaqueAction" uid="50dbc2d3-ad55-40a1-9289-48626a149040"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -51,7 +51,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="bf25db7d-e9a4-4338-8401-68903dc10923"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="1c51a768-d2a2-4510-b5ed-f0de1634ca4e"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -61,7 +61,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Comprobación de datos de busqueda" mc="Standard.OpaqueAction" uid="d4c1843c-f5ab-45d1-acf6-01920de48b16"/>
+                      <ID name="Comprobación de datos de busqueda" mc="Standard.OpaqueAction" uid="c9d90be9-d485-4507-9b61-c53b1c3467ee"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -70,7 +70,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Comprobación de datos de busqueda" mc="Standard.OpaqueAction" uid="d4c1843c-f5ab-45d1-acf6-01920de48b16"/>
+          <ID name="Comprobación de datos de busqueda" mc="Standard.OpaqueAction" uid="c9d90be9-d485-4507-9b61-c53b1c3467ee"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -81,7 +81,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="1c8c836b-8806-4dd1-b2f2-8047fcb0711b"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="9b0bf821-942f-4327-ab02-b5f536692de5"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -91,7 +91,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Decision-Merge" mc="Standard.DecisionMergeNode" uid="ec588acc-15c9-4190-b2c4-7c1f3f0ee69c"/>
+                      <ID name="Decision-Merge" mc="Standard.DecisionMergeNode" uid="6d0b4573-9df0-436f-a547-f623d63235f0"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -100,7 +100,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Decision-Merge" mc="Standard.DecisionMergeNode" uid="ec588acc-15c9-4190-b2c4-7c1f3f0ee69c"/>
+          <ID name="Decision-Merge" mc="Standard.DecisionMergeNode" uid="6d0b4573-9df0-436f-a547-f623d63235f0"/>
           <ATTRIBUTES>
             <ATT name="DecisionKind">ExclusiveDecision</ATT>
             <ATT name="DecisionInputBehavior"></ATT>
@@ -110,7 +110,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="f9ff82a9-0db7-49b6-bf53-9275194e467a"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="f9a86d36-ac00-4b83-b573-9207e370260e"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[Datos incorrectos]]></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -120,13 +120,13 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Introducción de datos de busqueda" mc="Standard.OpaqueAction" uid="40bbf64f-5753-435e-9185-42afec43cc90"/>
+                      <ID name="Introducción de datos de busqueda" mc="Standard.OpaqueAction" uid="50dbc2d3-ad55-40a1-9289-48626a149040"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="d9b422b1-e4aa-4d6a-94f5-922cbd4b718a"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="70a5a79a-a8fa-403a-8617-06e0de61f454"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[Datos correctos]]></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -136,7 +136,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Mostrar lista y datos de lugares" mc="Standard.OpaqueAction" uid="530b3ac1-5a6a-4c73-8555-abfbbc1f17c2"/>
+                      <ID name="Mostrar lista y datos de lugares" mc="Standard.OpaqueAction" uid="9318baab-6b2f-4217-876a-bca1f96e3077"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -145,7 +145,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Mostrar lista y datos de lugares" mc="Standard.OpaqueAction" uid="530b3ac1-5a6a-4c73-8555-abfbbc1f17c2"/>
+          <ID name="Mostrar lista y datos de lugares" mc="Standard.OpaqueAction" uid="9318baab-6b2f-4217-876a-bca1f96e3077"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -156,7 +156,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="540f7a4a-d09a-4b85-b8a8-89fb9b7b1263"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="d4011085-44dd-4e82-bd6c-cd28bf9afc5f"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -166,7 +166,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Usuario selecciona el lugar de reserva y la modalidad de pago" mc="Standard.OpaqueAction" uid="2bb11f66-bb3a-4d58-a911-4f3f39174f80"/>
+                      <ID name="Usuario selecciona el lugar de reserva y la modalidad de pago" mc="Standard.OpaqueAction" uid="4e1e0792-92ff-494b-bd13-c47827df8247"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -175,7 +175,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Usuario selecciona el lugar de reserva y la modalidad de pago" mc="Standard.OpaqueAction" uid="2bb11f66-bb3a-4d58-a911-4f3f39174f80"/>
+          <ID name="Usuario selecciona el lugar de reserva y la modalidad de pago" mc="Standard.OpaqueAction" uid="4e1e0792-92ff-494b-bd13-c47827df8247"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -186,7 +186,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="fcce68ac-aefb-428f-8499-c2b50cadb6a7"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="51619f33-6234-4675-8178-b1d3e37c33dd"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -196,7 +196,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Confirmación de operaciones" mc="Standard.OpaqueAction" uid="481e6367-55a6-4868-99c1-8b105ebb08d5"/>
+                      <ID name="Confirmación de operaciones" mc="Standard.OpaqueAction" uid="1a97add4-2c74-4d16-a0f3-2e87e430f78c"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -204,7 +204,7 @@
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="323e59a7-43d3-4191-88d6-6014e9fec766"/>
+                <ID name="" mc="Infrastructure.Note" uid="6d1ef75f-ee7e-4749-9f4b-150a1b84ff45"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -221,7 +221,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Confirmación de operaciones" mc="Standard.OpaqueAction" uid="481e6367-55a6-4868-99c1-8b105ebb08d5"/>
+          <ID name="Confirmación de operaciones" mc="Standard.OpaqueAction" uid="1a97add4-2c74-4d16-a0f3-2e87e430f78c"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -232,7 +232,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="7fc839e3-4a41-4c86-b9dd-acd1fcf36177"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="198768e2-507b-4192-b739-9b4fd3cf0276"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -242,7 +242,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Decision-Merge1" mc="Standard.DecisionMergeNode" uid="1d5f564c-cb5e-4181-a6b6-768edd8c592a"/>
+                      <ID name="Decision-Merge1" mc="Standard.DecisionMergeNode" uid="5898276d-cd51-4199-ac13-6d3cd39883c9"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -251,7 +251,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Decision-Merge1" mc="Standard.DecisionMergeNode" uid="1d5f564c-cb5e-4181-a6b6-768edd8c592a"/>
+          <ID name="Decision-Merge1" mc="Standard.DecisionMergeNode" uid="5898276d-cd51-4199-ac13-6d3cd39883c9"/>
           <ATTRIBUTES>
             <ATT name="DecisionKind">ExclusiveDecision</ATT>
             <ATT name="DecisionInputBehavior"></ATT>
@@ -261,7 +261,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="d7b85010-eb9d-4563-bdd4-4714a5096267"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="61491f50-995b-4ca4-a9cb-147a1c7979d5"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[No confirmación]]></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -271,13 +271,13 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Mostrar lista y datos de lugares" mc="Standard.OpaqueAction" uid="530b3ac1-5a6a-4c73-8555-abfbbc1f17c2"/>
+                      <ID name="Mostrar lista y datos de lugares" mc="Standard.OpaqueAction" uid="9318baab-6b2f-4217-876a-bca1f96e3077"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="716af40e-b5b2-4513-8d6d-ae498838d728"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="6e967a86-bc98-4765-8ade-53ef87bf1aff"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[Confirmación]]></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -287,7 +287,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Usuario introduce los datos de pago " mc="Standard.OpaqueAction" uid="574b4d41-a573-4b52-b32a-ff549b0fa00f"/>
+                      <ID name="Usuario introduce los datos de pago " mc="Standard.OpaqueAction" uid="d193e7bb-c502-452b-b805-86fcb80b864e"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -296,7 +296,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Usuario introduce los datos de pago " mc="Standard.OpaqueAction" uid="574b4d41-a573-4b52-b32a-ff549b0fa00f"/>
+          <ID name="Usuario introduce los datos de pago " mc="Standard.OpaqueAction" uid="d193e7bb-c502-452b-b805-86fcb80b864e"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -307,7 +307,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="1b9a05a3-2e87-4406-860f-842a7c6b7b2f"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="993dbbe5-ebc5-421a-86f4-8d057fbecfee"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -317,7 +317,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Comprobación de datos de pago " mc="Standard.OpaqueAction" uid="90b83ccb-a86b-4c3e-8079-488a9bb3bf1f"/>
+                      <ID name="Comprobación de datos de pago " mc="Standard.OpaqueAction" uid="9892cb19-8e29-49bf-bf28-4f61ff540673"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -325,7 +325,7 @@
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="15fd6d00-1278-4692-bdb1-13f0807595d4"/>
+                <ID name="" mc="Infrastructure.Note" uid="f56656c4-6e9f-4b10-87ef-62849cf1337e"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -342,7 +342,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Comprobación de datos de pago " mc="Standard.OpaqueAction" uid="90b83ccb-a86b-4c3e-8079-488a9bb3bf1f"/>
+          <ID name="Comprobación de datos de pago " mc="Standard.OpaqueAction" uid="9892cb19-8e29-49bf-bf28-4f61ff540673"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -353,7 +353,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="33676836-a8c9-4a59-ba58-155c0748dc0f"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="a5c328bb-0dab-4a9b-bc23-e62f60457eb2"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -363,7 +363,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Decision-Merge2" mc="Standard.DecisionMergeNode" uid="0fd85859-a8c9-4c32-8210-bcc6403e0076"/>
+                      <ID name="Decision-Merge2" mc="Standard.DecisionMergeNode" uid="4a60d86f-9877-4de1-99c7-2b16a90b4862"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -372,7 +372,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Decision-Merge2" mc="Standard.DecisionMergeNode" uid="0fd85859-a8c9-4c32-8210-bcc6403e0076"/>
+          <ID name="Decision-Merge2" mc="Standard.DecisionMergeNode" uid="4a60d86f-9877-4de1-99c7-2b16a90b4862"/>
           <ATTRIBUTES>
             <ATT name="DecisionKind">ExclusiveDecision</ATT>
             <ATT name="DecisionInputBehavior"></ATT>
@@ -382,7 +382,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="12cad598-3e8a-4911-898c-73fc17020c4d"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="613c5fb5-0973-4e3a-b55f-71e04578f785"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[Datos incorrectos]]></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -392,13 +392,13 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Usuario introduce los datos de pago " mc="Standard.OpaqueAction" uid="574b4d41-a573-4b52-b32a-ff549b0fa00f"/>
+                      <ID name="Usuario introduce los datos de pago " mc="Standard.OpaqueAction" uid="d193e7bb-c502-452b-b805-86fcb80b864e"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="8f22c1ef-c764-4809-bf6f-3be58173a495"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="90dea413-791e-48ac-ac47-f0fce21fc6c9"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[Datos correctos]]></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -408,12 +408,12 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Comprobación de disponibilidad del lugar" mc="Standard.OpaqueAction" uid="2da7efb2-1d39-4241-97eb-4318add031d9"/>
+                      <ID name="Comprobación de disponibilidad del lugar" mc="Standard.OpaqueAction" uid="5dfa4c32-240f-4e69-b838-98d8eb29ceea"/>
                     </REFOBJ>
                   </LINK>
                   <COMP relation="Descriptor">
                     <OBJECT>
-                      <ID name="" mc="Infrastructure.Note" uid="dcbb976c-32e1-452a-9df9-d974e1efb209"/>
+                      <ID name="" mc="Infrastructure.Note" uid="7ec38d8e-e4a0-4f00-bf3a-5a046996febe"/>
                       <ATTRIBUTES>
                         <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
                         <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -433,7 +433,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Comprobación de disponibilidad del lugar" mc="Standard.OpaqueAction" uid="2da7efb2-1d39-4241-97eb-4318add031d9"/>
+          <ID name="Comprobación de disponibilidad del lugar" mc="Standard.OpaqueAction" uid="5dfa4c32-240f-4e69-b838-98d8eb29ceea"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -444,7 +444,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="14c544dd-baca-4482-9fad-27e70fe0c43f"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="cfe670ca-472f-462c-8445-2d161a8e070e"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -454,7 +454,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Decision-Merge3" mc="Standard.DecisionMergeNode" uid="188770ec-9007-44a7-b9fe-b577979433a8"/>
+                      <ID name="Decision-Merge3" mc="Standard.DecisionMergeNode" uid="fa2e779d-21d5-45f0-bb45-4000689115f2"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -462,7 +462,7 @@
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="e8c6dcfe-82fe-4f5f-8f67-88ac4dc3bb6d"/>
+                <ID name="" mc="Infrastructure.Note" uid="d1efe734-d786-417b-86ee-666efbc18e21"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -479,7 +479,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Decision-Merge3" mc="Standard.DecisionMergeNode" uid="188770ec-9007-44a7-b9fe-b577979433a8"/>
+          <ID name="Decision-Merge3" mc="Standard.DecisionMergeNode" uid="fa2e779d-21d5-45f0-bb45-4000689115f2"/>
           <ATTRIBUTES>
             <ATT name="DecisionKind">ExclusiveDecision</ATT>
             <ATT name="DecisionInputBehavior"></ATT>
@@ -489,7 +489,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="ef950c21-a733-499a-9a2e-90a2f6756e1a"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="6d1262a5-d9d4-408b-9526-c735ed79034a"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[Lugar no disponble]]></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -499,13 +499,13 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Mostrar lista y datos de lugares" mc="Standard.OpaqueAction" uid="530b3ac1-5a6a-4c73-8555-abfbbc1f17c2"/>
+                      <ID name="Mostrar lista y datos de lugares" mc="Standard.OpaqueAction" uid="9318baab-6b2f-4217-876a-bca1f96e3077"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="ae337f10-9368-43c3-90b9-017af8b5da93"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="1674b5ad-1caa-49e8-a953-f2bde9ae5e97"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[Lugar disponible]]></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -515,7 +515,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Confirmación de realización de pago" mc="Standard.OpaqueAction" uid="4348b6bf-df03-4259-891d-9ca56f6edc1a"/>
+                      <ID name="Confirmación de realización de pago" mc="Standard.OpaqueAction" uid="20c9a2e7-8cf8-4f73-a2c7-f3647a95499f"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -524,7 +524,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Confirmación de realización de pago" mc="Standard.OpaqueAction" uid="4348b6bf-df03-4259-891d-9ca56f6edc1a"/>
+          <ID name="Confirmación de realización de pago" mc="Standard.OpaqueAction" uid="20c9a2e7-8cf8-4f73-a2c7-f3647a95499f"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -535,7 +535,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="9d2f99fc-d1d0-4eca-92f2-f5bc97d7afde"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="34c9b61e-6789-41ae-a858-69e0d4836850"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -545,7 +545,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Decision-Merge4" mc="Standard.DecisionMergeNode" uid="53ccc790-82ca-4eac-b8d3-b1af7896db1b"/>
+                      <ID name="Decision-Merge4" mc="Standard.DecisionMergeNode" uid="5b73a671-76f2-422a-bcc2-a5c764c60f2e"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -554,7 +554,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="7348b471-5be7-451e-91c8-2a2b43244ce0"/>
+          <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="78f34492-875f-4b40-a272-acf8615b692c"/>
           <ATTRIBUTES>
             <ATT name="Name"><![CDATA[Activity Final Node]]></ATT>
             <ATT name="status">1970354901745664</ATT>
@@ -562,7 +562,7 @@
           <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Decision-Merge4" mc="Standard.DecisionMergeNode" uid="53ccc790-82ca-4eac-b8d3-b1af7896db1b"/>
+          <ID name="Decision-Merge4" mc="Standard.DecisionMergeNode" uid="5b73a671-76f2-422a-bcc2-a5c764c60f2e"/>
           <ATTRIBUTES>
             <ATT name="DecisionKind">ExclusiveDecision</ATT>
             <ATT name="DecisionInputBehavior"></ATT>
@@ -572,7 +572,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="7e333c33-f642-41ec-83c6-fc155270ebce"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="5ed1fd09-0231-4428-89ac-abc8e7fb93a9"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[Confirmación]]></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -582,13 +582,13 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="7348b471-5be7-451e-91c8-2a2b43244ce0"/>
+                      <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="78f34492-875f-4b40-a272-acf8615b692c"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="53080954-4449-4ff0-a9c9-706d38b329ed"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="efea1662-595f-4a4d-83fc-38ff468133c0"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[No confirmación]]></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -598,7 +598,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Usuario introduce los datos de pago " mc="Standard.OpaqueAction" uid="574b4d41-a573-4b52-b32a-ff549b0fa00f"/>
+                      <ID name="Usuario introduce los datos de pago " mc="Standard.OpaqueAction" uid="d193e7bb-c502-452b-b805-86fcb80b864e"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -609,7 +609,7 @@
       </COMP>
       <COMP relation="OwnedCollaboration">
         <OBJECT>
-          <ID name="locals" mc="Standard.Collaboration" uid="39e3742a-c89c-43ea-ba92-79e39a290dec"/>
+          <ID name="locals" mc="Standard.Collaboration" uid="01476af0-323b-41de-b8b8-4f89966da799"/>
           <ATTRIBUTES>
             <ATT name="IsConcurrent">false</ATT>
             <ATT name="IsAbstract">false</ATT>
@@ -623,7 +623,7 @@
         </OBJECT>
       </COMP>
       <COMP relation="Product">
-        <COMPID name="SRES_ResLug" mc="Standard.ActivityDiagram" uid="7dde4400-53da-462a-94e6-93cded92865a"/>
+        <COMPID name="Reserva de lugar Diagrama de Actividad" mc="Standard.ActivityDiagram" uid="55b5c062-69e5-4790-81a4-a7f06a7db4db"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>
