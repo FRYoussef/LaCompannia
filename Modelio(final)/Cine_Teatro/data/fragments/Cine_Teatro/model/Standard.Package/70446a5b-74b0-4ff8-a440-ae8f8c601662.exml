@@ -18,6 +18,268 @@
         <COMPID name="Fecha" mc="Standard.Class" uid="a7eba67d-1ab4-4916-a896-7720c930dbfb"/>
         <COMPID name="Persona" mc="Standard.Class" uid="b0230bc9-e414-4ce4-ae22-6c2b0aa1d722"/>
         <COMPID name="Obra" mc="Standard.Class" uid="7bd49ce5-3158-498b-aaf0-20d3d01e308a"/>
+        <OBJECT>
+          <ID name="Rol" mc="Standard.Enumeration" uid="99ab54ed-f3eb-46a7-b627-bda5cd5fc9cb"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[Rol]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Value">
+              <OBJECT>
+                <ID name="Actor" mc="Standard.EnumerationLiteral" uid="d37eae14-776f-409b-9656-07244bbdfec4"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Actor]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Note" uid="c3d48c1e-2ede-47dc-af03-76ed9eba677f"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                        <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Director" mc="Standard.EnumerationLiteral" uid="70448e76-cb40-4c9c-9739-0d752e299c25"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Director]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Note" uid="da372c45-6a59-46fc-806e-52faed57b4f5"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                        <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Productor" mc="Standard.EnumerationLiteral" uid="7415625e-0089-462a-95e8-2730ce2513a1"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Productor]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Note" uid="755d8e64-2751-423b-a363-ebed91852d40"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                        <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Guionista" mc="Standard.EnumerationLiteral" uid="4c53b46f-d6ea-41c0-bfa1-d73f0285c05f"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Guionista]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Note" uid="75196692-e3d8-415f-8a60-184fc916eb85"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                        <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Manager" mc="Standard.EnumerationLiteral" uid="782355e6-bae5-4e95-8227-a71f0e761d17"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Manager]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Descriptor">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.Note" uid="e4869633-c33d-4f01-876a-02d3dc06d11e"/>
+                      <ATTRIBUTES>
+                        <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                        <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Model">
+                          <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Administrador" mc="Standard.EnumerationLiteral" uid="163bcd0b-b1f0-401b-9ab8-18b21bbdd1b7"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Administrador]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Contable" mc="Standard.EnumerationLiteral" uid="bf9599d1-2338-4e5e-92a1-add4f22c51ef"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Contable]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaEnumeration" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Estado" mc="Standard.Enumeration" uid="c737c45e-3070-4fde-82d3-be83f5aa515a"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[Estado]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Value">
+              <OBJECT>
+                <ID name="Rodando" mc="Standard.EnumerationLiteral" uid="4b74cc70-a886-41ce-9e19-01b37a200ff2"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Rodando]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Terminada" mc="Standard.EnumerationLiteral" uid="7bea35ea-eb76-4510-9056-00a25821ac64"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Terminada]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="EnProduccion" mc="Standard.EnumerationLiteral" uid="6c6a897b-c74c-4fea-97a4-f6a4952abd2f"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[EnProduccion]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaEnumeration" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Genero" mc="Standard.Enumeration" uid="5614b4fd-1e08-4b04-8569-0ab137f0c38d"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[Genero]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Value">
+              <OBJECT>
+                <ID name="Miedo" mc="Standard.EnumerationLiteral" uid="2e9e0dcb-f6ae-4fa1-8a69-f54d0ef8877f"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Miedo]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Aventura" mc="Standard.EnumerationLiteral" uid="640ae32f-56cb-44bb-8d4b-449202ba623c"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Aventura]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Comedia" mc="Standard.EnumerationLiteral" uid="5c1bdc74-e73c-4368-8df4-abf8b45c184a"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Comedia]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="SciFi" mc="Standard.EnumerationLiteral" uid="70c0c8a7-acfa-48c3-a172-1f1d157b8367"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[SciFi]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="Policiaca" mc="Standard.EnumerationLiteral" uid="fa54c926-488a-40fb-a4eb-bf64ba5a5a1f"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[Policiaca]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaEnumeration" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
       </COMP>
       <COMP relation="Product">
         <COMPID name="Diagrama de Clases ADP" mc="Standard.ClassDiagram" uid="3a334fe0-b6f4-4af8-99d8-fbb5b2f106b9"/>
