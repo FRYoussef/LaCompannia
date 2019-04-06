@@ -1,23 +1,23 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Persona" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Pago" version="4">
   <OBJECT>
-    <ID name="Persona" mc="Standard.Class" uid="dd8186d0-9b42-4b51-b327-cefcef64144d"/>
-    <PID name="Diagramas de Clases" mc="Standard.Package" uid="ac2cdab1-43c7-488c-ae1f-7dda4565fdf3"/>
+    <ID name="Pago" mc="Standard.Class" uid="cf8bcef9-1c64-45aa-9f1f-b81bc1e6ebba"/>
+    <PID name="Diagrama de Clases" mc="Standard.Package" uid="76b8f34c-7e2b-409d-9844-0b38e8d0e715"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
       <ATT name="IsElementary">false</ATT>
-      <ATT name="IsAbstract">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[Persona]]></ATT>
+      <ATT name="Name"><![CDATA[Pago]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="getNombre" mc="Standard.Operation" uid="c4cb4b04-1f6f-4dea-910a-74f13f34542a"/>
+          <ID name="getCompra" mc="Standard.Operation" uid="7123acbd-1376-40af-af5c-cb0eb9569189"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -25,13 +25,13 @@
             <ATT name="Visibility">PackageVisibility</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[getNombre]]></ATT>
+            <ATT name="Name"><![CDATA[getCompra]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="4e7ade57-19c4-4621-b3e2-688633d0220d"/>
+                <ID name="" mc="Standard.Parameter" uid="0bbe9679-ffa5-4595-96c2-9cc8c0673b8b"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -48,7 +48,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                    <ID name="Compra" mc="Standard.Class" uid="47a392b7-e6b9-4e73-8d7e-0ffa0015a573"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -58,7 +58,7 @@
             </LINK>
             <COMP relation="DependsOnDependency">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Dependency" uid="ede86179-f50e-4b86-8d95-a91f0a567112"/>
+                <ID name="" mc="Infrastructure.Dependency" uid="e81b29e0-744e-49c7-948c-70441cbc005b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -66,7 +66,7 @@
                 <DEPENDENCIES>
                   <LINK relation="DependsOn">
                     <REFOBJ>
-                      <ID name="Nombre" mc="Standard.Attribute" uid="f6561fca-b4db-41c9-a749-43edfe10d9d7"/>
+                      <ID name="compra" mc="Standard.AssociationEnd" uid="b747dc58-6701-4757-8286-4afe360e144a"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="Extension">
@@ -77,7 +77,7 @@
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="c99790d7-fd1d-4e80-9a7d-5c77ef576cf0"/>
+                <ID name="" mc="Infrastructure.Note" uid="4bdf9b9c-9dac-40b0-9e6f-d1a2ea28579c"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.]]></ATT>
                   <ATT name="MimeType"></ATT>
@@ -91,9 +91,9 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="8c86fc81-baa0-42a7-8b85-16be88c15840"/>
+                <ID name="" mc="Infrastructure.Note" uid="b0d146bd-47b7-40c7-abb8-5715ad34443f"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return this.Nombre;]]></ATT>
+                  <ATT name="Content"><![CDATA[return this.compra;]]></ATT>
                   <ATT name="MimeType"></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -108,7 +108,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="setNombre" mc="Standard.Operation" uid="70ead705-3e45-4dd2-ae56-58be0124eaa5"/>
+          <ID name="setCompra" mc="Standard.Operation" uid="fc54a712-cb21-4745-abec-7486e9cbfd52"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -116,13 +116,13 @@
             <ATT name="Visibility">PackageVisibility</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[setNombre]]></ATT>
+            <ATT name="Name"><![CDATA[setCompra]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="value" mc="Standard.Parameter" uid="86bcc54a-24ab-456c-8e50-ae6573e32f85"/>
+                <ID name="value" mc="Standard.Parameter" uid="ee95c7e1-714b-47b2-a217-7e9c53e10068"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -139,7 +139,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                    <ID name="Compra" mc="Standard.Class" uid="47a392b7-e6b9-4e73-8d7e-0ffa0015a573"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -149,7 +149,7 @@
             </LINK>
             <COMP relation="DependsOnDependency">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Dependency" uid="26eec9d8-1ff7-4bd6-9e33-e1f9a0d80b70"/>
+                <ID name="" mc="Infrastructure.Dependency" uid="b7699960-7111-4c31-86e5-08ffd865be87"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -157,7 +157,7 @@
                 <DEPENDENCIES>
                   <LINK relation="DependsOn">
                     <REFOBJ>
-                      <ID name="Nombre" mc="Standard.Attribute" uid="f6561fca-b4db-41c9-a749-43edfe10d9d7"/>
+                      <ID name="compra" mc="Standard.AssociationEnd" uid="b747dc58-6701-4757-8286-4afe360e144a"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="Extension">
@@ -168,10 +168,10 @@
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="309620d6-6b2a-4d7a-b5a2-89456719d18d"/>
+                <ID name="" mc="Infrastructure.Note" uid="82b417c5-3948-43ac-a34f-aebaef025163"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.
-this.Nombre = value;]]></ATT>
+this.compra = value;]]></ATT>
                   <ATT name="MimeType"></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -186,13 +186,12 @@ this.Nombre = value;]]></ATT>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
-      <COMP relation="OwnedAttribute">
+      <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="Nombre" mc="Standard.Attribute" uid="f6561fca-b4db-41c9-a749-43edfe10d9d7"/>
+          <ID name="compra" mc="Standard.AssociationEnd" uid="b747dc58-6701-4757-8286-4afe360e144a"/>
           <ATTRIBUTES>
-            <ATT name="TypeConstraint"></ATT>
-            <ATT name="Value"></ATT>
-            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
             <ATT name="Changeable">ReadWrite</ATT>
             <ATT name="IsDerived">false</ATT>
             <ATT name="IsOrdered">false</ATT>
@@ -202,13 +201,28 @@ this.Nombre = value;]]></ATT>
             <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[Nombre]]></ATT>
+            <ATT name="Name"><![CDATA[compra]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
-            <LINK relation="Type">
-              <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
+            <LINK relation="Target">
+              <ID name="Compra" mc="Standard.Class" uid="47a392b7-e6b9-4e73-8d7e-0ffa0015a573"/>
             </LINK>
+            <COMP relation="Opposite">
+              <REFOBJ>
+                <ID name="pago" mc="Standard.AssociationEnd" uid="e6aaeba5-e196-4d49-a435-338c014f3819"/>
+              </REFOBJ>
+            </COMP>
+            <COMP relation="Association">
+              <OBJECT>
+                <ID name="" mc="Standard.Association" uid="84b15ca6-5d99-4788-a769-dea62160fc0f"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>

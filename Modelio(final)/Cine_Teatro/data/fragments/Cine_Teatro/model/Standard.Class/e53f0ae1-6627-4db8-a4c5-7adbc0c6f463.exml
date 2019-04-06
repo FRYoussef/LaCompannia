@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="OrdenPago" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Pago" version="4">
   <OBJECT>
-    <ID name="OrdenPago" mc="Standard.Class" uid="0e7fa05d-c1c1-4f80-98ed-5f5f719e0406"/>
-    <PID name="Diagrama de Clases" mc="Standard.Package" uid="76b8f34c-7e2b-409d-9844-0b38e8d0e715"/>
+    <ID name="Pago" mc="Standard.Class" uid="e53f0ae1-6627-4db8-a4c5-7adbc0c6f463"/>
+    <PID name="Diagramas de Clases" mc="Standard.Package" uid="ac2cdab1-43c7-488c-ae1f-7dda4565fdf3"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -11,123 +11,18 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[OrdenPago]]></ATT>
+      <ATT name="Name"><![CDATA[Pago]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="getId" mc="Standard.Operation" uid="e6625adf-330f-4b61-a6db-c7c19fe80072"/>
+          <ID name="getFechaInicio" mc="Standard.Operation" uid="15bc0655-5ae5-4882-abf8-62b5904b1825"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[getId]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Return">
-              <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="4b3310d5-3e53-4cc9-989e-62deeb979e34"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
-                  </LINK>
-                  <COMP relation="Tag">
-                    <OBJECT>
-                      <ID name="" mc="Infrastructure.TaggedValue" uid="be34c9f8-bd53-4d97-ae20-f6a591c14a1d"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="Definition">
-                          <FOREIGNID name="JavaFinal" mc="Infrastructure.TagType" uid="eb8c1900-000a-b31d-0000-000000000000"/>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <LINK relation="Extension">
-              <FOREIGNID name="JavaGetter" mc="Infrastructure.Stereotype" uid="01ec25e8-0000-00f0-0000-000000000000"/>
-            </LINK>
-            <COMP relation="DependsOnDependency">
-              <OBJECT>
-                <ID name="" mc="Infrastructure.Dependency" uid="cc5661ec-8755-4f3e-9a56-560df793cf1d"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="DependsOn">
-                    <REFOBJ>
-                      <ID name="id" mc="Standard.Attribute" uid="69af4efb-3e67-4265-a06c-1fe4b85c57ed"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="Extension">
-                    <FOREIGNID name="JavaGetter" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-012b-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="50139c30-d77b-4d6e-a743-36cc7bbd40ac"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.]]></ATT>
-                  <ATT name="MimeType"></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaCode" mc="Infrastructure.NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="2143797e-e59f-490e-b385-587442e59f36"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return this.id;]]></ATT>
-                  <ATT name="MimeType"></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaReturned" mc="Infrastructure.NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="getFechaInicio" mc="Standard.Operation" uid="ebae99a1-a3a2-450c-8567-ed6b6a48d524"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
+            <ATT name="Visibility">PackageVisibility</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
             <ATT name="Name"><![CDATA[getFechaInicio]]></ATT>
@@ -136,7 +31,7 @@
           <DEPENDENCIES>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="24d7a4bc-937b-445a-80d3-e31b655aa193"/>
+                <ID name="" mc="Standard.Parameter" uid="7b881d38-fd9a-4e8b-a3f6-ce0b80cf35ca"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -155,20 +50,6 @@
                   <LINK relation="Type">
                     <FOREIGNID name="date" mc="Standard.DataType" uid="00000004-0000-0014-0000-000000000000"/>
                   </LINK>
-                  <COMP relation="Tag">
-                    <OBJECT>
-                      <ID name="" mc="Infrastructure.TaggedValue" uid="da87278d-4f66-4c53-a624-f1390ca412f2"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="Definition">
-                          <FOREIGNID name="JavaFinal" mc="Infrastructure.TagType" uid="eb8c1900-000a-b31d-0000-000000000000"/>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
@@ -177,7 +58,7 @@
             </LINK>
             <COMP relation="DependsOnDependency">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Dependency" uid="602da0bb-2f82-4f0d-a8f5-b146604fc531"/>
+                <ID name="" mc="Infrastructure.Dependency" uid="2efbf670-7a79-4d26-859d-2a4146ca4d11"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -185,7 +66,7 @@
                 <DEPENDENCIES>
                   <LINK relation="DependsOn">
                     <REFOBJ>
-                      <ID name="fechaInicio" mc="Standard.Attribute" uid="bff94677-c544-45fa-af3f-1bd4b7abaaae"/>
+                      <ID name="fechaInicio" mc="Standard.Attribute" uid="53e4aaee-ba2c-4cac-b5da-5f1d115717b3"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="Extension">
@@ -196,7 +77,7 @@
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="c924b9a5-9e09-4731-909b-6974cc6ecdbd"/>
+                <ID name="" mc="Infrastructure.Note" uid="3e2c769e-986a-4207-8813-676cd7f7edd0"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.]]></ATT>
                   <ATT name="MimeType"></ATT>
@@ -210,7 +91,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="a9503837-133a-4d5c-bc8d-68822cf11f45"/>
+                <ID name="" mc="Infrastructure.Note" uid="f9544098-27e7-44b5-8aa9-2dbf2cf92908"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[return this.fechaInicio;]]></ATT>
                   <ATT name="MimeType"></ATT>
@@ -227,12 +108,90 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="getFechasCobro" mc="Standard.Operation" uid="2aa3e2f4-ec74-48bd-85a4-a3681bb475d6"/>
+          <ID name="setFechaInicio" mc="Standard.Operation" uid="e5a646fa-b3d3-4738-81c0-76e5e2b99f5e"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
+            <ATT name="Visibility">PackageVisibility</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[setFechaInicio]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="value" mc="Standard.Parameter" uid="0140c56a-9990-4602-9b44-2a2051dea3c0"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[value]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="date" mc="Standard.DataType" uid="00000004-0000-0014-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaSetter" mc="Infrastructure.Stereotype" uid="01ec25e8-0000-00f5-0000-000000000000"/>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Dependency" uid="39f19101-eba1-4afe-a235-f4e66ffa16ae"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="fechaInicio" mc="Standard.Attribute" uid="53e4aaee-ba2c-4cac-b5da-5f1d115717b3"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="Extension">
+                    <FOREIGNID name="JavaSetter" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0130-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="5d423a47-cea2-465c-b886-fa88467b4b9e"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.
+this.fechaInicio = value;]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="Infrastructure.NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="getFechasCobro" mc="Standard.Operation" uid="66383a2c-2ef2-430b-b18b-e1d0beae2449"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">PackageVisibility</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
             <ATT name="Name"><![CDATA[getFechasCobro]]></ATT>
@@ -241,10 +200,10 @@
           <DEPENDENCIES>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="fb3c6d23-ef82-4c78-bf73-50bf0645b336"/>
+                <ID name="" mc="Standard.Parameter" uid="b50749fe-73b6-4b75-a115-8033d792ce04"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
                   <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
                   <ATT name="TypeConstraint"></ATT>
                   <ATT name="DefaultValue"></ATT>
@@ -262,7 +221,7 @@
                   </LINK>
                   <COMP relation="Tag">
                     <OBJECT>
-                      <ID name="" mc="Infrastructure.TaggedValue" uid="533250e8-f101-4aba-962a-5d9493c8788b"/>
+                      <ID name="" mc="Infrastructure.TaggedValue" uid="e7960b3f-a62d-4d3e-9e83-16a24b640085"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -270,7 +229,7 @@
                       <DEPENDENCIES>
                         <COMP relation="Actual">
                           <OBJECT>
-                            <ID name="" mc="Infrastructure.TagParameter" uid="a31d7b2a-a77b-4679-9b76-774a992b1c01"/>
+                            <ID name="" mc="Infrastructure.TagParameter" uid="5d76bc1b-a7f3-4c39-bcbb-79195ad70f9d"/>
                             <ATTRIBUTES>
                               <ATT name="Value"><![CDATA[Array]]></ATT>
                               <ATT name="status">1970354901745664</ATT>
@@ -292,7 +251,7 @@
             </LINK>
             <COMP relation="DependsOnDependency">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Dependency" uid="52b08bff-a932-40a1-a2cb-062cdb7fc37d"/>
+                <ID name="" mc="Infrastructure.Dependency" uid="a78a6c89-f172-4841-9a4b-563c3ca378c5"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -300,7 +259,7 @@
                 <DEPENDENCIES>
                   <LINK relation="DependsOn">
                     <REFOBJ>
-                      <ID name="fechasCobro" mc="Standard.Attribute" uid="7064a1b3-93b2-410c-b8d8-d7a2cce90e73"/>
+                      <ID name="fechasCobro" mc="Standard.Attribute" uid="8e15cc29-ba19-43ef-91ab-5772b8975a4d"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="Extension">
@@ -311,7 +270,7 @@
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="ee09dfe1-7a62-4046-9887-110ee392adcd"/>
+                <ID name="" mc="Infrastructure.Note" uid="494b1e74-0d4d-42f0-976c-7b8b9eacafed"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.]]></ATT>
                   <ATT name="MimeType"></ATT>
@@ -325,7 +284,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="7f3449b4-91f3-4263-9c89-f1a4efd63ad8"/>
+                <ID name="" mc="Infrastructure.Note" uid="f5908f5f-e7e7-4555-a609-e5a980b8ce1d"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[return this.fechasCobro;]]></ATT>
                   <ATT name="MimeType"></ATT>
@@ -342,12 +301,12 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="setFechasCobro" mc="Standard.Operation" uid="6d8a7ac9-769d-475e-b918-d19da19d06be"/>
+          <ID name="setFechasCobro" mc="Standard.Operation" uid="7010baf7-1a7e-4960-87b0-8bee2c797eab"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
+            <ATT name="Visibility">PackageVisibility</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
             <ATT name="Name"><![CDATA[setFechasCobro]]></ATT>
@@ -356,10 +315,10 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="value" mc="Standard.Parameter" uid="d104ea3b-abc3-4737-8238-de0fced1d2e9"/>
+                <ID name="value" mc="Standard.Parameter" uid="f433e935-ff8b-4e59-8109-fc2b0bff4225"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
                   <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
                   <ATT name="TypeConstraint"></ATT>
                   <ATT name="DefaultValue"></ATT>
@@ -377,7 +336,7 @@
                   </LINK>
                   <COMP relation="Tag">
                     <OBJECT>
-                      <ID name="" mc="Infrastructure.TaggedValue" uid="bdc5766b-ab65-473e-91c2-c47271395eed"/>
+                      <ID name="" mc="Infrastructure.TaggedValue" uid="f2fa1f98-4bc3-4289-a169-d99380b67575"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -385,7 +344,7 @@
                       <DEPENDENCIES>
                         <COMP relation="Actual">
                           <OBJECT>
-                            <ID name="" mc="Infrastructure.TagParameter" uid="9753e46b-f0f8-417f-b180-76847576ea15"/>
+                            <ID name="" mc="Infrastructure.TagParameter" uid="30c510e0-5f09-4790-8581-07cf66b9e658"/>
                             <ATTRIBUTES>
                               <ATT name="Value"><![CDATA[Array]]></ATT>
                               <ATT name="status">1970354901745664</ATT>
@@ -407,7 +366,7 @@
             </LINK>
             <COMP relation="DependsOnDependency">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Dependency" uid="0b9cb296-e596-4ced-8cfe-ca5dcae38e06"/>
+                <ID name="" mc="Infrastructure.Dependency" uid="884b1449-a655-4092-8947-4590956e10fc"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -415,7 +374,7 @@
                 <DEPENDENCIES>
                   <LINK relation="DependsOn">
                     <REFOBJ>
-                      <ID name="fechasCobro" mc="Standard.Attribute" uid="7064a1b3-93b2-410c-b8d8-d7a2cce90e73"/>
+                      <ID name="fechasCobro" mc="Standard.Attribute" uid="8e15cc29-ba19-43ef-91ab-5772b8975a4d"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="Extension">
@@ -426,7 +385,7 @@
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="13cd6a70-d7c3-4b86-ac67-1e363ccc6b33"/>
+                <ID name="" mc="Infrastructure.Note" uid="c077d875-713a-4889-8173-7b0548ba5328"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.
 this.fechasCobro = value;]]></ATT>
@@ -444,12 +403,12 @@ this.fechasCobro = value;]]></ATT>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="getDineroCobrado" mc="Standard.Operation" uid="dd00e6a0-1549-471b-9075-9e9a8f56b96c"/>
+          <ID name="getDineroCobrado" mc="Standard.Operation" uid="ea3e0eee-57af-418c-a9ff-06a7c1deab6b"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
+            <ATT name="Visibility">PackageVisibility</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
             <ATT name="Name"><![CDATA[getDineroCobrado]]></ATT>
@@ -458,7 +417,7 @@ this.fechasCobro = value;]]></ATT>
           <DEPENDENCIES>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="e8f7f782-6618-4a5a-a1bf-ad76b5cc60a9"/>
+                <ID name="" mc="Standard.Parameter" uid="fee57253-4a44-40f4-94f6-7667be25604b"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -485,7 +444,7 @@ this.fechasCobro = value;]]></ATT>
             </LINK>
             <COMP relation="DependsOnDependency">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Dependency" uid="af412873-085c-40b7-af82-3ba44b737a72"/>
+                <ID name="" mc="Infrastructure.Dependency" uid="eee0ca83-2d5d-42a8-87f6-ffa02e5d9364"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -493,7 +452,7 @@ this.fechasCobro = value;]]></ATT>
                 <DEPENDENCIES>
                   <LINK relation="DependsOn">
                     <REFOBJ>
-                      <ID name="dineroCobrado" mc="Standard.Attribute" uid="bcfbde28-69ab-4df2-a9ff-4584f4b7e604"/>
+                      <ID name="dineroCobrado" mc="Standard.Attribute" uid="786c4ba5-90b3-47b6-84d8-237679541b93"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="Extension">
@@ -504,7 +463,7 @@ this.fechasCobro = value;]]></ATT>
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="061f5730-c52f-433f-b6d2-2f056196470f"/>
+                <ID name="" mc="Infrastructure.Note" uid="7337c813-732c-403e-8f1f-a02acc24fb64"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.]]></ATT>
                   <ATT name="MimeType"></ATT>
@@ -518,7 +477,7 @@ this.fechasCobro = value;]]></ATT>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="5e022391-3060-4d91-a75f-2667bbcc6ec6"/>
+                <ID name="" mc="Infrastructure.Note" uid="d5c9082d-3b06-4af2-912c-56da67ec2661"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[return this.dineroCobrado;]]></ATT>
                   <ATT name="MimeType"></ATT>
@@ -535,12 +494,12 @@ this.fechasCobro = value;]]></ATT>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="setDineroCobrado" mc="Standard.Operation" uid="94967a4a-6954-4e4c-86f4-9f73e3e49bfa"/>
+          <ID name="setDineroCobrado" mc="Standard.Operation" uid="72def48e-4c35-42af-975d-d6ae3d9dc6d0"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
+            <ATT name="Visibility">PackageVisibility</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
             <ATT name="Name"><![CDATA[setDineroCobrado]]></ATT>
@@ -549,7 +508,7 @@ this.fechasCobro = value;]]></ATT>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="value" mc="Standard.Parameter" uid="659892c0-0f0c-47e0-a804-33bb07f024f0"/>
+                <ID name="value" mc="Standard.Parameter" uid="d4ae2046-d78d-4f64-b83a-e5ea3343029c"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -576,7 +535,7 @@ this.fechasCobro = value;]]></ATT>
             </LINK>
             <COMP relation="DependsOnDependency">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Dependency" uid="ce5bf26a-b51f-453f-8773-9a0d49166cae"/>
+                <ID name="" mc="Infrastructure.Dependency" uid="8cee9043-e81a-4280-b65d-c9566a7eed42"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -584,7 +543,7 @@ this.fechasCobro = value;]]></ATT>
                 <DEPENDENCIES>
                   <LINK relation="DependsOn">
                     <REFOBJ>
-                      <ID name="dineroCobrado" mc="Standard.Attribute" uid="bcfbde28-69ab-4df2-a9ff-4584f4b7e604"/>
+                      <ID name="dineroCobrado" mc="Standard.Attribute" uid="786c4ba5-90b3-47b6-84d8-237679541b93"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="Extension">
@@ -595,7 +554,7 @@ this.fechasCobro = value;]]></ATT>
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="a47bdb92-7470-48d8-821c-8d056f759c5f"/>
+                <ID name="" mc="Infrastructure.Note" uid="2f0b6032-a110-4411-bdf6-925b075476fe"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.
 this.dineroCobrado = value;]]></ATT>
@@ -613,12 +572,12 @@ this.dineroCobrado = value;]]></ATT>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="getDineroAdeudado" mc="Standard.Operation" uid="48b0c48b-d5fd-4926-af3a-6fedb9a6697b"/>
+          <ID name="getDineroAdeudado" mc="Standard.Operation" uid="e700e948-bc11-42d4-a8b8-10b50cc3c8de"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
+            <ATT name="Visibility">PackageVisibility</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
             <ATT name="Name"><![CDATA[getDineroAdeudado]]></ATT>
@@ -627,7 +586,7 @@ this.dineroCobrado = value;]]></ATT>
           <DEPENDENCIES>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="d578deb0-a784-47b7-b898-f5eeea0640e8"/>
+                <ID name="" mc="Standard.Parameter" uid="66c142e3-1767-49ad-bb04-31ff85db2397"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -654,7 +613,7 @@ this.dineroCobrado = value;]]></ATT>
             </LINK>
             <COMP relation="DependsOnDependency">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Dependency" uid="7e2e7469-7a90-4d39-adc1-5e80111821e9"/>
+                <ID name="" mc="Infrastructure.Dependency" uid="c2f57341-0ae3-4e4e-92a2-f963ecc254f2"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -662,7 +621,7 @@ this.dineroCobrado = value;]]></ATT>
                 <DEPENDENCIES>
                   <LINK relation="DependsOn">
                     <REFOBJ>
-                      <ID name="dineroAdeudado" mc="Standard.Attribute" uid="1719c585-25a6-42a9-8b14-d19b16e6f8c3"/>
+                      <ID name="dineroAdeudado" mc="Standard.Attribute" uid="ad0923b6-83a7-482e-bc06-3f1173115aef"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="Extension">
@@ -673,7 +632,7 @@ this.dineroCobrado = value;]]></ATT>
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="9df035e1-f2ce-4dab-ae0a-3b0e8fd58382"/>
+                <ID name="" mc="Infrastructure.Note" uid="d4214891-4a02-465e-beb9-0a7dd7cce649"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.]]></ATT>
                   <ATT name="MimeType"></ATT>
@@ -687,7 +646,7 @@ this.dineroCobrado = value;]]></ATT>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="d374b187-9f9a-4ad5-b6f9-a62810f2c702"/>
+                <ID name="" mc="Infrastructure.Note" uid="a63466f5-1b65-40d0-86d2-7816f6b5131d"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[return this.dineroAdeudado;]]></ATT>
                   <ATT name="MimeType"></ATT>
@@ -704,12 +663,12 @@ this.dineroCobrado = value;]]></ATT>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="setDineroAdeudado" mc="Standard.Operation" uid="0b889da2-0271-45d4-9e6a-5dfa82c721dd"/>
+          <ID name="setDineroAdeudado" mc="Standard.Operation" uid="0ccbad68-f6b2-4753-9926-5fc867b1b77f"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
+            <ATT name="Visibility">PackageVisibility</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
             <ATT name="Name"><![CDATA[setDineroAdeudado]]></ATT>
@@ -718,7 +677,7 @@ this.dineroCobrado = value;]]></ATT>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="value" mc="Standard.Parameter" uid="134c7f64-f846-4b3d-b175-af8c44bacaf6"/>
+                <ID name="value" mc="Standard.Parameter" uid="0971e7d2-544f-4853-a7cf-53fe768a0b5a"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -745,7 +704,7 @@ this.dineroCobrado = value;]]></ATT>
             </LINK>
             <COMP relation="DependsOnDependency">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Dependency" uid="20368a44-a45b-466d-b3a9-0ab3693333ff"/>
+                <ID name="" mc="Infrastructure.Dependency" uid="c728f53a-797e-40e0-9a85-7a8ac9952b01"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -753,7 +712,7 @@ this.dineroCobrado = value;]]></ATT>
                 <DEPENDENCIES>
                   <LINK relation="DependsOn">
                     <REFOBJ>
-                      <ID name="dineroAdeudado" mc="Standard.Attribute" uid="1719c585-25a6-42a9-8b14-d19b16e6f8c3"/>
+                      <ID name="dineroAdeudado" mc="Standard.Attribute" uid="ad0923b6-83a7-482e-bc06-3f1173115aef"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="Extension">
@@ -764,7 +723,7 @@ this.dineroCobrado = value;]]></ATT>
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="06db8c7e-5fa9-407e-a0a0-f7ef56a50a7f"/>
+                <ID name="" mc="Infrastructure.Note" uid="f025bce7-0800-4de9-9af4-9e3264381071"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.
 this.dineroAdeudado = value;]]></ATT>
@@ -782,21 +741,21 @@ this.dineroAdeudado = value;]]></ATT>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="getPlan" mc="Standard.Operation" uid="29339f5d-8553-4185-ada3-681d91683c2b"/>
+          <ID name="getTipoPago" mc="Standard.Operation" uid="42eb0649-f94a-4685-a2af-d2ab2479cea3"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
+            <ATT name="Visibility">PackageVisibility</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[getPlan]]></ATT>
+            <ATT name="Name"><![CDATA[getTipoPago]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="5e28eb29-361c-4d2b-aa68-9c9254d70432"/>
+                <ID name="" mc="Standard.Parameter" uid="00698d83-fb88-432e-b7a0-5eb6f8a28e88"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -814,7 +773,7 @@ this.dineroAdeudado = value;]]></ATT>
                 <DEPENDENCIES>
                   <LINK relation="Type">
                     <REFOBJ>
-                      <ID name="PlandePago" mc="Standard.Enumeration" uid="a5eb066a-9410-4fec-800c-66e6593f6d28"/>
+                      <ID name="TipoPago" mc="Standard.Enumeration" uid="f9517f35-de34-4c96-81fc-74676a0a3de7"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -825,7 +784,7 @@ this.dineroAdeudado = value;]]></ATT>
             </LINK>
             <COMP relation="DependsOnDependency">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Dependency" uid="7310c797-ab03-4255-8572-93bd9e39bcf2"/>
+                <ID name="" mc="Infrastructure.Dependency" uid="1e4781a9-39c7-4a68-96b2-dc3e9366afad"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -833,7 +792,7 @@ this.dineroAdeudado = value;]]></ATT>
                 <DEPENDENCIES>
                   <LINK relation="DependsOn">
                     <REFOBJ>
-                      <ID name="plan" mc="Standard.Attribute" uid="2d9d87e2-5c83-4afd-9d47-4c119664f66d"/>
+                      <ID name="tipoPago" mc="Standard.Attribute" uid="569237ff-6d62-4819-967c-9b6ca30a5ad8"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="Extension">
@@ -844,7 +803,7 @@ this.dineroAdeudado = value;]]></ATT>
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="f53a847e-02db-411d-96f7-8050bdc9f2c3"/>
+                <ID name="" mc="Infrastructure.Note" uid="682b4b7c-d3fd-48ce-93af-4c82f85897a6"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.]]></ATT>
                   <ATT name="MimeType"></ATT>
@@ -858,9 +817,9 @@ this.dineroAdeudado = value;]]></ATT>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="acc2383d-c622-40de-bdde-ffa45dc391fb"/>
+                <ID name="" mc="Infrastructure.Note" uid="757fc391-ceef-49ed-9936-df66a1bfbbfc"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return this.plan;]]></ATT>
+                  <ATT name="Content"><![CDATA[return this.tipoPago;]]></ATT>
                   <ATT name="MimeType"></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -875,21 +834,21 @@ this.dineroAdeudado = value;]]></ATT>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="setPlan" mc="Standard.Operation" uid="d4597a91-d14e-48ae-8ba0-f56ade753df8"/>
+          <ID name="setTipoPago" mc="Standard.Operation" uid="fbb0ec28-57fa-4b24-adc5-b246e3bcd21f"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
+            <ATT name="Visibility">PackageVisibility</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[setPlan]]></ATT>
+            <ATT name="Name"><![CDATA[setTipoPago]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="value" mc="Standard.Parameter" uid="cfddbdb9-8d98-4f73-a6d6-43e24f80fa58"/>
+                <ID name="value" mc="Standard.Parameter" uid="7d8859d4-3579-42b1-8ed2-e2ceb33603f0"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -907,7 +866,7 @@ this.dineroAdeudado = value;]]></ATT>
                 <DEPENDENCIES>
                   <LINK relation="Type">
                     <REFOBJ>
-                      <ID name="PlandePago" mc="Standard.Enumeration" uid="a5eb066a-9410-4fec-800c-66e6593f6d28"/>
+                      <ID name="TipoPago" mc="Standard.Enumeration" uid="f9517f35-de34-4c96-81fc-74676a0a3de7"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -918,7 +877,7 @@ this.dineroAdeudado = value;]]></ATT>
             </LINK>
             <COMP relation="DependsOnDependency">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Dependency" uid="12c84e26-2083-4ffe-828c-152bfdd0add0"/>
+                <ID name="" mc="Infrastructure.Dependency" uid="a391829f-3c9b-4c68-9e15-6c89af90ea6f"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -926,7 +885,7 @@ this.dineroAdeudado = value;]]></ATT>
                 <DEPENDENCIES>
                   <LINK relation="DependsOn">
                     <REFOBJ>
-                      <ID name="plan" mc="Standard.Attribute" uid="2d9d87e2-5c83-4afd-9d47-4c119664f66d"/>
+                      <ID name="tipoPago" mc="Standard.Attribute" uid="569237ff-6d62-4819-967c-9b6ca30a5ad8"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="Extension">
@@ -937,10 +896,10 @@ this.dineroAdeudado = value;]]></ATT>
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="7ca10518-ce13-474a-a876-f62a43143efb"/>
+                <ID name="" mc="Infrastructure.Note" uid="fdd9c9e3-7911-406f-85b0-87038d9b3725"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.
-this.plan = value;]]></ATT>
+this.tipoPago = value;]]></ATT>
                   <ATT name="MimeType"></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -955,75 +914,12 @@ this.plan = value;]]></ATT>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="cobrar" mc="Standard.Operation" uid="fb290585-3c60-4a1a-9a57-811465f48a2e"/>
+          <ID name="getDescripcion" mc="Standard.Operation" uid="a57a41b0-ed7f-4120-aedc-c190e505cb53"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[cobrar]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="IO">
-              <OBJECT>
-                <ID name="dinero" mc="Standard.Parameter" uid="2ebb64d2-f0d9-4e4a-b949-54f947d6cee8"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[dinero]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <COMP relation="Return">
-              <OBJECT>
-                <ID name="p2" mc="Standard.Parameter" uid="419eb616-dd98-4946-8472-81c770acefa2"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[p2]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="boolean" mc="Standard.DataType" uid="00000004-0000-0005-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="getDescripcion" mc="Standard.Operation" uid="e2bdd368-a96f-4618-9f8e-f0ffb4bb9884"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
+            <ATT name="Visibility">PackageVisibility</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
             <ATT name="Name"><![CDATA[getDescripcion]]></ATT>
@@ -1032,7 +928,7 @@ this.plan = value;]]></ATT>
           <DEPENDENCIES>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="411b876b-6de1-438b-9566-9fb7c39756a0"/>
+                <ID name="" mc="Standard.Parameter" uid="0cb20088-a6c1-4f6f-b5d8-2b208aee4fc3"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -1059,7 +955,7 @@ this.plan = value;]]></ATT>
             </LINK>
             <COMP relation="DependsOnDependency">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Dependency" uid="d8529133-e6d9-4262-b9c0-ee0e0d255b72"/>
+                <ID name="" mc="Infrastructure.Dependency" uid="0513dc9d-6c63-415b-805b-4c3c1ceaaa9c"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -1067,7 +963,7 @@ this.plan = value;]]></ATT>
                 <DEPENDENCIES>
                   <LINK relation="DependsOn">
                     <REFOBJ>
-                      <ID name="descripcion" mc="Standard.Attribute" uid="b4da3f68-3cd3-44f9-b7b1-d6b17f3bb906"/>
+                      <ID name="descripcion" mc="Standard.Attribute" uid="55884191-f191-4bb5-8e33-592db104e11b"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="Extension">
@@ -1078,7 +974,7 @@ this.plan = value;]]></ATT>
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="08699a2e-555d-4df7-a6a7-c66e865099e6"/>
+                <ID name="" mc="Infrastructure.Note" uid="fb4d7b70-d265-49a2-84c3-7fa72dceb2d0"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.]]></ATT>
                   <ATT name="MimeType"></ATT>
@@ -1092,7 +988,7 @@ this.plan = value;]]></ATT>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="ad67ea6e-a72f-4b5b-b57c-e3afa5f37fed"/>
+                <ID name="" mc="Infrastructure.Note" uid="8f1fec59-cec2-4e66-815a-3ff679972bf4"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[return this.descripcion;]]></ATT>
                   <ATT name="MimeType"></ATT>
@@ -1109,12 +1005,12 @@ this.plan = value;]]></ATT>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="setDescripcion" mc="Standard.Operation" uid="af298739-d5af-4afa-94e9-5569fe5b3136"/>
+          <ID name="setDescripcion" mc="Standard.Operation" uid="10412abf-7a0a-4330-8483-224dba286521"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
+            <ATT name="Visibility">PackageVisibility</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
             <ATT name="Name"><![CDATA[setDescripcion]]></ATT>
@@ -1123,7 +1019,7 @@ this.plan = value;]]></ATT>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="value" mc="Standard.Parameter" uid="864f765c-fcb8-4c06-a325-581655c2fcc0"/>
+                <ID name="value" mc="Standard.Parameter" uid="c8567a2e-21f9-48e5-959b-14a03483ac38"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -1150,7 +1046,7 @@ this.plan = value;]]></ATT>
             </LINK>
             <COMP relation="DependsOnDependency">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Dependency" uid="27ad71a9-5382-480e-afe7-c31efde52892"/>
+                <ID name="" mc="Infrastructure.Dependency" uid="8fd904e5-da3b-4fa5-b7b0-7bfeb217ba0b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -1158,7 +1054,7 @@ this.plan = value;]]></ATT>
                 <DEPENDENCIES>
                   <LINK relation="DependsOn">
                     <REFOBJ>
-                      <ID name="descripcion" mc="Standard.Attribute" uid="b4da3f68-3cd3-44f9-b7b1-d6b17f3bb906"/>
+                      <ID name="descripcion" mc="Standard.Attribute" uid="55884191-f191-4bb5-8e33-592db104e11b"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="Extension">
@@ -1169,7 +1065,7 @@ this.plan = value;]]></ATT>
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="3cd9a03a-1ed0-4c48-b258-89a80e9ec8df"/>
+                <ID name="" mc="Infrastructure.Note" uid="aa063997-0c03-4ea9-b568-2c50948b4f5f"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.
 this.descripcion = value;]]></ATT>
@@ -1189,45 +1085,7 @@ this.descripcion = value;]]></ATT>
       </COMP>
       <COMP relation="OwnedAttribute">
         <OBJECT>
-          <ID name="id" mc="Standard.Attribute" uid="69af4efb-3e67-4265-a06c-1fe4b85c57ed"/>
-          <ATTRIBUTES>
-            <ATT name="TypeConstraint"></ATT>
-            <ATT name="Value"></ATT>
-            <ATT name="TargetIsClass">false</ATT>
-            <ATT name="Changeable">ReadWrite</ATT>
-            <ATT name="IsDerived">false</ATT>
-            <ATT name="IsOrdered">false</ATT>
-            <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-            <ATT name="Visibility">Private</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[id]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="Type">
-              <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
-            </LINK>
-            <COMP relation="Tag">
-              <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="2ee4d9fa-d7bc-426b-af5a-2b218a7f148f"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Definition">
-                    <FOREIGNID name="JavaFinal" mc="Infrastructure.TagType" uid="003800a8-0000-0161-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="fechaInicio" mc="Standard.Attribute" uid="bff94677-c544-45fa-af3f-1bd4b7abaaae"/>
+          <ID name="fechaInicio" mc="Standard.Attribute" uid="53e4aaee-ba2c-4cac-b5da-5f1d115717b3"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -1248,16 +1106,18 @@ this.descripcion = value;]]></ATT>
             <LINK relation="Type">
               <FOREIGNID name="date" mc="Standard.DataType" uid="00000004-0000-0014-0000-000000000000"/>
             </LINK>
-            <COMP relation="Tag">
+            <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="650dc868-36f0-4ede-a027-7d2fa893d25c"/>
+                <ID name="" mc="Infrastructure.Note" uid="824c3817-da77-47cb-9bb8-7c5486829e5d"/>
                 <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
-                  <LINK relation="Definition">
-                    <FOREIGNID name="JavaFinal" mc="Infrastructure.TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -1265,7 +1125,7 @@ this.descripcion = value;]]></ATT>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="fechasCobro" mc="Standard.Attribute" uid="7064a1b3-93b2-410c-b8d8-d7a2cce90e73"/>
+          <ID name="fechasCobro" mc="Standard.Attribute" uid="8e15cc29-ba19-43ef-91ab-5772b8975a4d"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -1274,7 +1134,7 @@ this.descripcion = value;]]></ATT>
             <ATT name="IsDerived">false</ATT>
             <ATT name="IsOrdered">false</ATT>
             <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
             <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
             <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
@@ -1286,10 +1146,26 @@ this.descripcion = value;]]></ATT>
             <LINK relation="Type">
               <FOREIGNID name="date" mc="Standard.DataType" uid="00000004-0000-0014-0000-000000000000"/>
             </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="dd6ff02f-f04b-44d1-b797-ccf6575c4d3c"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="dineroCobrado" mc="Standard.Attribute" uid="bcfbde28-69ab-4df2-a9ff-4584f4b7e604"/>
+          <ID name="dineroCobrado" mc="Standard.Attribute" uid="786c4ba5-90b3-47b6-84d8-237679541b93"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -1313,7 +1189,7 @@ this.descripcion = value;]]></ATT>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="dineroAdeudado" mc="Standard.Attribute" uid="1719c585-25a6-42a9-8b14-d19b16e6f8c3"/>
+          <ID name="dineroAdeudado" mc="Standard.Attribute" uid="ad0923b6-83a7-482e-bc06-3f1173115aef"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -1337,7 +1213,7 @@ this.descripcion = value;]]></ATT>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="plan" mc="Standard.Attribute" uid="2d9d87e2-5c83-4afd-9d47-4c119664f66d"/>
+          <ID name="tipoPago" mc="Standard.Attribute" uid="569237ff-6d62-4819-967c-9b6ca30a5ad8"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -1351,19 +1227,19 @@ this.descripcion = value;]]></ATT>
             <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[plan]]></ATT>
+            <ATT name="Name"><![CDATA[tipoPago]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Type">
               <REFOBJ>
-                <ID name="PlandePago" mc="Standard.Enumeration" uid="a5eb066a-9410-4fec-800c-66e6593f6d28"/>
+                <ID name="TipoPago" mc="Standard.Enumeration" uid="f9517f35-de34-4c96-81fc-74676a0a3de7"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="descripcion" mc="Standard.Attribute" uid="b4da3f68-3cd3-44f9-b7b1-d6b17f3bb906"/>
+          <ID name="descripcion" mc="Standard.Attribute" uid="55884191-f191-4bb5-8e33-592db104e11b"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -1386,44 +1262,6 @@ this.descripcion = value;]]></ATT>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
-      </COMP>
-      <COMP relation="OwnedEnd">
-        <OBJECT>
-          <ID name="" mc="Standard.AssociationEnd" uid="906aa3ff-ddc8-44b8-8edc-856f9ee86c6b"/>
-          <ATTRIBUTES>
-            <ATT name="Aggregation">KindIsAssociation</ATT>
-            <ATT name="IsChangeable">true</ATT>
-            <ATT name="Changeable">ReadWrite</ATT>
-            <ATT name="IsDerived">false</ATT>
-            <ATT name="IsOrdered">false</ATT>
-            <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="Target">
-              <ID name="Persona" mc="Standard.Class" uid="31388515-0f4f-4f04-813d-7f2823498808"/>
-            </LINK>
-            <COMP relation="Opposite">
-              <REFOBJ>
-                <ID name="ordenesPago" mc="Standard.AssociationEnd" uid="5b5ff383-ce28-47c8-9259-d86263d77fbb"/>
-              </REFOBJ>
-            </COMP>
-            <COMP relation="Association">
-              <REFOBJ>
-                <ID name="" mc="Standard.Association" uid="4c244d2c-9827-485e-8160-945b5b989073"/>
-              </REFOBJ>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <REFOBJ>
-          <ID name="" mc="Standard.AssociationEnd" uid="bb531115-aa7d-43d6-a4d3-54c4be924b9b"/>
-        </REFOBJ>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaClass" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
