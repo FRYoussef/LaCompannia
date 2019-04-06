@@ -1,23 +1,21 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DAOOrdenPagoImp" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DAOCliente" version="4">
   <OBJECT>
-    <ID name="DAOOrdenPagoImp" mc="Standard.Class" uid="902c7365-1e5d-424a-9de3-a2db1a704d2f"/>
+    <ID name="DAOCliente" mc="Standard.Interface" uid="69d8aa43-4bf7-469d-8ddd-0948ce89bd52"/>
     <PID name="Diagrama de 3 capas" mc="Standard.Package" uid="ca4902ac-393d-4816-85a3-15e09052f47c"/>
     <ATTRIBUTES>
-      <ATT name="IsActive">false</ATT>
-      <ATT name="IsMain">false</ATT>
       <ATT name="IsElementary">false</ATT>
-      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsAbstract">true</ATT>
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[DAOOrdenPagoImp]]></ATT>
+      <ATT name="Name"><![CDATA[DAOCliente]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="altaOrdenPago" mc="Standard.Operation" uid="313be494-da50-4a53-b735-18d526db78ba"/>
+          <ID name="altaCliente" mc="Standard.Operation" uid="b6e74f3d-e712-4ee5-a9f1-67190206b02d"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -25,13 +23,13 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[altaOrdenPago]]></ATT>
+            <ATT name="Name"><![CDATA[altaCliente]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="ordenPago" mc="Standard.Parameter" uid="17241a16-03a3-42cd-bcde-814ecbb410f7"/>
+                <ID name="cliente" mc="Standard.Parameter" uid="6abd09cb-9996-4bfe-a8ae-271fc7c3c981"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -43,25 +41,20 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[ordenPago]]></ATT>
+                  <ATT name="Name"><![CDATA[cliente]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferOrdenPago" mc="Standard.Class" uid="3fc99a66-4d96-4f79-a893-0f538f26de25"/>
+                    <ID name="TransferCliente" mc="Standard.Class" uid="f5dba30d-7d8d-4689-9255-2df78914ff18"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
-            <LINK relation="Redefines">
-              <REFOBJ>
-                <ID name="altaOrdenPago" mc="Standard.Operation" uid="e44072fa-9505-4391-860a-9969258722de"/>
-              </REFOBJ>
-            </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="modOrdenPago" mc="Standard.Operation" uid="7d772e98-2e01-4908-8d1c-6265f260693a"/>
+          <ID name="modCliente" mc="Standard.Operation" uid="2a2d49bb-7169-401a-9736-087a49992a37"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -69,13 +62,13 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[modOrdenPago]]></ATT>
+            <ATT name="Name"><![CDATA[modCliente]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="ordenPago" mc="Standard.Parameter" uid="ba9e7628-bada-4b13-8d04-b5437c44dbea"/>
+                <ID name="cliente" mc="Standard.Parameter" uid="6ee26ea2-6b3b-4574-a788-15bbef7a5862"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -87,25 +80,20 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[ordenPago]]></ATT>
+                  <ATT name="Name"><![CDATA[cliente]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferOrdenPago" mc="Standard.Class" uid="3fc99a66-4d96-4f79-a893-0f538f26de25"/>
+                    <ID name="TransferCliente" mc="Standard.Class" uid="f5dba30d-7d8d-4689-9255-2df78914ff18"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
-            <LINK relation="Redefines">
-              <REFOBJ>
-                <ID name="modOrdenPago" mc="Standard.Operation" uid="ad4b6724-8ec9-4af9-9a4e-c3fc2f396ee0"/>
-              </REFOBJ>
-            </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="elimOrdenPago" mc="Standard.Operation" uid="18c1ea1b-a471-4ea3-8408-ac91fb26bb9b"/>
+          <ID name="elimCliente" mc="Standard.Operation" uid="8e8402a1-b511-40fd-b0c4-bcefa02e3e05"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -113,13 +101,13 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[elimOrdenPago]]></ATT>
+            <ATT name="Name"><![CDATA[elimCliente]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="idOrdenPago" mc="Standard.Parameter" uid="fd7886c8-a22c-45ce-a16e-5aa3460df64f"/>
+                <ID name="cliente" mc="Standard.Parameter" uid="40d12168-0f0a-443a-a51f-0ff076d70dd8"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -131,111 +119,7 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[idOrdenPago]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <LINK relation="Redefines">
-              <REFOBJ>
-                <ID name="elimOrdenPago" mc="Standard.Operation" uid="7a4a03c8-591e-4188-8d50-177723ad4022"/>
-              </REFOBJ>
-            </LINK>
-            <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="80131fcf-4c63-4291-8a2c-b8160d9e05a3"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
-                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="consultaOrdenPago" mc="Standard.Operation" uid="7e956f01-4b71-4ea0-9962-f5e11da8ed24"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[consultaOrdenPago]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="IO">
-              <OBJECT>
-                <ID name="idReserva" mc="Standard.Parameter" uid="6cff6717-5adf-4ce8-95c4-4a6ed1ece5a7"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[idReserva]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <ID name="TransferOrdenPago" mc="Standard.Class" uid="3fc99a66-4d96-4f79-a893-0f538f26de25"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <LINK relation="Redefines">
-              <REFOBJ>
-                <ID name="consultaOrdenPago" mc="Standard.Operation" uid="471a859c-0b25-4b53-bd1b-52637c96499e"/>
-              </REFOBJ>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="consultaOrdenPago" mc="Standard.Operation" uid="dcbdc855-2d1a-4792-965f-6308455479a1"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">true</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[consultaOrdenPago]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="IO">
-              <OBJECT>
-                <ID name="idPersona" mc="Standard.Parameter" uid="450a433d-dc50-46ba-9c3b-18cbaea3040e"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[idPersona]]></ATT>
+                  <ATT name="Name"><![CDATA[cliente]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -247,9 +131,9 @@
             </COMP>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="a0ec3022-0dd4-453f-9c7b-b6eba098ad29"/>
+                <ID name="p2" mc="Standard.Parameter" uid="808a4b4e-825a-4a57-b910-059a832de852"/>
                 <ATTRIBUTES>
-                  <ATT name="ParameterPassing">Out</ATT>
+                  <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
                   <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
                   <ATT name="TypeConstraint"></ATT>
@@ -259,71 +143,85 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"></ATT>
+                  <ATT name="Name"><![CDATA[p2]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferOrdenPago" mc="Standard.Class" uid="3fc99a66-4d96-4f79-a893-0f538f26de25"/>
+                    <FOREIGNID name="boolean" mc="Standard.DataType" uid="00000004-0000-0005-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
-            <LINK relation="Redefines">
-              <REFOBJ>
-                <ID name="consultaOrdenPago" mc="Standard.Operation" uid="ee4216c9-273b-4069-9462-00e78eea0a56"/>
-              </REFOBJ>
-            </LINK>
           </DEPENDENCIES>
         </OBJECT>
-      </COMP>
-      <COMP relation="Realized">
         <OBJECT>
-          <ID name="InterfaceRealization" mc="Standard.InterfaceRealization" uid="c236716b-7536-4d31-99e5-eda829b8d4a9"/>
+          <ID name="consultaCliente" mc="Standard.Operation" uid="ba5185b4-4da7-4418-96c3-3567fc313dc2"/>
           <ATTRIBUTES>
-            <ATT name="Name"><![CDATA[InterfaceRealization]]></ATT>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[consultaCliente]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
-            <LINK relation="Implemented">
-              <ID name="DAOOrdenPago" mc="Standard.Interface" uid="4adf237e-4a46-40e0-9a8e-97d92f53d257"/>
-            </LINK>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="dniCliente" mc="Standard.Parameter" uid="25c14dde-2239-43c7-85ec-6e957cecb3c3"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[dniCliente]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="p2" mc="Standard.Parameter" uid="c630c6ed-6936-4b13-9edb-4ff581cd286e"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p2]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="TransferCliente" mc="Standard.Class" uid="f5dba30d-7d8d-4689-9255-2df78914ff18"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
       <LINK relation="Extension">
-        <FOREIGNID name="JavaClass" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+        <FOREIGNID name="JavaInterface" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0267-0000-000000000000"/>
       </LINK>
-      <COMP relation="DependsOnDependency">
-        <OBJECT>
-          <ID name="" mc="Standard.Usage" uid="29fd8049-4eaf-46da-a902-133f830895e3"/>
-          <ATTRIBUTES>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="DependsOn">
-              <ID name="TransferOrdenPago" mc="Standard.Class" uid="3fc99a66-4d96-4f79-a893-0f538f26de25"/>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-      </COMP>
-      <COMP relation="Descriptor">
-        <OBJECT>
-          <ID name="" mc="Infrastructure.Note" uid="33a8f6b7-462a-4fa6-8311-943da68dbcfb"/>
-          <ATTRIBUTES>
-            <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
-            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="Model">
-              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-      </COMP>
     </DEPENDENCIES>
   </OBJECT>
 </EXT>

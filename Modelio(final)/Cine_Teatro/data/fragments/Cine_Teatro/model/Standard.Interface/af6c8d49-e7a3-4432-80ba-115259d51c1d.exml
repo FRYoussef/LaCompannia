@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DAOLugar" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DAOReservaLugar" version="4">
   <OBJECT>
-    <ID name="DAOLugar" mc="Standard.Interface" uid="fa0cf5f6-2d63-406d-981c-58a57fb98114"/>
+    <ID name="DAOReservaLugar" mc="Standard.Interface" uid="af6c8d49-e7a3-4432-80ba-115259d51c1d"/>
     <PID name="Diagrama de 3 capas" mc="Standard.Package" uid="ca4902ac-393d-4816-85a3-15e09052f47c"/>
     <ATTRIBUTES>
       <ATT name="IsElementary">false</ATT>
@@ -9,13 +9,13 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[DAOLugar]]></ATT>
+      <ATT name="Name"><![CDATA[DAOReservaLugar]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="altaLugar" mc="Standard.Operation" uid="18ae4fed-01db-4eeb-a694-1783ead28251"/>
+          <ID name="altaReserva" mc="Standard.Operation" uid="caad5381-f71f-4d1d-890c-3fb014ac2449"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -23,13 +23,13 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[altaLugar]]></ATT>
+            <ATT name="Name"><![CDATA[altaReserva]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="lugar" mc="Standard.Parameter" uid="ad89b525-b817-41bd-828c-d4d880b6ec4f"/>
+                <ID name="reserva" mc="Standard.Parameter" uid="52361cc1-03db-4ea1-8e1c-3445811f26c7"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -41,12 +41,12 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[lugar]]></ATT>
+                  <ATT name="Name"><![CDATA[reserva]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferLugar" mc="Standard.Class" uid="b7cfbe29-dcc8-45d4-a216-221714c92881"/>
+                    <ID name="TransferReservaLugar" mc="Standard.Class" uid="56a36a09-3ad7-47bc-9ddf-96acbf639754"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -54,7 +54,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="modLugar" mc="Standard.Operation" uid="fb79e560-d0b6-41d0-8edb-2ee58efa18c6"/>
+          <ID name="elimReserva" mc="Standard.Operation" uid="097c65d1-2444-4f75-b951-cb9702c4b79a"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -62,13 +62,13 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[modLugar]]></ATT>
+            <ATT name="Name"><![CDATA[elimReserva]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="lugar" mc="Standard.Parameter" uid="738fee0e-d0f9-413e-9955-2604b50cd1fd"/>
+                <ID name="idCompra" mc="Standard.Parameter" uid="ddee0c2b-8441-4069-86a9-46d1aa4dbd73"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -80,46 +80,7 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[lugar]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <ID name="TransferLugar" mc="Standard.Class" uid="b7cfbe29-dcc8-45d4-a216-221714c92881"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="elimLugar" mc="Standard.Operation" uid="0b0ad6e6-2d82-4c00-9ddd-02152496d4a9"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[elimLugar]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="IO">
-              <OBJECT>
-                <ID name="idLugar" mc="Standard.Parameter" uid="7e895509-0c9e-435f-b865-6ec90e361e1b"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[idLugar]]></ATT>
+                  <ATT name="Name"><![CDATA[idCompra]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -129,24 +90,9 @@
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="consultaLugar" mc="Standard.Operation" uid="3de128ea-6858-4aa7-97d7-77160522cce3"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[consultaLugar]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="IO">
+            <COMP relation="Return">
               <OBJECT>
-                <ID name="filtro" mc="Standard.Parameter" uid="40afc66c-7100-4858-bbde-58b3e33b2a6f"/>
+                <ID name="p2" mc="Standard.Parameter" uid="d1fdeecb-1709-4b1f-ad63-c00fb6deac53"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -158,15 +104,58 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[filtro]]></ATT>
+                  <ATT name="Name"><![CDATA[p2]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="boolean" mc="Standard.DataType" uid="00000004-0000-0005-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="consultaAllReservas" mc="Standard.Operation" uid="c95ce4d2-e859-4052-b029-b9c48e5cce75"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[consultaAllReservas]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="dniCliente" mc="Standard.Parameter" uid="0d0644b8-9f79-4288-b847-3aabcb9c2e4f"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[dniCliente]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
               </OBJECT>
             </COMP>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="p2" mc="Standard.Parameter" uid="04aff929-e4bb-41f8-b9b1-6b54b40c5aa8"/>
+                <ID name="p2" mc="Standard.Parameter" uid="2846b2ac-7bbc-4752-90c5-97f2c638fb98"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
@@ -183,7 +172,23 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferLugar" mc="Standard.Class" uid="b7cfbe29-dcc8-45d4-a216-221714c92881"/>
+                    <ID name="TransferReservaLugar" mc="Standard.Class" uid="56a36a09-3ad7-47bc-9ddf-96acbf639754"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="86d40228-e645-403f-9243-4bccd0794855"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -191,7 +196,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="consultaLugar" mc="Standard.Operation" uid="d1609370-6a3f-4dd4-abbc-cdb4c44987e5"/>
+          <ID name="consultaReserva" mc="Standard.Operation" uid="c1333116-0896-4538-9dc8-7622a01a446c"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -199,13 +204,13 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[consultaLugar]]></ATT>
+            <ATT name="Name"><![CDATA[consultaReserva]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="idLugar" mc="Standard.Parameter" uid="8c2b91ce-ed2e-4618-9070-27e48109638a"/>
+                <ID name="idCompra" mc="Standard.Parameter" uid="3e43faf3-6154-43d6-bb97-19ccc7fca82b"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -217,12 +222,36 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[idLugar]]></ATT>
+                  <ATT name="Name"><![CDATA[idCompra]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
                     <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="p2" mc="Standard.Parameter" uid="8e409e7d-879c-4ba5-87f3-3c2f8a1c7c9d"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p2]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="TransferReservaLugar" mc="Standard.Class" uid="56a36a09-3ad7-47bc-9ddf-96acbf639754"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -233,6 +262,22 @@
       <LINK relation="Extension">
         <FOREIGNID name="JavaInterface" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0267-0000-000000000000"/>
       </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="9c62831b-c7c3-42ac-a7cb-60f00f8ab4dc"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
     </DEPENDENCIES>
   </OBJECT>
 </EXT>

@@ -1,46 +1,54 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="GUIReserva" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="FactoriaSA" version="4">
   <OBJECT>
-    <ID name="GUIReserva" mc="Standard.Class" uid="29dfcc42-9b4b-4eb1-89de-00a150604d1e"/>
+    <ID name="FactoriaSA" mc="Standard.Class" uid="eb9149c6-a9d6-4d24-a74f-f9480ecbeaf7"/>
     <PID name="Diagrama de 3 capas" mc="Standard.Package" uid="ca4902ac-393d-4816-85a3-15e09052f47c"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
       <ATT name="IsElementary">false</ATT>
-      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsAbstract">true</ATT>
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[GUIReserva]]></ATT>
+      <ATT name="Name"><![CDATA[FactoriaSA]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="listarLugaresClicked" mc="Standard.Operation" uid="18f4da9e-a07a-4784-82f7-218022e8620a"/>
+          <ID name="getInstancia" mc="Standard.Operation" uid="c220883c-e341-4f93-966d-1d040f1e7ef4"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
             <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
+            <ATT name="IsClass">true</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[listarLugaresClicked]]></ATT>
+            <ATT name="Name"><![CDATA[getInstancia]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
-            <COMP relation="Descriptor">
+            <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="0c67f308-02b3-48d2-b096-e045f39c96a7"/>
+                <ID name="p1" mc="Standard.Parameter" uid="78944f19-30a5-4a55-8c31-b0b498e504a8"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
-                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
-                  <ATT name="Name"></ATT>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p1]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  <LINK relation="Type">
+                    <ID name="FactoriaSA" mc="Standard.Class" uid="eb9149c6-a9d6-4d24-a74f-f9480ecbeaf7"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -48,90 +56,70 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="listarReservasClicked" mc="Standard.Operation" uid="0a2d92f0-ab24-42b8-bdc8-7d24d6f27b07"/>
+          <ID name="nuevoSAReserva" mc="Standard.Operation" uid="4449bb7d-8392-4c56-ac6c-7e49b8719bc1"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[listarReservasClicked]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="addLugarClicked" mc="Standard.Operation" uid="52069539-ce32-457c-b53b-cd4f1d0d189c"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[addLugarClicked]]></ATT>
+            <ATT name="IsAbstract">true</ATT>
+            <ATT name="Name"><![CDATA[nuevoSAReserva]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
-            <COMP relation="Descriptor">
+            <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="bbd25b05-7366-4dad-b8d9-a6a2caa12553"/>
+                <ID name="p1" mc="Standard.Parameter" uid="d534efef-2346-4db8-906c-a2216464d329"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
-                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
-                  <ATT name="Name"></ATT>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p1]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  <LINK relation="Type">
+                    <ID name="SAReserva" mc="Standard.Interface" uid="157952b2-32cf-4372-9022-8bdfe9f1ddbf"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
           </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="listarTodosLugaresClicked" mc="Standard.Operation" uid="36ffee5c-a150-4727-89a1-0a6edf932847"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[listarTodosLugaresClicked]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
       </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="controladorReservas" mc="Standard.AssociationEnd" uid="f879857c-8064-4fc3-80cb-86e44e63fa52"/>
+          <ID name="instance" mc="Standard.AssociationEnd" uid="3bfe860f-a32d-46dd-ac3a-3fff4cb1ec22"/>
           <ATTRIBUTES>
-            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="Aggregation">KindIsComposition</ATT>
             <ATT name="IsChangeable">true</ATT>
             <ATT name="Changeable">ReadWrite</ATT>
             <ATT name="IsDerived">false</ATT>
             <ATT name="IsOrdered">false</ATT>
             <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
             <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
             <ATT name="Visibility">Private</ATT>
-            <ATT name="IsClass">false</ATT>
+            <ATT name="IsClass">true</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[controladorReservas]]></ATT>
+            <ATT name="Name"><![CDATA[instance]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="ControladorReservas" mc="Standard.Class" uid="7673f97e-85d9-4214-bd5c-4e90951aaf15"/>
+              <ID name="FactoriaSA" mc="Standard.Class" uid="eb9149c6-a9d6-4d24-a74f-f9480ecbeaf7"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="2ff65f51-20bf-4ee7-9160-fca3d5befd8c"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="91f73d5c-c9d4-4fd8-bd2d-aa4cd3109439"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -149,11 +137,11 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="controladorReservas" mc="Standard.AssociationEnd" uid="f879857c-8064-4fc3-80cb-86e44e63fa52"/>
+                    <COMPID name="instance" mc="Standard.AssociationEnd" uid="3bfe860f-a32d-46dd-ac3a-3fff4cb1ec22"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="0367a596-3b23-46b3-8aff-f4db20632948"/>
+                      <ID name="" mc="Standard.Association" uid="e521ea58-24e2-4464-bd1a-6c3c4e0be4c2"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -165,7 +153,23 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="0367a596-3b23-46b3-8aff-f4db20632948"/>
+              <COMPID name="" mc="Standard.Association" uid="e521ea58-24e2-4464-bd1a-6c3c4e0be4c2"/>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="dffdfad1-d0ab-4000-86ce-8263d31cd867"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -173,18 +177,16 @@
       <LINK relation="Extension">
         <FOREIGNID name="JavaClass" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
       </LINK>
-      <COMP relation="Descriptor">
+      <COMP relation="DependsOnDependency">
         <OBJECT>
-          <ID name="" mc="Infrastructure.Note" uid="d0932414-ff50-4829-a34c-490933375441"/>
+          <ID name="" mc="Standard.Usage" uid="ac95bc47-fc70-4076-bd9c-39aeb18294ec"/>
           <ATTRIBUTES>
-            <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
-            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
-            <LINK relation="Model">
-              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            <LINK relation="DependsOn">
+              <ID name="SAReserva" mc="Standard.Interface" uid="157952b2-32cf-4372-9022-8bdfe9f1ddbf"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
