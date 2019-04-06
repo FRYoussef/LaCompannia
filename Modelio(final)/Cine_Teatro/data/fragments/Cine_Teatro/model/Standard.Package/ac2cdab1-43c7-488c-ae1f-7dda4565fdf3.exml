@@ -22,21 +22,21 @@
         <COMPID name="Subsistema Gestion vestimenta y reserva" mc="Standard.Package" uid="f22a6d3f-3446-4bd4-a28a-f2b5e64240cd"/>
         <COMPID name="Subsistema Transporte" mc="Standard.Package" uid="12c89eda-d14a-4e08-9755-73c2ade62460"/>
         <COMPID name="Subsistema publicidad" mc="Standard.Package" uid="bf671506-953b-42a8-9b89-b01cb4df37a2"/>
-        <COMPID name="Persona" mc="Standard.Class" uid="31a231b2-0333-4247-8104-dfddbaf627f8"/>
-        <COMPID name="Empresa" mc="Standard.Class" uid="5b0e4eb8-4409-4b45-ab6d-a937da0a7833"/>
-        <COMPID name="Contrato" mc="Standard.Class" uid="ea45fda4-1ac6-4426-aaac-550ae41ca3fb"/>
-        <COMPID name="Compra" mc="Standard.Class" uid="106b2506-cf1f-4892-8bd7-79f6e520fe60"/>
-        <COMPID name="Pedido" mc="Standard.Class" uid="c9ee7ab6-e83d-4043-8ca0-64607507c7c1"/>
-        <COMPID name="Obra" mc="Standard.Class" uid="73b427b3-d7b6-48a4-8451-6988067802fa"/>
-        <COMPID name="Producto" mc="Standard.Class" uid="7a89dc0a-7d76-4f6b-b783-d3e940fa1e84"/>
-        <COMPID name="Averia" mc="Standard.Class" uid="84da1f69-8669-47fd-8ce0-dbacd1fa6296"/>
-        <COMPID name="Pago" mc="Standard.Class" uid="e53f0ae1-6627-4db8-a4c5-7adbc0c6f463"/>
-        <COMPID name="Cliente" mc="Standard.Class" uid="ea52dc9b-072e-4c37-ac8b-628cf9b446c6"/>
-        <COMPID name="PersonaEspectaculo" mc="Standard.Class" uid="266f3f7a-6115-4fff-9036-7c21bcac2b6d"/>
-        <COMPID name="DatosBancarios" mc="Standard.Class" uid="2c0cacc0-cf50-4c88-9749-ab05641e68e1"/>
-        <COMPID name="Reserva" mc="Standard.Class" uid="3b60c196-8560-4125-9401-76cce2f02db1"/>
+        <COMPID name="Producto" mc="Standard.Class" uid="b140fa47-8786-4485-82a8-48100f254eab"/>
+        <COMPID name="Compra" mc="Standard.Class" uid="1b5ffd0c-deda-4147-8cd7-d8a231413706"/>
+        <COMPID name="PersonaEspectaculo" mc="Standard.Class" uid="0853a772-abf5-4a38-a13d-b8045ee1ed2b"/>
+        <COMPID name="Contrato" mc="Standard.Class" uid="08c81c6a-cb7d-4ed9-a66a-c92e1833df76"/>
+        <COMPID name="Cliente" mc="Standard.Class" uid="698f1a55-683c-4daf-896b-fc17a4248676"/>
+        <COMPID name="Pedido" mc="Standard.Class" uid="44c33a96-6a79-4bb5-8466-1436b05dbbdf"/>
+        <COMPID name="DatosBancarios" mc="Standard.Class" uid="ad74714c-98e0-42a8-8284-39291209b94c"/>
+        <COMPID name="Persona" mc="Standard.Class" uid="411ce535-1510-4ae2-a406-329af95c2683"/>
+        <COMPID name="Pago" mc="Standard.Class" uid="2236b100-9e6b-4dbf-9301-1c55130d2dfc"/>
+        <COMPID name="Empresa" mc="Standard.Class" uid="6972fe6e-1900-4ede-9892-360bf1238ac2"/>
+        <COMPID name="Obra" mc="Standard.Class" uid="e81bd65d-ecd1-4bb3-92d3-1e054ccc6ddb"/>
+        <COMPID name="Averia" mc="Standard.Class" uid="458774e6-c6b5-44e1-a113-82cb046d36f1"/>
+        <COMPID name="Reserva" mc="Standard.Class" uid="8f871fb0-f7ba-4a9e-b838-9047ec2b381d"/>
         <OBJECT>
-          <ID name="TipoPago" mc="Standard.Enumeration" uid="f9517f35-de34-4c96-81fc-74676a0a3de7"/>
+          <ID name="TipoPago" mc="Standard.Enumeration" uid="cc13e94c-c7f8-4d41-99d3-efb6ea652aee"/>
           <ATTRIBUTES>
             <ATT name="IsElementary">true</ATT>
             <ATT name="IsAbstract">false</ATT>
@@ -49,7 +49,7 @@
           <DEPENDENCIES>
             <COMP relation="Value">
               <OBJECT>
-                <ID name="Completo" mc="Standard.EnumerationLiteral" uid="45dc94d0-689b-46ff-a028-03bcee5fb8c0"/>
+                <ID name="Completo" mc="Standard.EnumerationLiteral" uid="3180534b-05d1-4e3b-8cb8-30639549b2ce"/>
                 <ATTRIBUTES>
                   <ATT name="Name"><![CDATA[Completo]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -57,7 +57,7 @@
                 <DEPENDENCIES></DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Fraccionado" mc="Standard.EnumerationLiteral" uid="e9535bac-8ba6-4639-9bb3-f8a782aa66ec"/>
+                <ID name="Fraccionado" mc="Standard.EnumerationLiteral" uid="8ca377c3-7bcd-4f5a-96a1-5a7a0bcb8d77"/>
                 <ATTRIBUTES>
                   <ATT name="Name"><![CDATA[Fraccionado]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -70,6 +70,9 @@
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="Diagrama de Clases Aplicacion" mc="Standard.ClassDiagram" uid="54981d3c-c64a-4798-9256-bcbd349fe308"/>
       </COMP>
       <COMP relation="Descriptor">
         <OBJECT>

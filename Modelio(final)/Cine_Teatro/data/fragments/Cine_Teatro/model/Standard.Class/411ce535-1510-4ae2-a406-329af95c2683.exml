@@ -1,23 +1,23 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Pedido" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Persona" version="4">
   <OBJECT>
-    <ID name="Pedido" mc="Standard.Class" uid="c9ee7ab6-e83d-4043-8ca0-64607507c7c1"/>
+    <ID name="Persona" mc="Standard.Class" uid="411ce535-1510-4ae2-a406-329af95c2683"/>
     <PID name="Diagramas de Clases" mc="Standard.Package" uid="ac2cdab1-43c7-488c-ae1f-7dda4565fdf3"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
       <ATT name="IsElementary">false</ATT>
-      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsAbstract">true</ATT>
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[Pedido]]></ATT>
+      <ATT name="Name"><![CDATA[Persona]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="productos" mc="Standard.AssociationEnd" uid="3a8cec6f-69ac-40b8-9360-1fff75507984"/>
+          <ID name="datosBancarios" mc="Standard.AssociationEnd" uid="14ea546a-2507-4df1-8c39-042ce0a6ee32"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsComposition</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -26,20 +26,20 @@
             <ATT name="IsOrdered">false</ATT>
             <ATT name="IsUnique">false</ATT>
             <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
             <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[productos]]></ATT>
+            <ATT name="Name"><![CDATA[datosBancarios]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="Producto" mc="Standard.Class" uid="7a89dc0a-7d76-4f6b-b783-d3e940fa1e84"/>
+              <ID name="DatosBancarios" mc="Standard.Class" uid="ad74714c-98e0-42a8-8284-39291209b94c"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="bee8ca0b-5ab6-4177-b6fa-e15a3522daf0"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="0bdd58a9-2270-4eda-9c28-5a3be118804b"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -57,11 +57,11 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="productos" mc="Standard.AssociationEnd" uid="3a8cec6f-69ac-40b8-9360-1fff75507984"/>
+                    <COMPID name="datosBancarios" mc="Standard.AssociationEnd" uid="14ea546a-2507-4df1-8c39-042ce0a6ee32"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="77bc80cf-b484-472b-ba1b-d122bbb2db53"/>
+                      <ID name="" mc="Standard.Association" uid="015bbb3d-26e4-43b1-8e8b-f14570a403e2"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -73,23 +73,8 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="77bc80cf-b484-472b-ba1b-d122bbb2db53"/>
+              <COMPID name="" mc="Standard.Association" uid="015bbb3d-26e4-43b1-8e8b-f14570a403e2"/>
             </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-      </COMP>
-      <COMP relation="Parent">
-        <OBJECT>
-          <ID name="Generalization" mc="Standard.Generalization" uid="41633f94-bf06-48ae-917a-29e9a9d5d2fb"/>
-          <ATTRIBUTES>
-            <ATT name="Discriminator"></ATT>
-            <ATT name="Name"><![CDATA[Generalization]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="SuperType">
-              <ID name="Compra" mc="Standard.Class" uid="106b2506-cf1f-4892-8bd7-79f6e520fe60"/>
-            </LINK>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
