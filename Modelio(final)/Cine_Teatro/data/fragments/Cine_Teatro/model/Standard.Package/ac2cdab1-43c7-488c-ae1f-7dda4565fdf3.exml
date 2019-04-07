@@ -28,7 +28,6 @@
         <COMPID name="Contrato" mc="Standard.Class" uid="08c81c6a-cb7d-4ed9-a66a-c92e1833df76"/>
         <COMPID name="Cliente" mc="Standard.Class" uid="698f1a55-683c-4daf-896b-fc17a4248676"/>
         <COMPID name="Pedido" mc="Standard.Class" uid="44c33a96-6a79-4bb5-8466-1436b05dbbdf"/>
-        <COMPID name="DatosBancarios" mc="Standard.Class" uid="ad74714c-98e0-42a8-8284-39291209b94c"/>
         <COMPID name="Persona" mc="Standard.Class" uid="411ce535-1510-4ae2-a406-329af95c2683"/>
         <COMPID name="Pago" mc="Standard.Class" uid="2236b100-9e6b-4dbf-9301-1c55130d2dfc"/>
         <COMPID name="Empresa" mc="Standard.Class" uid="6972fe6e-1900-4ede-9892-360bf1238ac2"/>
@@ -70,6 +69,51 @@
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
+        <OBJECT>
+          <ID name="EstadoPedido" mc="Standard.Enumeration" uid="21a6190d-0ea3-4b0d-b407-04426c444a6d"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[EstadoPedido]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Value">
+              <OBJECT>
+                <ID name="PROCESO" mc="Standard.EnumerationLiteral" uid="add9eaec-1a4b-49f5-8b32-e731d07975ea"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[PROCESO]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="CANCELADO" mc="Standard.EnumerationLiteral" uid="fa8c6c21-2de2-4d7b-a70b-1b44d0bdf505"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[CANCELADO]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="PAGADO" mc="Standard.EnumerationLiteral" uid="1b4296f7-5b0f-461a-ab8e-3be907e4fe45"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[PAGADO]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaEnumeration" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <COMPID name="PedidoCatering" mc="Standard.Class" uid="8cbd5e13-4f88-4c9d-bd21-1dd017b181ce"/>
+        <COMPID name="DatosBancarios" mc="Standard.Class" uid="9eae0134-0cdf-4e84-b808-c0651db40974"/>
       </COMP>
       <COMP relation="Product">
         <COMPID name="Diagrama de Clases Aplicacion" mc="Standard.ClassDiagram" uid="54981d3c-c64a-4798-9256-bcbd349fe308"/>

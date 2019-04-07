@@ -3306,9 +3306,25 @@
           <DEPENDENCIES>
             <LINK relation="Represented">
               <REFOBJ>
-                <ID name="r1" mc="Standard.BindableInstance" uid="8be15ca6-6e05-460c-8ed9-0661c314cc7b"/>
+                <ID name="r1" mc="Standard.BindableInstance" uid="ce8c1a19-0f63-48ba-ad7a-e6954e328150"/>
               </REFOBJ>
             </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="19b7fe24-40c1-47bb-94b9-7741456c5e8d"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
@@ -3412,22 +3428,6 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="r1" mc="Standard.BindableInstance" uid="8be15ca6-6e05-460c-8ed9-0661c314cc7b"/>
-                <ATTRIBUTES>
-                  <ATT name="IsConstant">false</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="Value"></ATT>
-                  <ATT name="Name"><![CDATA[r1]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Base">
-                    <ID name="ControladorPedidos" mc="Standard.Class" uid="1016c069-899f-4a3d-a064-f7af5ee274a9"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
                 <ID name="r2" mc="Standard.BindableInstance" uid="7d2d8f49-76f3-4ee5-bc86-0f1702c332a1"/>
                 <ATTRIBUTES>
                   <ATT name="IsConstant">false</ATT>
@@ -3488,6 +3488,22 @@
                 <DEPENDENCIES>
                   <LINK relation="Base">
                     <ID name="DAOPedidoImp" mc="Standard.Class" uid="58c0b5b3-d3a6-40a5-9475-febc74541c2b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="r1" mc="Standard.BindableInstance" uid="ce8c1a19-0f63-48ba-ad7a-e6954e328150"/>
+                <ATTRIBUTES>
+                  <ATT name="IsConstant">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Value"></ATT>
+                  <ATT name="Name"><![CDATA[r1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Base">
+                    <ID name="SAPedidoImp" mc="Standard.Class" uid="9e7f28d3-b705-49d7-a0e2-4b098f53ce49"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>

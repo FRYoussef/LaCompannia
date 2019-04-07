@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Subsistema Gestion Catering" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Subsistema Gestion Catering (GC)" version="4">
   <OBJECT>
-    <ID name="Subsistema Gestion Catering" mc="Standard.Package" uid="f800c511-4a5a-4fec-8135-80d8a8a9aaa0"/>
+    <ID name="Subsistema Gestion Catering (GC)" mc="Standard.Package" uid="f800c511-4a5a-4fec-8135-80d8a8a9aaa0"/>
     <PID name="Diagramas de Clases" mc="Standard.Package" uid="ac2cdab1-43c7-488c-ae1f-7dda4565fdf3"/>
     <ATTRIBUTES>
       <ATT name="IsInstantiable">false</ATT>
@@ -9,7 +9,7 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[Subsistema Gestion Catering]]></ATT>
+      <ATT name="Name"><![CDATA[Subsistema Gestion Catering (GC)]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
@@ -58,171 +58,11 @@
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
-        <COMPID name="DatosBancarios" mc="Standard.Class" uid="94460775-8eec-4b02-8af6-1e4e22863259"/>
-        <COMPID name="Persona" mc="Standard.Class" uid="5c4e7c57-d77f-48dc-b8d4-2d3b113476de"/>
+        <COMPID name="Datos_Bancarios" mc="Standard.Class" uid="94460775-8eec-4b02-8af6-1e4e22863259"/>
+        <COMPID name="Cliente" mc="Standard.Class" uid="5c4e7c57-d77f-48dc-b8d4-2d3b113476de"/>
         <COMPID name="TransferPedido" mc="Standard.Class" uid="2ab40fb5-eea2-435d-85b3-7d12a8a558fb"/>
         <COMPID name="Fecha" mc="Standard.Class" uid="0aab13a5-a600-4d63-bafe-8daa99e6af91"/>
         <COMPID name="Queja" mc="Standard.Class" uid="4f0b6ef2-41e7-4243-96f3-6f21ed9f98b5"/>
-        <OBJECT>
-          <ID name="Rol" mc="Standard.Enumeration" uid="6ca51faa-1009-49f8-b07d-8921e4c2348c"/>
-          <ATTRIBUTES>
-            <ATT name="IsElementary">true</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="IsLeaf">false</ATT>
-            <ATT name="IsRoot">false</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="Name"><![CDATA[Rol]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Value">
-              <OBJECT>
-                <ID name="Actor" mc="Standard.EnumerationLiteral" uid="44ee8026-456d-4573-8613-711c6aa796de"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[Actor]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="Descriptor">
-                    <OBJECT>
-                      <ID name="" mc="Infrastructure.Note" uid="76effbbd-c832-4cb9-8df6-1c33a0f390bf"/>
-                      <ATTRIBUTES>
-                        <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
-                        <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="Model">
-                          <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Director" mc="Standard.EnumerationLiteral" uid="1aab40e6-9a19-4f40-a5f7-75f79c121d01"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[Director]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="Descriptor">
-                    <OBJECT>
-                      <ID name="" mc="Infrastructure.Note" uid="55c12ff9-b746-452e-821b-39f6b7c19d27"/>
-                      <ATTRIBUTES>
-                        <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
-                        <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="Model">
-                          <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Productor" mc="Standard.EnumerationLiteral" uid="1d65dc3d-facf-4ffc-afa1-4fe5cfad6bed"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[Productor]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="Descriptor">
-                    <OBJECT>
-                      <ID name="" mc="Infrastructure.Note" uid="583488c2-8b36-4c51-a49f-d7b1ae778cf8"/>
-                      <ATTRIBUTES>
-                        <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
-                        <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="Model">
-                          <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Guionista" mc="Standard.EnumerationLiteral" uid="b7e56079-8d25-48ed-97fa-3e48b49ca7ea"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[Guionista]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="Descriptor">
-                    <OBJECT>
-                      <ID name="" mc="Infrastructure.Note" uid="97a64ace-9d93-479d-9a50-b757f8f40435"/>
-                      <ATTRIBUTES>
-                        <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
-                        <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="Model">
-                          <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Manager" mc="Standard.EnumerationLiteral" uid="f43d87cb-59e4-4156-b4d9-21e4000bc4cb"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[Manager]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="Descriptor">
-                    <OBJECT>
-                      <ID name="" mc="Infrastructure.Note" uid="088d0585-3b27-4379-8e74-861a96d16f8c"/>
-                      <ATTRIBUTES>
-                        <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
-                        <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <LINK relation="Model">
-                          <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Administrador" mc="Standard.EnumerationLiteral" uid="e54f3e73-5ba5-4642-80fd-55596449b1ea"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[Administrador]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Contable" mc="Standard.EnumerationLiteral" uid="8b5eefba-8416-46f0-ab20-53620f485fdf"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[Contable]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <LINK relation="Extension">
-              <FOREIGNID name="JavaEnumeration" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
         <COMPID name="SAPedido" mc="Standard.Interface" uid="cade1fa2-3556-41b6-9ce7-0a2fa8bd216b"/>
         <COMPID name="SAPedidoImp" mc="Standard.Class" uid="9e7f28d3-b705-49d7-a0e2-4b098f53ce49"/>
         <COMPID name="DAO" mc="Standard.Interface" uid="1fcb7e1c-a32c-48da-9334-95ecb88963f9"/>
@@ -230,6 +70,7 @@
         <COMPID name="ControladorPedidos" mc="Standard.Class" uid="1016c069-899f-4a3d-a064-f7af5ee274a9"/>
         <COMPID name="GUIPedidos" mc="Standard.Class" uid="fad556a9-56b1-47fe-a0cb-e7652b560b9e"/>
         <COMPID name="DAOProductoImp" mc="Standard.Class" uid="222e2509-5a92-4a36-b277-ee8eb59b54c7"/>
+        <COMPID name="Persona" mc="Standard.Class" uid="dd124fe2-0ec2-4ba4-ae9b-d0c73f62e454"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
