@@ -48,7 +48,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="Obra" mc="Standard.Class" uid="c86f2ec6-3f38-4ee4-9d32-e68f1432f62f"/>
+                    <ID name="TransferObra" mc="Standard.Class" uid="c86f2ec6-3f38-4ee4-9d32-e68f1432f62f"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -111,7 +111,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="Obra" mc="Standard.Class" uid="c86f2ec6-3f38-4ee4-9d32-e68f1432f62f"/>
+                    <ID name="TransferObra" mc="Standard.Class" uid="c86f2ec6-3f38-4ee4-9d32-e68f1432f62f"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -174,7 +174,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="Obra" mc="Standard.Class" uid="c86f2ec6-3f38-4ee4-9d32-e68f1432f62f"/>
+                    <ID name="TransferObra" mc="Standard.Class" uid="c86f2ec6-3f38-4ee4-9d32-e68f1432f62f"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -213,7 +213,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="Obra" mc="Standard.Class" uid="c86f2ec6-3f38-4ee4-9d32-e68f1432f62f"/>
+                    <ID name="TransferObra" mc="Standard.Class" uid="c86f2ec6-3f38-4ee4-9d32-e68f1432f62f"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -300,7 +300,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="Obra" mc="Standard.Class" uid="c86f2ec6-3f38-4ee4-9d32-e68f1432f62f"/>
+                    <ID name="TransferObra" mc="Standard.Class" uid="c86f2ec6-3f38-4ee4-9d32-e68f1432f62f"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -320,6 +320,69 @@
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedEnd">
+        <OBJECT>
+          <ID name="transferObra" mc="Standard.AssociationEnd" uid="c2021dfd-57b4-4e82-8b8e-91b75c146c30"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">ReadWrite</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[transferObra]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="TransferObra" mc="Standard.Class" uid="c86f2ec6-3f38-4ee4-9d32-e68f1432f62f"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="Standard.AssociationEnd" uid="bd372bd5-fabb-4444-9f55-5c5d72f13424"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="transferObra" mc="Standard.AssociationEnd" uid="c2021dfd-57b4-4e82-8b8e-91b75c146c30"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Standard.Association" uid="a91b1d3d-33ce-4716-81d0-ffd331e648ce"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Standard.Association" uid="a91b1d3d-33ce-4716-81d0-ffd331e648ce"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
