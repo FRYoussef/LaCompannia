@@ -18,105 +18,11 @@
         <COMPID name="Subsistema obras actores directores productores(ADP)" mc="Standard.Package" uid="70446a5b-74b0-4ff8-a440-ae8f8c601662"/>
         <COMPID name="Subsistema gestion de Obras" mc="Standard.Package" uid="c428e33b-b3e2-41e2-beff-a9d34b6c8d46"/>
         <COMPID name="subsistema SGRA" mc="Standard.Package" uid="db73b9ff-3e6d-4762-8330-8283ad6b10e7"/>
-        <COMPID name="Subsistema Gestion Catering" mc="Standard.Package" uid="f800c511-4a5a-4fec-8135-80d8a8a9aaa0"/>
+        <COMPID name="Subsistema Gestion Catering (GC)" mc="Standard.Package" uid="f800c511-4a5a-4fec-8135-80d8a8a9aaa0"/>
         <COMPID name="Subsistema Gestion vestimenta y reserva" mc="Standard.Package" uid="f22a6d3f-3446-4bd4-a28a-f2b5e64240cd"/>
         <COMPID name="Subsistema Transporte" mc="Standard.Package" uid="12c89eda-d14a-4e08-9755-73c2ade62460"/>
         <COMPID name="Subsistema publicidad" mc="Standard.Package" uid="bf671506-953b-42a8-9b89-b01cb4df37a2"/>
-        <COMPID name="Producto" mc="Standard.Class" uid="b140fa47-8786-4485-82a8-48100f254eab"/>
-        <COMPID name="Compra" mc="Standard.Class" uid="1b5ffd0c-deda-4147-8cd7-d8a231413706"/>
-        <COMPID name="PersonaEspectaculo" mc="Standard.Class" uid="0853a772-abf5-4a38-a13d-b8045ee1ed2b"/>
-        <COMPID name="Contrato" mc="Standard.Class" uid="08c81c6a-cb7d-4ed9-a66a-c92e1833df76"/>
-        <COMPID name="Cliente" mc="Standard.Class" uid="698f1a55-683c-4daf-896b-fc17a4248676"/>
-        <COMPID name="Pedido" mc="Standard.Class" uid="44c33a96-6a79-4bb5-8466-1436b05dbbdf"/>
-        <COMPID name="Persona" mc="Standard.Class" uid="411ce535-1510-4ae2-a406-329af95c2683"/>
-        <COMPID name="Pago" mc="Standard.Class" uid="2236b100-9e6b-4dbf-9301-1c55130d2dfc"/>
-        <COMPID name="Empresa" mc="Standard.Class" uid="6972fe6e-1900-4ede-9892-360bf1238ac2"/>
-        <COMPID name="Obra" mc="Standard.Class" uid="e81bd65d-ecd1-4bb3-92d3-1e054ccc6ddb"/>
-        <COMPID name="Averia" mc="Standard.Class" uid="458774e6-c6b5-44e1-a113-82cb046d36f1"/>
-        <COMPID name="Reserva" mc="Standard.Class" uid="8f871fb0-f7ba-4a9e-b838-9047ec2b381d"/>
-        <OBJECT>
-          <ID name="TipoPago" mc="Standard.Enumeration" uid="cc13e94c-c7f8-4d41-99d3-efb6ea652aee"/>
-          <ATTRIBUTES>
-            <ATT name="IsElementary">true</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="IsLeaf">false</ATT>
-            <ATT name="IsRoot">false</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="Name"><![CDATA[TipoPago]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Value">
-              <OBJECT>
-                <ID name="Completo" mc="Standard.EnumerationLiteral" uid="3180534b-05d1-4e3b-8cb8-30639549b2ce"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[Completo]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="Fraccionado" mc="Standard.EnumerationLiteral" uid="8ca377c3-7bcd-4f5a-96a1-5a7a0bcb8d77"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[Fraccionado]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <LINK relation="Extension">
-              <FOREIGNID name="JavaEnumeration" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="EstadoPedido" mc="Standard.Enumeration" uid="21a6190d-0ea3-4b0d-b407-04426c444a6d"/>
-          <ATTRIBUTES>
-            <ATT name="IsElementary">true</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="IsLeaf">false</ATT>
-            <ATT name="IsRoot">false</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="Name"><![CDATA[EstadoPedido]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Value">
-              <OBJECT>
-                <ID name="PROCESO" mc="Standard.EnumerationLiteral" uid="add9eaec-1a4b-49f5-8b32-e731d07975ea"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[PROCESO]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="CANCELADO" mc="Standard.EnumerationLiteral" uid="fa8c6c21-2de2-4d7b-a70b-1b44d0bdf505"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[CANCELADO]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="PAGADO" mc="Standard.EnumerationLiteral" uid="1b4296f7-5b0f-461a-ab8e-3be907e4fe45"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"><![CDATA[PAGADO]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <LINK relation="Extension">
-              <FOREIGNID name="JavaEnumeration" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <COMPID name="PedidoCatering" mc="Standard.Class" uid="8cbd5e13-4f88-4c9d-bd21-1dd017b181ce"/>
-        <COMPID name="DatosBancarios" mc="Standard.Class" uid="9eae0134-0cdf-4e84-b808-c0651db40974"/>
-      </COMP>
-      <COMP relation="Product">
-        <COMPID name="Diagrama de Clases Aplicacion" mc="Standard.ClassDiagram" uid="54981d3c-c64a-4798-9256-bcbd349fe308"/>
+        <COMPID name="Diagramas Generales" mc="Standard.Package" uid="13b86193-933b-48b7-82a8-9e5948e40fa4"/>
       </COMP>
       <COMP relation="Descriptor">
         <OBJECT>

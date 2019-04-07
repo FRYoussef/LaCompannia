@@ -2,7 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Compra" version="4">
   <OBJECT>
     <ID name="Compra" mc="Standard.Class" uid="1b5ffd0c-deda-4147-8cd7-d8a231413706"/>
-    <PID name="Diagramas de Clases" mc="Standard.Package" uid="ac2cdab1-43c7-488c-ae1f-7dda4565fdf3"/>
+    <PID name="Diagramas Generales" mc="Standard.Package" uid="13b86193-933b-48b7-82a8-9e5948e40fa4"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -17,15 +17,15 @@
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="getCliente" mc="Standard.Operation" uid="41aceee1-ea6a-420f-beb2-bbc2bf6be997"/>
+          <ID name="getPago" mc="Standard.Operation" uid="41aceee1-ea6a-420f-beb2-bbc2bf6be997"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">PackageVisibility</ATT>
+            <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[getCliente]]></ATT>
+            <ATT name="Name"><![CDATA[getPago]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -48,7 +48,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="Cliente" mc="Standard.Class" uid="698f1a55-683c-4daf-896b-fc17a4248676"/>
+                    <ID name="Pago" mc="Standard.Class" uid="2236b100-9e6b-4dbf-9301-1c55130d2dfc"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -108,15 +108,15 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="setCliente" mc="Standard.Operation" uid="47d47a4e-9262-4816-b3eb-76bc923bf6c4"/>
+          <ID name="setPago" mc="Standard.Operation" uid="47d47a4e-9262-4816-b3eb-76bc923bf6c4"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">PackageVisibility</ATT>
+            <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[setCliente]]></ATT>
+            <ATT name="Name"><![CDATA[setPago]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -139,7 +139,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="Cliente" mc="Standard.Class" uid="698f1a55-683c-4daf-896b-fc17a4248676"/>
+                    <ID name="Pago" mc="Standard.Class" uid="2236b100-9e6b-4dbf-9301-1c55130d2dfc"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -191,7 +191,7 @@ this.cliente = value;]]></ATT>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">PackageVisibility</ATT>
+            <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
             <ATT name="Name"><![CDATA[getIdCompra]]></ATT>
@@ -219,6 +219,20 @@ this.cliente = value;]]></ATT>
                   <LINK relation="Type">
                     <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
                   </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TaggedValue" uid="50760b5f-19c5-4b01-9ae4-174902ac6f52"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="Infrastructure.TagType" uid="eb8c1900-000a-b31d-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
@@ -277,90 +291,12 @@ this.cliente = value;]]></ATT>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="setIdCompra" mc="Standard.Operation" uid="c17c94e4-c960-4d64-b67d-c6ce04bc2c31"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">PackageVisibility</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[setIdCompra]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="IO">
-              <OBJECT>
-                <ID name="value" mc="Standard.Parameter" uid="6890018c-7026-4900-9c33-b4676ce25223"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[value]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <LINK relation="Extension">
-              <FOREIGNID name="JavaSetter" mc="Infrastructure.Stereotype" uid="01ec25e8-0000-00f5-0000-000000000000"/>
-            </LINK>
-            <COMP relation="DependsOnDependency">
-              <OBJECT>
-                <ID name="" mc="Infrastructure.Dependency" uid="784d086f-e3a5-43aa-a483-67aeee10fbd0"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="DependsOn">
-                    <REFOBJ>
-                      <ID name="idCompra" mc="Standard.Attribute" uid="4533a2f1-b303-40e9-9669-2069135aa3bf"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="Extension">
-                    <FOREIGNID name="JavaSetter" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0130-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="577cfbcc-617c-46cf-a48e-8718baf72844"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.
-this.idCompra = value;]]></ATT>
-                  <ATT name="MimeType"></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaCode" mc="Infrastructure.NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
           <ID name="getTipoCompra" mc="Standard.Operation" uid="d36f5cf2-3d3e-4248-83aa-173ce37fed7d"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">PackageVisibility</ATT>
+            <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
             <ATT name="Name"><![CDATA[getTipoCompra]]></ATT>
@@ -388,6 +324,20 @@ this.idCompra = value;]]></ATT>
                   <LINK relation="Type">
                     <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
                   </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TaggedValue" uid="23b11397-9afb-454a-a74b-d19dcc334c9f"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaFinal" mc="Infrastructure.TagType" uid="eb8c1900-000a-b31d-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
@@ -445,84 +395,6 @@ this.idCompra = value;]]></ATT>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
-        <OBJECT>
-          <ID name="setTipoCompra" mc="Standard.Operation" uid="1fce2a81-88eb-4373-9edd-dd2588efd7de"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">PackageVisibility</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[setTipoCompra]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="IO">
-              <OBJECT>
-                <ID name="value" mc="Standard.Parameter" uid="c73a6690-6231-42b9-97ea-86b441c13d90"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[value]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <LINK relation="Extension">
-              <FOREIGNID name="JavaSetter" mc="Infrastructure.Stereotype" uid="01ec25e8-0000-00f5-0000-000000000000"/>
-            </LINK>
-            <COMP relation="DependsOnDependency">
-              <OBJECT>
-                <ID name="" mc="Infrastructure.Dependency" uid="9c4b5c8f-e477-41d9-8d82-05d2151ef2a8"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="DependsOn">
-                    <REFOBJ>
-                      <ID name="tipoCompra" mc="Standard.Attribute" uid="26213fb8-0dca-4bfa-9ea6-564dad0d6d34"/>
-                    </REFOBJ>
-                  </LINK>
-                  <LINK relation="Extension">
-                    <FOREIGNID name="JavaSetter" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0130-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="1b3d7bf8-56cb-4060-a4dd-07f95de417fd"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.
-this.tipoCompra = value;]]></ATT>
-                  <ATT name="MimeType"></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaCode" mc="Infrastructure.NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
       </COMP>
       <COMP relation="OwnedAttribute">
         <OBJECT>
@@ -547,6 +419,20 @@ this.tipoCompra = value;]]></ATT>
             <LINK relation="Type">
               <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
             </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="87aaf511-2d26-42f7-befd-bdfe9af47b47"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaFinal" mc="Infrastructure.TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
@@ -571,6 +457,20 @@ this.tipoCompra = value;]]></ATT>
             <LINK relation="Type">
               <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
             </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="6e6919f5-b0b8-44ae-af9b-88488c3b5d0d"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaFinal" mc="Infrastructure.TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
