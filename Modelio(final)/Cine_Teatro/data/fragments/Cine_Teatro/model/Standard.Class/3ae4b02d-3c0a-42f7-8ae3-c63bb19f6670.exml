@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SAVestimentaImp" version="4">
   <OBJECT>
-    <ID name="SAVestimentaImp" mc="Standard.Class" uid="3280dc46-377a-4fb1-9ff2-5ea048441de3"/>
-    <PID name="Diagrama de 3 capas" mc="Standard.Package" uid="7d77af5a-b816-4fd2-9983-f9ddf0ff2373"/>
+    <ID name="SAVestimentaImp" mc="Standard.Class" uid="3ae4b02d-3c0a-42f7-8ae3-c63bb19f6670"/>
+    <PID name="Diagrama de 3 capas" mc="Standard.Package" uid="d6a582b8-0eb7-4175-b5ac-e01837b6448e"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -17,7 +17,7 @@
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="ListarPrendas" mc="Standard.Operation" uid="deced14b-48ea-4493-8418-5792beaf2afb"/>
+          <ID name="ListarPrendas" mc="Standard.Operation" uid="03b25574-dd2d-4a73-8dfe-ce575a19007d"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">true</ATT>
@@ -31,7 +31,7 @@
           <DEPENDENCIES>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="b8561f80-1fe7-4e2c-9468-10b558287e1f"/>
+                <ID name="" mc="Standard.Parameter" uid="156acd7e-4e42-4760-990e-0ddf89fe4e4b"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">Out</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -48,20 +48,20 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferVestimenta" mc="Standard.Class" uid="340498ec-e6b9-4abf-98d5-39b1d0866739"/>
+                    <ID name="TransferVestimenta" mc="Standard.Class" uid="a7b16a44-6e72-48dd-b0ef-a7d472b667f6"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
             <LINK relation="Redefines">
               <REFOBJ>
-                <ID name="ListarPrendas" mc="Standard.Operation" uid="db87446e-e7d9-44dd-8f86-50605fb3e534"/>
+                <ID name="ListarPrendas" mc="Standard.Operation" uid="578e7fad-68cf-46ca-8a0d-5effd16d2421"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="listarReservas" mc="Standard.Operation" uid="2da6e974-2143-4497-96f9-8f5571d4d671"/>
+          <ID name="listarReservas" mc="Standard.Operation" uid="291890f2-49bf-48d3-82b5-cf6b3262fad3"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -75,7 +75,7 @@
           <DEPENDENCIES>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="def88ab6-d2fa-4183-881e-5f586cd4a8e2"/>
+                <ID name="" mc="Standard.Parameter" uid="161e8997-ca81-46ad-8dd2-4da43a724b99"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">Out</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -92,20 +92,20 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferReserva" mc="Standard.Class" uid="98abfb63-947a-4aee-9f36-f06027094117"/>
+                    <ID name="TransferReserva" mc="Standard.Class" uid="36c86299-7488-43b5-9263-b2a15ebaf4d0"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
             <LINK relation="Redefines">
               <REFOBJ>
-                <ID name="listarReservas" mc="Standard.Operation" uid="0bae377a-faa0-431b-b321-3e5445cb32df"/>
+                <ID name="listarReservas" mc="Standard.Operation" uid="07a3b1d7-7883-4c5f-b654-28f1c37b06bc"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="ReservarPrenda" mc="Standard.Operation" uid="9d539a17-e1d8-491a-888e-99f4e2a2db32"/>
+          <ID name="ReservarPrenda" mc="Standard.Operation" uid="a1833a1c-9221-46ee-aa29-a3752b9892a2"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -119,7 +119,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="codigo" mc="Standard.Parameter" uid="b7eb0c46-b4a1-4ec4-bb6a-a5509a389574"/>
+                <ID name="codigo" mc="Standard.Parameter" uid="63832722-bc1d-4393-88bc-b7a4362d3918"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -141,7 +141,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="periodo" mc="Standard.Parameter" uid="cfa58f54-39ea-4e80-9c74-3c374e9e6d19"/>
+                <ID name="periodo" mc="Standard.Parameter" uid="67737991-919f-475d-9d4b-9f7fe2dfc674"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -163,7 +163,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="IDPersona" mc="Standard.Parameter" uid="44bab7f6-0386-4bb8-b4d5-cf0cf02f2288"/>
+                <ID name="IDPersona" mc="Standard.Parameter" uid="f2af6b1a-22ea-4064-bb81-b9a97db9176e"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -180,14 +180,14 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferPersona" mc="Standard.Class" uid="d5f99770-6e01-42b5-819d-aa0bdea35db2"/>
+                    <ID name="TransferPersona" mc="Standard.Class" uid="d2eadf15-1ed7-4557-acb2-7a8c8d19a337"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="dec3ce3c-c72d-48ae-927b-ed098b04f69e"/>
+                <ID name="" mc="Standard.Parameter" uid="f07b9c60-4113-415f-b4cf-641db556c5ec"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">Out</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -211,13 +211,13 @@
             </COMP>
             <LINK relation="Redefines">
               <REFOBJ>
-                <ID name="ReservarPrenda" mc="Standard.Operation" uid="74ede24d-014b-45df-ab50-4857aca11c87"/>
+                <ID name="ReservarPrenda" mc="Standard.Operation" uid="f21df145-0328-41ac-ab9d-38ccb8f5f995"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="ModificarReserva" mc="Standard.Operation" uid="d2a17c45-915e-4796-8cd6-ee269faeb285"/>
+          <ID name="ModificarReserva" mc="Standard.Operation" uid="84869c7f-506c-488b-9af3-1fac44a49710"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -231,7 +231,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="Reserva" mc="Standard.Parameter" uid="9c314909-4ddc-4f3e-bc4e-1ac30c2ae710"/>
+                <ID name="Reserva" mc="Standard.Parameter" uid="517d4c76-f54f-4bad-9a24-92a8c793ccda"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -248,20 +248,20 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferReserva" mc="Standard.Class" uid="98abfb63-947a-4aee-9f36-f06027094117"/>
+                    <ID name="TransferReserva" mc="Standard.Class" uid="36c86299-7488-43b5-9263-b2a15ebaf4d0"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
             <LINK relation="Redefines">
               <REFOBJ>
-                <ID name="ModificarReserva" mc="Standard.Operation" uid="cb4cc018-d972-4c63-b1b1-7680680847ac"/>
+                <ID name="ModificarReserva" mc="Standard.Operation" uid="d72cffee-99b9-47d7-b6c9-f570e3c6c6e0"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="altaVestimenta" mc="Standard.Operation" uid="a6a015e1-b2a0-434a-a289-e29c664a7dc1"/>
+          <ID name="altaVestimenta" mc="Standard.Operation" uid="64eb08be-c1aa-411f-9ba1-eb0e5cc48db9"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -275,7 +275,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="Prenda" mc="Standard.Parameter" uid="364b9eee-ae25-4400-aef4-87aa441569e7"/>
+                <ID name="Prenda" mc="Standard.Parameter" uid="c69b3455-f20f-408f-824f-c0b30c10d6c2"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -292,20 +292,20 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferVestimenta" mc="Standard.Class" uid="340498ec-e6b9-4abf-98d5-39b1d0866739"/>
+                    <ID name="TransferVestimenta" mc="Standard.Class" uid="a7b16a44-6e72-48dd-b0ef-a7d472b667f6"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
             <LINK relation="Redefines">
               <REFOBJ>
-                <ID name="altaVestimenta" mc="Standard.Operation" uid="3678c6d3-d5e5-471d-a9a7-4e3ed0133adc"/>
+                <ID name="altaVestimenta" mc="Standard.Operation" uid="a6897dc0-f437-4966-9b2b-b207434ce294"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="bajaPrenda" mc="Standard.Operation" uid="951fc37e-472a-44b3-ac95-d386d1aa88ea"/>
+          <ID name="bajaPrenda" mc="Standard.Operation" uid="b509bba2-3aba-4767-afa2-7f411293472a"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -319,7 +319,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="codigo" mc="Standard.Parameter" uid="39d1e24c-b4d2-4b44-a5d8-446472c9c089"/>
+                <ID name="codigo" mc="Standard.Parameter" uid="7443bc53-ce9e-406b-afe4-37d57bcd8157"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -343,7 +343,7 @@
             </COMP>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="7c06a5e3-0849-401f-a4fe-b0d618628f7e"/>
+                <ID name="" mc="Standard.Parameter" uid="f088674c-d766-45d8-be93-638ac68c0edc"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">Out</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -367,13 +367,13 @@
             </COMP>
             <LINK relation="Redefines">
               <REFOBJ>
-                <ID name="bajaPrenda" mc="Standard.Operation" uid="ef1e09d5-cada-4883-ba65-47ac59aba82b"/>
+                <ID name="bajaPrenda" mc="Standard.Operation" uid="0b73f84d-0de4-4b28-9fba-e8a44f30c372"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="AnunlarReserva" mc="Standard.Operation" uid="dc2a0702-b41f-4cbc-80ea-4279bbc7ec81"/>
+          <ID name="AnunlarReserva" mc="Standard.Operation" uid="b9917162-e62f-4c7d-81d0-5278550e0578"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -387,7 +387,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="IDReserva" mc="Standard.Parameter" uid="5fa0bce9-b245-4d0f-b68d-cb960e162335"/>
+                <ID name="IDReserva" mc="Standard.Parameter" uid="69b9a575-f18e-4651-98d9-df58be7acaab"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -411,7 +411,7 @@
             </COMP>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="8d672fb7-9a6d-44da-9d43-b777ec27a931"/>
+                <ID name="" mc="Standard.Parameter" uid="f7f2d64d-6530-4d76-be94-d3025f451b7e"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">Out</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -435,13 +435,13 @@
             </COMP>
             <LINK relation="Redefines">
               <REFOBJ>
-                <ID name="AnunlarReserva" mc="Standard.Operation" uid="92601824-4751-4e7f-bcae-39df2f464bf1"/>
+                <ID name="AnunlarReserva" mc="Standard.Operation" uid="26f04e59-1cfa-4fb0-9876-aeed8efff5f5"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="SolicitarCobro" mc="Standard.Operation" uid="213af89f-442d-45d9-9302-3380f1042251"/>
+          <ID name="SolicitarCobro" mc="Standard.Operation" uid="0661cbd4-9b48-4fd4-9d83-118d267150cd"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -455,7 +455,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="cobro" mc="Standard.Parameter" uid="953bf5f1-4040-4e6d-b9b4-90f844be55b7"/>
+                <ID name="cobro" mc="Standard.Parameter" uid="c90c0b92-a960-4040-8645-d0a8079e4639"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -472,20 +472,20 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferSolitudCobro" mc="Standard.Class" uid="3408016d-aefb-42f9-8f04-8179642700eb"/>
+                    <ID name="TransferSolitudCobro" mc="Standard.Class" uid="518ead6b-38fd-4b42-b929-3563ca6eef18"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
             <LINK relation="Redefines">
               <REFOBJ>
-                <ID name="SolicitarCobro" mc="Standard.Operation" uid="d178dd8f-9237-4584-a484-0071fdf9d0f2"/>
+                <ID name="SolicitarCobro" mc="Standard.Operation" uid="e54c52f3-8441-4c06-b6a3-dfed9860aff5"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="ListarReservasPersona" mc="Standard.Operation" uid="10466684-7fa7-4bcd-be47-7c8ef0b57708"/>
+          <ID name="ListarReservasPersona" mc="Standard.Operation" uid="fceada52-2976-4b6d-bfa0-858b5e2a2c44"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -499,7 +499,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="persona" mc="Standard.Parameter" uid="8dbe460b-51a2-4976-b406-96e43e9632e5"/>
+                <ID name="persona" mc="Standard.Parameter" uid="956e4ae5-d909-42fa-9ee6-83b7fe576d82"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -516,14 +516,14 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferPersona" mc="Standard.Class" uid="d5f99770-6e01-42b5-819d-aa0bdea35db2"/>
+                    <ID name="TransferPersona" mc="Standard.Class" uid="d2eadf15-1ed7-4557-acb2-7a8c8d19a337"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
             <LINK relation="Redefines">
               <REFOBJ>
-                <ID name="ListarReservasPersona" mc="Standard.Operation" uid="a0bd57eb-6992-42fe-8031-fd0ce4877253"/>
+                <ID name="ListarReservasPersona" mc="Standard.Operation" uid="674272f9-2aff-4832-9cf4-1d70e22697d9"/>
               </REFOBJ>
             </LINK>
           </DEPENDENCIES>
@@ -531,7 +531,7 @@
       </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="dAOReserva" mc="Standard.AssociationEnd" uid="7fd4ac8b-7300-499e-a120-9cc442e43b8f"/>
+          <ID name="dAOReserva" mc="Standard.AssociationEnd" uid="220cd12f-bea0-48b2-96b7-eb195725cfb4"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -549,11 +549,11 @@
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="DAOReserva" mc="Standard.Interface" uid="8d70f6e7-2d2a-489c-89ef-2aab4bb2916f"/>
+              <ID name="DAOReserva" mc="Standard.Interface" uid="1dd1ae39-1a40-4cf7-99c8-02fe4afadb3a"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="84f2d1e6-9bb8-48d2-b31a-e376e4fb47cf"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="f67930e7-96d5-45e6-944e-99249ca0e9b1"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -571,11 +571,11 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="dAOReserva" mc="Standard.AssociationEnd" uid="7fd4ac8b-7300-499e-a120-9cc442e43b8f"/>
+                    <COMPID name="dAOReserva" mc="Standard.AssociationEnd" uid="220cd12f-bea0-48b2-96b7-eb195725cfb4"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="96cd2a23-4a96-478b-b8e8-960d9c21a607"/>
+                      <ID name="" mc="Standard.Association" uid="a4650253-4a00-4839-b821-69a2fe8aa5d6"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -587,11 +587,11 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="96cd2a23-4a96-478b-b8e8-960d9c21a607"/>
+              <COMPID name="" mc="Standard.Association" uid="a4650253-4a00-4839-b821-69a2fe8aa5d6"/>
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="c48e39cf-ead5-45bd-9800-b574e54a3c82"/>
+                <ID name="" mc="Infrastructure.Note" uid="2b87a118-1778-4f94-ba4c-cee7643ec3d7"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -608,7 +608,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="dAOVestimenta" mc="Standard.AssociationEnd" uid="04c7e498-a531-43b7-becb-7539be4cf988"/>
+          <ID name="dAOVestimenta" mc="Standard.AssociationEnd" uid="016356b2-5331-49cb-8aa3-760d2e8a29dc"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -626,11 +626,11 @@
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="DAOVestimenta" mc="Standard.Interface" uid="62f5808b-809e-49d9-9032-684d6a4140d9"/>
+              <ID name="DAOVestimenta" mc="Standard.Interface" uid="84dac6c6-33e1-43b1-b7f6-c4fa30bc5c1e"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="7465d3e6-be0a-4f9e-9dc5-f1dd55a93711"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="aa3e829b-992e-4883-8ba1-858b65f33ca1"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -648,11 +648,11 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="dAOVestimenta" mc="Standard.AssociationEnd" uid="04c7e498-a531-43b7-becb-7539be4cf988"/>
+                    <COMPID name="dAOVestimenta" mc="Standard.AssociationEnd" uid="016356b2-5331-49cb-8aa3-760d2e8a29dc"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="eb071527-ab2a-4eca-a21e-9c7fccc96c46"/>
+                      <ID name="" mc="Standard.Association" uid="0a14294c-9d1c-4127-9875-d1c752e1c248"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -664,12 +664,12 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="eb071527-ab2a-4eca-a21e-9c7fccc96c46"/>
+              <COMPID name="" mc="Standard.Association" uid="0a14294c-9d1c-4127-9875-d1c752e1c248"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="dAOPersona" mc="Standard.AssociationEnd" uid="568061b8-4944-45b9-943d-b0bc64b39752"/>
+          <ID name="dAOPersona" mc="Standard.AssociationEnd" uid="4fe71856-68dd-441d-be23-1eaebbdb43cb"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -687,11 +687,11 @@
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="DAOPersona" mc="Standard.Interface" uid="dc4a2c07-bee1-489f-81c4-677942048d29"/>
+              <ID name="DAOPersona" mc="Standard.Interface" uid="028e19ac-7761-4f25-b03d-a01d51bcb25e"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="eaf3dc9a-a91c-4d0a-b087-b6e0d255bedd"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="a4e3dd1f-17ed-44fb-a591-aa4f4a240f3c"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -709,11 +709,11 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="dAOPersona" mc="Standard.AssociationEnd" uid="568061b8-4944-45b9-943d-b0bc64b39752"/>
+                    <COMPID name="dAOPersona" mc="Standard.AssociationEnd" uid="4fe71856-68dd-441d-be23-1eaebbdb43cb"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="91e297c0-c3d1-49e5-abf5-647d43476aeb"/>
+                      <ID name="" mc="Standard.Association" uid="ff863e85-f30e-4972-ad55-db8c7cf4f9d0"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -725,12 +725,12 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="91e297c0-c3d1-49e5-abf5-647d43476aeb"/>
+              <COMPID name="" mc="Standard.Association" uid="ff863e85-f30e-4972-ad55-db8c7cf4f9d0"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="dAOSolicitudCobro" mc="Standard.AssociationEnd" uid="04672bd3-c52c-4257-bda1-2cdf65a091c0"/>
+          <ID name="dAOSolicitudCobro" mc="Standard.AssociationEnd" uid="8cc080eb-2e77-4062-a8b3-9d511c3bbc0a"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -748,11 +748,11 @@
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="DAOSolicitudCobro" mc="Standard.Interface" uid="5ba4c433-5137-4272-98c0-0387ee965c10"/>
+              <ID name="DAOSolicitudCobro" mc="Standard.Interface" uid="c4ab80c8-7e35-4be0-b9af-d025527be556"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="047a0362-95ca-40c1-b2d2-2f137de41221"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="24b659da-0976-4517-809b-9b34f9edd74b"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -770,11 +770,11 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="dAOSolicitudCobro" mc="Standard.AssociationEnd" uid="04672bd3-c52c-4257-bda1-2cdf65a091c0"/>
+                    <COMPID name="dAOSolicitudCobro" mc="Standard.AssociationEnd" uid="8cc080eb-2e77-4062-a8b3-9d511c3bbc0a"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="60a1cb95-83e1-485d-a77c-5b1b3444e8a2"/>
+                      <ID name="" mc="Standard.Association" uid="48194c2e-6b0e-4417-8078-1ecf1a2e5937"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -786,21 +786,21 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="60a1cb95-83e1-485d-a77c-5b1b3444e8a2"/>
+              <COMPID name="" mc="Standard.Association" uid="48194c2e-6b0e-4417-8078-1ecf1a2e5937"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
       <COMP relation="Realized">
         <OBJECT>
-          <ID name="InterfaceRealization" mc="Standard.InterfaceRealization" uid="f2bcabf4-122c-4278-929d-2dd8fe072d07"/>
+          <ID name="InterfaceRealization" mc="Standard.InterfaceRealization" uid="fb6cc255-6d66-4ccf-98a9-0b45e0f313ed"/>
           <ATTRIBUTES>
             <ATT name="Name"><![CDATA[InterfaceRealization]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Implemented">
-              <ID name="SAVestimenta" mc="Standard.Interface" uid="9b14364d-4e85-4619-a550-ae34c2ed58ab"/>
+              <ID name="SAVestimenta" mc="Standard.Interface" uid="7455dd1f-a1eb-4864-9ad0-348a4bd0e271"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>

@@ -1,35 +1,35 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DAOPersona" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DAOVestimenta" version="4">
   <OBJECT>
-    <ID name="DAOPersona" mc="Standard.Interface" uid="dc4a2c07-bee1-489f-81c4-677942048d29"/>
-    <PID name="Diagrama de 3 capas" mc="Standard.Package" uid="7d77af5a-b816-4fd2-9983-f9ddf0ff2373"/>
+    <ID name="DAOVestimenta" mc="Standard.Interface" uid="84dac6c6-33e1-43b1-b7f6-c4fa30bc5c1e"/>
+    <PID name="Diagrama de 3 capas" mc="Standard.Package" uid="d6a582b8-0eb7-4175-b5ac-e01837b6448e"/>
     <ATTRIBUTES>
       <ATT name="IsElementary">false</ATT>
       <ATT name="IsAbstract">true</ATT>
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[DAOPersona]]></ATT>
+      <ATT name="Name"><![CDATA[DAOVestimenta]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="AltaPersona" mc="Standard.Operation" uid="4e85b20d-ec24-40ab-be7d-60e5926937e3"/>
+          <ID name="altaVestimenta" mc="Standard.Operation" uid="a6897dc0-f437-4966-9b2b-b207434ce294"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[AltaPersona]]></ATT>
+            <ATT name="IsAbstract">true</ATT>
+            <ATT name="Name"><![CDATA[altaVestimenta]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="person" mc="Standard.Parameter" uid="8bd1d081-be2d-4f0d-99ac-a6b31a9bfe84"/>
+                <ID name="Prenda" mc="Standard.Parameter" uid="e258f97b-8e79-4d97-b17e-b463b60bf329"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -41,12 +41,12 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[person]]></ATT>
+                  <ATT name="Name"><![CDATA[Prenda]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferPersona" mc="Standard.Class" uid="d5f99770-6e01-42b5-819d-aa0bdea35db2"/>
+                    <ID name="TransferVestimenta" mc="Standard.Class" uid="a7b16a44-6e72-48dd-b0ef-a7d472b667f6"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -54,7 +54,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="BajaPersona" mc="Standard.Operation" uid="e55838cc-6f45-4be4-9036-8b61726689e0"/>
+          <ID name="bajaPrenda" mc="Standard.Operation" uid="0b73f84d-0de4-4b28-9fba-e8a44f30c372"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -62,13 +62,13 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[BajaPersona]]></ATT>
+            <ATT name="Name"><![CDATA[bajaPrenda]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="ID" mc="Standard.Parameter" uid="5e7f40e2-1b51-4278-8c48-76060e5f03a1"/>
+                <ID name="codigo" mc="Standard.Parameter" uid="751651f4-867a-406b-88c5-0b7f9d07b0e1"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -80,7 +80,7 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[ID]]></ATT>
+                  <ATT name="Name"><![CDATA[codigo]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -90,40 +90,9 @@
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
-            <COMP relation="Descriptor">
+            <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="e4175ca9-5e0e-4edc-92d5-0f3d0f6ef6ce"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
-                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="Modificar" mc="Standard.Operation" uid="891b3e1f-edfe-4f7e-aad5-115c387c90de"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[Modificar]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="IO">
-              <OBJECT>
-                <ID name="persona" mc="Standard.Parameter" uid="9b333e04-f288-49c0-8433-8f703c80ac8e"/>
+                <ID name="p2" mc="Standard.Parameter" uid="5478c9aa-442f-4a21-850f-694c550e5b59"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -135,28 +104,12 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[persona]]></ATT>
+                  <ATT name="Name"><![CDATA[p2]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferPersona" mc="Standard.Class" uid="d5f99770-6e01-42b5-819d-aa0bdea35db2"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="c538d9e8-0170-47fc-9b34-6a8e81e3f651"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
-                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                    <FOREIGNID name="boolean" mc="Standard.DataType" uid="00000004-0000-0005-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>

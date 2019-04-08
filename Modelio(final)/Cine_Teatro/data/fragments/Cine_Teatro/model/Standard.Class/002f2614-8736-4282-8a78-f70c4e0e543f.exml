@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="GestiónVestimenta" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ControladorBDV" version="4">
   <OBJECT>
-    <ID name="GestiónVestimenta" mc="Standard.Class" uid="5d90c9e1-016e-4cfc-82d5-a9356b4ae2e6"/>
-    <PID name="Diagrama de clases" mc="Standard.Package" uid="fee38bf1-e39e-40ea-a93f-e6546279f01b"/>
+    <ID name="ControladorBDV" mc="Standard.Class" uid="002f2614-8736-4282-8a78-f70c4e0e543f"/>
+    <PID name="Diagrama de 3 capas" mc="Standard.Package" uid="d6a582b8-0eb7-4175-b5ac-e01837b6448e"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -11,13 +11,13 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[GestiónVestimenta]]></ATT>
+      <ATT name="Name"><![CDATA[ControladorBDV]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="ActualizarCód" mc="Standard.Operation" uid="dd0d361b-9c98-492e-b49b-16fa82674f3f"/>
+          <ID name="ActualizarCód" mc="Standard.Operation" uid="093d24a4-2ac1-4b8a-a16f-6ea46723c374"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -31,7 +31,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="codigo" mc="Standard.Parameter" uid="74b3e633-e9c1-4a0d-8bff-26694e890686"/>
+                <ID name="codigo" mc="Standard.Parameter" uid="11f9b4ac-6657-4107-b512-56c59ed0cdf6"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -55,7 +55,7 @@
             </COMP>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="p2" mc="Standard.Parameter" uid="a60a9456-82f4-472f-b1d0-07cabdf2402d"/>
+                <ID name="p2" mc="Standard.Parameter" uid="c4aff6de-c5ba-4595-a2ad-63a8b51e019f"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -80,7 +80,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="ActualizarTarifa" mc="Standard.Operation" uid="52904412-5e90-4e41-b287-6181e5c39d2c"/>
+          <ID name="ActualizarTarifa" mc="Standard.Operation" uid="87d106f3-6969-496c-8de5-bf4008f6aa1a"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -94,7 +94,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="Codigo" mc="Standard.Parameter" uid="75409ed2-1bba-4f2f-9094-5369e04b1aee"/>
+                <ID name="Codigo" mc="Standard.Parameter" uid="086b39ab-3bb5-4a79-a79c-da0b574b37bf"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -116,7 +116,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="nuevaTarifa" mc="Standard.Parameter" uid="b8d3d3d1-975e-4526-8743-d2fe78049bc8"/>
+                <ID name="nuevaTarifa" mc="Standard.Parameter" uid="a0379384-a2ee-4602-b66f-41ce85272fd4"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -140,7 +140,7 @@
             </COMP>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="p2" mc="Standard.Parameter" uid="bf7a952a-9618-4c9d-b780-334e232461b2"/>
+                <ID name="p2" mc="Standard.Parameter" uid="d94dbe1e-5945-490e-8f5f-bc44545a56a6"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -164,7 +164,7 @@
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="fa488e04-5bd9-4ba0-8807-a6721c4a0aab"/>
+                <ID name="" mc="Infrastructure.Note" uid="cbb06f5a-a6f4-4008-b411-a17b6a398998"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -181,7 +181,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="ModificarLoc" mc="Standard.Operation" uid="83b2b03b-d5b3-4937-b7d9-a9469b8e77af"/>
+          <ID name="ModificarLoc" mc="Standard.Operation" uid="0f62c6f0-f8ba-4227-8cac-0ed9c3954841"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -195,7 +195,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="codigo" mc="Standard.Parameter" uid="8d987798-390c-420b-940b-31ef38b8c4c6"/>
+                <ID name="codigo" mc="Standard.Parameter" uid="ce691e64-32e1-4196-92d0-3b2d60550abc"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -217,7 +217,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="nuevaLoc" mc="Standard.Parameter" uid="105178d3-179e-47cb-8eae-bb8a5b690f99"/>
+                <ID name="nuevaLoc" mc="Standard.Parameter" uid="d6a340c4-a03c-4d63-b409-5807ed69ea27"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -241,7 +241,7 @@
             </COMP>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="p3" mc="Standard.Parameter" uid="ac237baf-acb0-4fa7-958c-557f166b80d6"/>
+                <ID name="p3" mc="Standard.Parameter" uid="30daad37-0dd5-4bde-b61a-5e9e3e5092ed"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -265,7 +265,7 @@
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="cb990602-e747-4a09-a280-4f8f8c8efba0"/>
+                <ID name="" mc="Infrastructure.Note" uid="b66bdcf2-3a93-46a0-a13d-851c0042b6b9"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -282,7 +282,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="CambioDisponibilidad" mc="Standard.Operation" uid="d5bd722f-f2cc-41f1-aecb-6ce9734a05a4"/>
+          <ID name="CambioDisponibilidad" mc="Standard.Operation" uid="7767da79-2092-449b-b693-fdaf9d28a28d"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -296,7 +296,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="codigo" mc="Standard.Parameter" uid="642d36ae-eb4f-435c-a83f-184e1207aa49"/>
+                <ID name="codigo" mc="Standard.Parameter" uid="ba51b568-9592-4b12-8df2-cade85a348c6"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -318,7 +318,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="newEstado" mc="Standard.Parameter" uid="1e162fdf-5866-45a9-8687-d7a19695ffc3"/>
+                <ID name="newEstado" mc="Standard.Parameter" uid="53fbb7ec-2e7f-4e60-98f1-863ba9b02f2f"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -342,7 +342,7 @@
             </COMP>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="p3" mc="Standard.Parameter" uid="184fae82-6710-42ae-9180-f77244760dfc"/>
+                <ID name="p3" mc="Standard.Parameter" uid="e250a612-7e43-4feb-90b7-d1688f8cc700"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -367,7 +367,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="CambioDescripcion" mc="Standard.Operation" uid="38c75a11-4c49-4b23-a118-dea7a948c695"/>
+          <ID name="CambioDescripcion" mc="Standard.Operation" uid="b8d07aba-e6f0-4461-800c-ee4e13225d68"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -381,7 +381,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="Codigo" mc="Standard.Parameter" uid="e641ebe5-1ca5-4f04-8393-2fb6fdacac7d"/>
+                <ID name="Codigo" mc="Standard.Parameter" uid="658c2c45-2789-4d52-9470-c1dd9433e9a5"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -403,7 +403,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="newDescrip" mc="Standard.Parameter" uid="5c07c7f9-10b1-4c83-abc9-923ecd6d6463"/>
+                <ID name="newDescrip" mc="Standard.Parameter" uid="e02c4672-4017-4e84-977b-c65a9a54c7ca"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -427,7 +427,7 @@
             </COMP>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="p3" mc="Standard.Parameter" uid="3140bca0-0c32-40c2-900a-264f94978fd1"/>
+                <ID name="p3" mc="Standard.Parameter" uid="5cbbf5a1-9f88-4ebc-ab78-97bfba6c4b2a"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -451,7 +451,7 @@
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="d3f8a8fb-b6a2-4c6a-8662-5745aa9bddb5"/>
+                <ID name="" mc="Infrastructure.Note" uid="d1cedbe0-29d8-418f-98da-89e64f4b39b8"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -468,7 +468,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="altaVestimenta" mc="Standard.Operation" uid="d788cf6c-1f2c-43a1-afdd-38c82d0e8d79"/>
+          <ID name="altaVestimenta" mc="Standard.Operation" uid="4003b389-1b6f-4165-96b8-c1c0cac11dd2"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -482,7 +482,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="Codigo" mc="Standard.Parameter" uid="4d0f0554-c355-4b8d-8ddc-3b09bb6925f8"/>
+                <ID name="Codigo" mc="Standard.Parameter" uid="f79dd2f0-ae58-4634-a2bb-a2d322e6ad73"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -504,7 +504,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Obras" mc="Standard.Parameter" uid="0cf96215-5f9d-4c9a-bd4e-07890c31edfa"/>
+                <ID name="Obras" mc="Standard.Parameter" uid="0c19b586-9829-4509-9af9-efbda5811eb2"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -526,7 +526,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Nombre" mc="Standard.Parameter" uid="fb53622a-af03-4788-897a-7b5596d246e7"/>
+                <ID name="Nombre" mc="Standard.Parameter" uid="3ea5f6ee-3183-42b8-b357-707fe906507b"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -548,7 +548,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="foto" mc="Standard.Parameter" uid="e4bd5993-0bd9-4c3f-9edb-dbac7c137e77"/>
+                <ID name="foto" mc="Standard.Parameter" uid="dbd9ec89-a868-4468-b05a-2eb6346f876e"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -570,7 +570,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="coste" mc="Standard.Parameter" uid="4d0b445e-e206-43af-9e68-5a1de6c951e4"/>
+                <ID name="coste" mc="Standard.Parameter" uid="11ef8f21-e116-4273-b8c2-943521c916e6"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -592,7 +592,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="tarifa" mc="Standard.Parameter" uid="73154a9c-c4b6-45bd-aa84-b7ebcb8cb10d"/>
+                <ID name="tarifa" mc="Standard.Parameter" uid="ef40cfa5-ceaa-4b6a-87e3-683a56123a6b"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -614,7 +614,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="localizacion" mc="Standard.Parameter" uid="c95089f5-5bf2-41b5-9deb-345aae9ec5e8"/>
+                <ID name="localizacion" mc="Standard.Parameter" uid="1619b3f9-b4d0-4b6e-b5b0-ceb3a27c289b"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -636,7 +636,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="disponibilidad" mc="Standard.Parameter" uid="5cca5d1f-fe6c-4b7b-ab31-068336880efa"/>
+                <ID name="disponibilidad" mc="Standard.Parameter" uid="e7d81335-f12c-411c-9746-e11f92259504"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -658,7 +658,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="descripcion" mc="Standard.Parameter" uid="acd78f97-e442-4b74-81b7-c6eea7548547"/>
+                <ID name="descripcion" mc="Standard.Parameter" uid="633a2c58-1f82-492a-b2ef-e4a62543b7bc"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -685,7 +685,7 @@
             </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="e6a7efb5-82ed-4340-b6ff-6f5c3d792f0a"/>
+                <ID name="" mc="Infrastructure.Note" uid="1f4f5978-cfc7-4514-b73a-33d0d59b5c14"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -702,7 +702,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="delete" mc="Standard.Operation" uid="5967bb07-a6de-4002-950d-ec8fae9646e2"/>
+          <ID name="delete" mc="Standard.Operation" uid="d39a76c7-96f5-4618-bf78-c1c3782479c5"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -716,7 +716,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="Código" mc="Standard.Parameter" uid="ff3db5b1-ff64-4278-9913-e661d5accfd6"/>
+                <ID name="Código" mc="Standard.Parameter" uid="9cebd611-da07-4efd-9443-71fb582f02b5"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -743,7 +743,7 @@
             </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="bf1f7db7-bb08-42a4-89d7-7bfe70e6947c"/>
+                <ID name="" mc="Infrastructure.Note" uid="5db4d0fc-3b8c-4f6b-bb48-b1a3f8a9e3ed"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -760,7 +760,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="altaReserva" mc="Standard.Operation" uid="41235e2d-834c-4fa6-bfc6-8de6d1548213"/>
+          <ID name="altaReserva" mc="Standard.Operation" uid="be866833-841a-4ee1-81ec-0e718f482ba6"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -774,7 +774,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="Codigo" mc="Standard.Parameter" uid="d77f718a-5f60-4acb-a304-1eab177a0319"/>
+                <ID name="Codigo" mc="Standard.Parameter" uid="232b83f3-ed36-4365-b9f8-bfdebf8d92f5"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -796,7 +796,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Cantidad" mc="Standard.Parameter" uid="5fd7b186-86d5-4ed8-a29d-953ff21f8122"/>
+                <ID name="Cantidad" mc="Standard.Parameter" uid="8d6772aa-ead6-4f54-99e0-b8afd8959b67"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -818,7 +818,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="Importe" mc="Standard.Parameter" uid="c55a0fbe-387e-48ef-b0a1-951f48c3423a"/>
+                <ID name="Importe" mc="Standard.Parameter" uid="59cb97de-5664-4e94-ba8c-d4d4e69866f6"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -840,7 +840,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="FechaIni" mc="Standard.Parameter" uid="96db34bd-7045-4350-80b1-cc39e4ab292b"/>
+                <ID name="FechaIni" mc="Standard.Parameter" uid="9520249d-32c8-4035-ae67-aa1b6e3b5524"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -862,7 +862,7 @@
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="FechaFin" mc="Standard.Parameter" uid="c027e091-2d5b-43dc-87da-068a2d7ef44b"/>
+                <ID name="FechaFin" mc="Standard.Parameter" uid="16d53cd3-5c36-49f3-af70-80ceb29600ba"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -890,7 +890,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="deleteReserva" mc="Standard.Operation" uid="50820dd6-0093-4afd-a6dd-3351700038ec"/>
+          <ID name="deleteReserva" mc="Standard.Operation" uid="92f2516a-f3ca-48c8-969a-bd290a5dcf64"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -904,7 +904,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="Codigo" mc="Standard.Parameter" uid="2826498e-f434-4085-8aed-d58504212462"/>
+                <ID name="Codigo" mc="Standard.Parameter" uid="b1e7a370-fda3-4a26-b5ce-27aeb3b8bc05"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -934,7 +934,7 @@
       </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="empVestimenta" mc="Standard.AssociationEnd" uid="165d9c87-ad15-4d5e-aaca-40564716ec00"/>
+          <ID name="empVestimenta" mc="Standard.AssociationEnd" uid="aad1ebf1-7e87-47e4-89a4-a1f8690e7b54"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAggregation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -952,11 +952,11 @@
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="EmpVestimenta" mc="Standard.Class" uid="9ff5a8eb-2e9b-46f3-8636-793cff4f2081"/>
+              <ID name="EmpVestimenta" mc="Standard.Class" uid="39052527-673a-4813-bfce-77941f395776"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="a6d3f0d6-0faf-4bde-a81b-5f5975c5f27e"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="cf5be7a4-3947-450d-b9bc-0dbc150b62fc"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -974,11 +974,11 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="empVestimenta" mc="Standard.AssociationEnd" uid="165d9c87-ad15-4d5e-aaca-40564716ec00"/>
+                    <COMPID name="empVestimenta" mc="Standard.AssociationEnd" uid="aad1ebf1-7e87-47e4-89a4-a1f8690e7b54"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="73445d1f-c7d7-4899-ae9e-0fbeabb04ce1"/>
+                      <ID name="" mc="Standard.Association" uid="e04eee22-1001-4d5b-93f8-34536a3994dc"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -990,12 +990,12 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="73445d1f-c7d7-4899-ae9e-0fbeabb04ce1"/>
+              <COMPID name="" mc="Standard.Association" uid="e04eee22-1001-4d5b-93f8-34536a3994dc"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="vestimenta" mc="Standard.AssociationEnd" uid="db0cca4b-61e8-449c-8a01-34285a55b04c"/>
+          <ID name="vestimenta" mc="Standard.AssociationEnd" uid="882ccadb-5de5-498a-9b8b-fc57c186a0b9"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAggregation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -1013,11 +1013,11 @@
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="Vestimenta" mc="Standard.Class" uid="09d447c3-d03e-40e8-acc1-d4b138e05e18"/>
+              <ID name="Vestimenta" mc="Standard.Class" uid="611cdd08-30ba-42ad-8350-42ef960ef092"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="c95fe05c-b076-4a1b-944e-77302a90a6ed"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="4fa8a0e9-08a5-4783-8b3c-18705148a4f6"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -1035,11 +1035,11 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="vestimenta" mc="Standard.AssociationEnd" uid="db0cca4b-61e8-449c-8a01-34285a55b04c"/>
+                    <COMPID name="vestimenta" mc="Standard.AssociationEnd" uid="882ccadb-5de5-498a-9b8b-fc57c186a0b9"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="ce8596d2-ff07-45e4-aa95-dca8217276bc"/>
+                      <ID name="" mc="Standard.Association" uid="f59a8037-b4da-4629-941f-ce1a9660dd48"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -1049,7 +1049,7 @@
                   </COMP>
                   <COMP relation="Descriptor">
                     <OBJECT>
-                      <ID name="" mc="Infrastructure.Note" uid="7f407b8f-7098-47ae-8adc-0a6feecc4f43"/>
+                      <ID name="" mc="Infrastructure.Note" uid="eaa4e66a-84fd-4025-9aae-bdf8afe59bc3"/>
                       <ATTRIBUTES>
                         <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
                         <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -1067,7 +1067,7 @@
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="ce8596d2-ff07-45e4-aa95-dca8217276bc"/>
+              <COMPID name="" mc="Standard.Association" uid="f59a8037-b4da-4629-941f-ce1a9660dd48"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>

@@ -1,35 +1,35 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DAOVestimenta" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DAOSolicitudCobro" version="4">
   <OBJECT>
-    <ID name="DAOVestimenta" mc="Standard.Interface" uid="62f5808b-809e-49d9-9032-684d6a4140d9"/>
-    <PID name="Diagrama de 3 capas" mc="Standard.Package" uid="7d77af5a-b816-4fd2-9983-f9ddf0ff2373"/>
+    <ID name="DAOSolicitudCobro" mc="Standard.Interface" uid="c4ab80c8-7e35-4be0-b9af-d025527be556"/>
+    <PID name="Diagrama de 3 capas" mc="Standard.Package" uid="d6a582b8-0eb7-4175-b5ac-e01837b6448e"/>
     <ATTRIBUTES>
       <ATT name="IsElementary">false</ATT>
       <ATT name="IsAbstract">true</ATT>
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[DAOVestimenta]]></ATT>
+      <ATT name="Name"><![CDATA[DAOSolicitudCobro]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="altaVestimenta" mc="Standard.Operation" uid="3678c6d3-d5e5-471d-a9a7-4e3ed0133adc"/>
+          <ID name="AñadirSolicitud" mc="Standard.Operation" uid="e8648437-167a-4c98-b3a1-5c82d815e923"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
             <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">true</ATT>
-            <ATT name="Name"><![CDATA[altaVestimenta]]></ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[AñadirSolicitud]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="Prenda" mc="Standard.Parameter" uid="5297ad66-e677-43f9-90a8-3a3da6cb7b86"/>
+                <ID name="Cobro" mc="Standard.Parameter" uid="4bab836b-1b6f-4d3c-bc02-dfdd6c85ae35"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -41,12 +41,12 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[Prenda]]></ATT>
+                  <ATT name="Name"><![CDATA[Cobro]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferVestimenta" mc="Standard.Class" uid="340498ec-e6b9-4abf-98d5-39b1d0866739"/>
+                    <ID name="TransferSolitudCobro" mc="Standard.Class" uid="518ead6b-38fd-4b42-b929-3563ca6eef18"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -54,7 +54,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="bajaPrenda" mc="Standard.Operation" uid="ef1e09d5-cada-4883-ba65-47ac59aba82b"/>
+          <ID name="ConsultarEstadoCobro" mc="Standard.Operation" uid="401a1dd2-c497-4f06-bf2d-7c4c426112b7"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -62,13 +62,13 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[bajaPrenda]]></ATT>
+            <ATT name="Name"><![CDATA[ConsultarEstadoCobro]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="codigo" mc="Standard.Parameter" uid="e5355f23-faee-41ba-b75f-d14202e7036e"/>
+                <ID name="estado" mc="Standard.Parameter" uid="9538d126-3492-456b-a9af-d400ff887302"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -80,36 +80,28 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[codigo]]></ATT>
+                  <ATT name="Name"><![CDATA[estado]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                    <ID name="TransferSolitudCobro" mc="Standard.Class" uid="518ead6b-38fd-4b42-b929-3563ca6eef18"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
-            <COMP relation="Return">
+            <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="p2" mc="Standard.Parameter" uid="7ee86d04-c29f-472e-855c-d33b12228965"/>
+                <ID name="" mc="Infrastructure.Note" uid="11360fcb-60b9-4798-8e4d-0d12ac42ad8a"/>
                 <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[p2]]></ATT>
+                  <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="boolean" mc="Standard.DataType" uid="00000004-0000-0005-0000-000000000000"/>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>

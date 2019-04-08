@@ -1,21 +1,23 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DAOReserva" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="DAOReservaImp" version="4">
   <OBJECT>
-    <ID name="DAOReserva" mc="Standard.Interface" uid="8d70f6e7-2d2a-489c-89ef-2aab4bb2916f"/>
-    <PID name="Diagrama de 3 capas" mc="Standard.Package" uid="7d77af5a-b816-4fd2-9983-f9ddf0ff2373"/>
+    <ID name="DAOReservaImp" mc="Standard.Class" uid="81e02bef-a429-4e68-b9c5-6ee87b83ebfe"/>
+    <PID name="Diagrama de 3 capas" mc="Standard.Package" uid="d6a582b8-0eb7-4175-b5ac-e01837b6448e"/>
     <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
       <ATT name="IsElementary">false</ATT>
-      <ATT name="IsAbstract">true</ATT>
+      <ATT name="IsAbstract">false</ATT>
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[DAOReserva]]></ATT>
+      <ATT name="Name"><![CDATA[DAOReservaImp]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="AltaReserva" mc="Standard.Operation" uid="19693d61-94bd-4927-aca2-0e2fea6d3341"/>
+          <ID name="AltaReserva" mc="Standard.Operation" uid="d41390b7-9809-43b4-8bb2-a46e16665831"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -29,7 +31,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="reserva" mc="Standard.Parameter" uid="e99c2c0f-9396-4884-aa5d-e076c95b6ba6"/>
+                <ID name="reserva" mc="Standard.Parameter" uid="030d3f9b-ee98-4d2f-b602-f2b44d6178aa"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -46,15 +48,20 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferReserva" mc="Standard.Class" uid="98abfb63-947a-4aee-9f36-f06027094117"/>
+                    <ID name="TransferReserva" mc="Standard.Class" uid="36c86299-7488-43b5-9263-b2a15ebaf4d0"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
+            <LINK relation="Redefines">
+              <REFOBJ>
+                <ID name="AltaReserva" mc="Standard.Operation" uid="285248b8-d1d2-4462-870b-5fbe72a493f2"/>
+              </REFOBJ>
+            </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="AnularReserva" mc="Standard.Operation" uid="ac5eaf88-270a-480c-9ca6-a4b00417ea1c"/>
+          <ID name="AnularReserva" mc="Standard.Operation" uid="18239456-bf92-4ba3-99ad-abd871a0cf2a"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -68,7 +75,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="IDReserva" mc="Standard.Parameter" uid="5767447f-87a6-4d97-9c1f-abb1d90aab6d"/>
+                <ID name="IDReserva" mc="Standard.Parameter" uid="039848ac-5c87-476f-93c1-95948319ace6"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -92,9 +99,9 @@
             </COMP>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="p2" mc="Standard.Parameter" uid="854e1efd-eb1d-4183-96a8-5eda0fd2aa99"/>
+                <ID name="" mc="Standard.Parameter" uid="0e431eea-501e-47b3-84c1-ab54f296f891"/>
                 <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="ParameterPassing">Out</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
                   <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
                   <ATT name="TypeConstraint"></ATT>
@@ -104,7 +111,7 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[p2]]></ATT>
+                  <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -114,10 +121,15 @@
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
+            <LINK relation="Redefines">
+              <REFOBJ>
+                <ID name="AnularReserva" mc="Standard.Operation" uid="cd35b11b-be6c-4198-a2ec-ed5cca9ce2f1"/>
+              </REFOBJ>
+            </LINK>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="ModificarReserva" mc="Standard.Operation" uid="d75af577-e563-47c7-8ca8-4ea83e9ca6b4"/>
+          <ID name="ModificarReserva" mc="Standard.Operation" uid="ac680f79-35e3-4cab-9e48-14904dafefef"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -131,7 +143,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="reserva" mc="Standard.Parameter" uid="2da959e1-7143-4a07-8a89-dbd227f5437a"/>
+                <ID name="reserva" mc="Standard.Parameter" uid="8cc60697-727b-4405-aa10-1aea28d10ac8"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -148,14 +160,19 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="TransferReserva" mc="Standard.Class" uid="98abfb63-947a-4aee-9f36-f06027094117"/>
+                    <ID name="TransferReserva" mc="Standard.Class" uid="36c86299-7488-43b5-9263-b2a15ebaf4d0"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
+            <LINK relation="Redefines">
+              <REFOBJ>
+                <ID name="ModificarReserva" mc="Standard.Operation" uid="aef6c549-cdd0-4069-b343-ac741f4d2de6"/>
+              </REFOBJ>
+            </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="539c0155-49b7-4ede-8d40-9c0ce07a386c"/>
+                <ID name="" mc="Infrastructure.Note" uid="38a6ec7a-09b8-4974-87f2-38ec1084fc5a"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -172,9 +189,37 @@
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
+      <COMP relation="Realized">
+        <OBJECT>
+          <ID name="InterfaceRealization" mc="Standard.InterfaceRealization" uid="c66d8aea-e162-48e4-8935-2c10beeedfc2"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[InterfaceRealization]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Implemented">
+              <ID name="DAOReserva" mc="Standard.Interface" uid="1dd1ae39-1a40-4cf7-99c8-02fe4afadb3a"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
       <LINK relation="Extension">
-        <FOREIGNID name="JavaInterface" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0267-0000-000000000000"/>
+        <FOREIGNID name="JavaClass" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
       </LINK>
+      <COMP relation="DependsOnDependency">
+        <OBJECT>
+          <ID name="" mc="Standard.Usage" uid="07193429-273c-44d3-87d0-3aa3b02dc367"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="DependsOn">
+              <ID name="TransferReserva" mc="Standard.Class" uid="36c86299-7488-43b5-9263-b2a15ebaf4d0"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
     </DEPENDENCIES>
   </OBJECT>
 </EXT>
