@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Usuario" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Cliente" version="4">
   <OBJECT>
-    <ID name="Usuario" mc="Standard.Class" uid="2e8a9e93-134c-466f-8675-aa262820aade"/>
-    <PID name="subsistema SGRA" mc="Standard.Package" uid="db73b9ff-3e6d-4762-8330-8283ad6b10e7"/>
+    <ID name="Cliente" mc="Standard.Class" uid="6bf86efe-db5f-4f04-ab44-1556bac37a13"/>
+    <PID name="Subsistema gestion de recursos audiovisuales" mc="Standard.Package" uid="db73b9ff-3e6d-4762-8330-8283ad6b10e7"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -11,74 +11,13 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[Usuario]]></ATT>
+      <ATT name="Name"><![CDATA[Cliente]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
-      <COMP relation="OwnedOperation">
-        <OBJECT>
-          <ID name="setProyectos" mc="Standard.Operation" uid="ad24b229-470d-4df3-b4e3-17221faf28ac"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">PackageVisibility</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[setProyectos]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="IO">
-              <OBJECT>
-                <ID name="value" mc="Standard.Parameter" uid="b9c619a8-a7e1-49dc-9186-ef9fe354dc7c"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[value]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <LINK relation="Extension">
-              <FOREIGNID name="JavaSetter" mc="Infrastructure.Stereotype" uid="01ec25e8-0000-00f5-0000-000000000000"/>
-            </LINK>
-            <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="9a1d9e26-f503-4180-a6a4-432aa3b080cb"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.
-this.proyectos = value;]]></ATT>
-                  <ATT name="MimeType"></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaCode" mc="Infrastructure.NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-      </COMP>
       <COMP relation="OwnedAttribute">
         <OBJECT>
-          <ID name="idUsuario" mc="Standard.Attribute" uid="51f41220-3eaf-41b7-a792-a5bb2f21a57e"/>
+          <ID name="idUsuario" mc="Standard.Attribute" uid="e2fe8e6c-6076-4f0e-ab96-42e554975bb2"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -89,7 +28,7 @@ this.proyectos = value;]]></ATT>
             <ATT name="IsUnique">false</ATT>
             <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
             <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-            <ATT name="Visibility">Private</ATT>
+            <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
             <ATT name="Name"><![CDATA[idUsuario]]></ATT>
@@ -97,14 +36,14 @@ this.proyectos = value;]]></ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Type">
-              <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
+              <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="proyectos" mc="Standard.AssociationEnd" uid="b9d5629f-5baf-4fbd-89cf-c907a92b6aca"/>
+          <ID name="proyecto" mc="Standard.AssociationEnd" uid="2bbc173c-ce2e-4cd8-9689-603f32bc4752"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAggregation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -112,12 +51,12 @@ this.proyectos = value;]]></ATT>
             <ATT name="IsDerived">false</ATT>
             <ATT name="IsOrdered">false</ATT>
             <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
-            <ATT name="Visibility">Private</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1 *]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1 *]]></ATT>
+            <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[proyectos]]></ATT>
+            <ATT name="Name"><![CDATA[proyecto]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -126,7 +65,7 @@ this.proyectos = value;]]></ATT>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="901ee20d-4058-4cdf-adc4-7fcc17fd474c"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="b64e9d51-d17f-4f87-b728-b56a83c426e3"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -134,8 +73,8 @@ this.proyectos = value;]]></ATT>
                   <ATT name="IsDerived">false</ATT>
                   <ATT name="IsOrdered">false</ATT>
                   <ATT name="IsUnique">false</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1 *]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1 *]]></ATT>
                   <ATT name="Visibility">Public</ATT>
                   <ATT name="IsClass">false</ATT>
                   <ATT name="IsAbstract">false</ATT>
@@ -144,11 +83,11 @@ this.proyectos = value;]]></ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="proyectos" mc="Standard.AssociationEnd" uid="b9d5629f-5baf-4fbd-89cf-c907a92b6aca"/>
+                    <COMPID name="proyecto" mc="Standard.AssociationEnd" uid="2bbc173c-ce2e-4cd8-9689-603f32bc4752"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="f68bc0e2-7b2e-485d-8052-567185de8ce4"/>
+                      <ID name="" mc="Standard.Association" uid="0951154b-8d68-4991-8b6a-45c0258f0feb"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -160,12 +99,12 @@ this.proyectos = value;]]></ATT>
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="f68bc0e2-7b2e-485d-8052-567185de8ce4"/>
+              <COMPID name="" mc="Standard.Association" uid="0951154b-8d68-4991-8b6a-45c0258f0feb"/>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="compras" mc="Standard.AssociationEnd" uid="538d17d7-d81f-4536-a6f3-52eff6bcac78"/>
+          <ID name="compras" mc="Standard.AssociationEnd" uid="46c6ab7d-6de5-4f31-b2e3-70915bc12b57"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsComposition</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -173,9 +112,9 @@ this.proyectos = value;]]></ATT>
             <ATT name="IsDerived">false</ATT>
             <ATT name="IsOrdered">false</ATT>
             <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[1 *]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[1 *]]></ATT>
-            <ATT name="Visibility">Private</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+            <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
             <ATT name="Name"><![CDATA[compras]]></ATT>
@@ -187,7 +126,7 @@ this.proyectos = value;]]></ATT>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="08e40f98-13a9-415b-a081-3ab5342035ea"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="23e6112b-b450-4111-96d6-d07278cea6f0"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -205,11 +144,11 @@ this.proyectos = value;]]></ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="compras" mc="Standard.AssociationEnd" uid="538d17d7-d81f-4536-a6f3-52eff6bcac78"/>
+                    <COMPID name="compras" mc="Standard.AssociationEnd" uid="46c6ab7d-6de5-4f31-b2e3-70915bc12b57"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="8e96d3a3-f794-49a7-a317-2a08533e0c06"/>
+                      <ID name="" mc="Standard.Association" uid="a8d030ef-6bda-4c60-af18-e7bea5e92705"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -221,8 +160,23 @@ this.proyectos = value;]]></ATT>
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="8e96d3a3-f794-49a7-a317-2a08533e0c06"/>
+              <COMPID name="" mc="Standard.Association" uid="a8d030ef-6bda-4c60-af18-e7bea5e92705"/>
             </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Parent">
+        <OBJECT>
+          <ID name="Generalization" mc="Standard.Generalization" uid="e2e5ccd6-18ac-4be8-a7b8-62cda54f9662"/>
+          <ATTRIBUTES>
+            <ATT name="Discriminator"></ATT>
+            <ATT name="Name"><![CDATA[Generalization]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SuperType">
+              <ID name="Persona" mc="Standard.Class" uid="dafed00d-f5bd-44d1-929b-096dbecb7cb4"/>
+            </LINK>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
