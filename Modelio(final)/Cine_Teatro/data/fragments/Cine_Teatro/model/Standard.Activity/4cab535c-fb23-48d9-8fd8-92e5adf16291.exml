@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Diagrama de Actividad" version="4">
   <OBJECT>
-    <ID name="Diagrama de Actividad" mc="Standard.Activity" uid="91f02661-decd-4cfc-bd0a-4c4a2110538d"/>
-    <PID name="Contratación de publicidad" mc="Standard.UseCase" uid="ca90cedb-b6a8-4396-8778-0a9cd61a81ed"/>
+    <ID name="Diagrama de Actividad" mc="Standard.Activity" uid="4cab535c-fb23-48d9-8fd8-92e5adf16291"/>
+    <PID name="Contratación de publicidad" mc="Standard.UseCase" uid="981b28c9-d3c0-4372-a009-51955bf232d4"/>
     <ATTRIBUTES>
       <ATT name="IsSingleExecution">false</ATT>
       <ATT name="IsReadOnly">false</ATT>
@@ -13,7 +13,7 @@
     <DEPENDENCIES>
       <COMP relation="OwnedNode">
         <OBJECT>
-          <ID name="Initial Node" mc="Standard.InitialNode" uid="a7e477e6-6702-465c-bd59-4fcc6df53053"/>
+          <ID name="Initial Node" mc="Standard.InitialNode" uid="be6597f6-7fdd-4fc1-ba1e-6676207c7c94"/>
           <ATTRIBUTES>
             <ATT name="Name"><![CDATA[Initial Node]]></ATT>
             <ATT name="status">1970354901745664</ATT>
@@ -21,7 +21,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="b78cd480-2283-4ae0-8b96-3ec4507ee2f3"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="fb4577f9-cd64-4c7f-b388-622bf09f1789"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -31,7 +31,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Decision-Merge" mc="Standard.DecisionMergeNode" uid="0b939f92-5b0b-430f-ba3c-67118e6c213f"/>
+                      <ID name="Decision-Merge" mc="Standard.DecisionMergeNode" uid="a9a2634d-5a99-4e86-9c0a-31822888f37b"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -40,7 +40,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Decision-Merge" mc="Standard.DecisionMergeNode" uid="0b939f92-5b0b-430f-ba3c-67118e6c213f"/>
+          <ID name="Decision-Merge" mc="Standard.DecisionMergeNode" uid="a9a2634d-5a99-4e86-9c0a-31822888f37b"/>
           <ATTRIBUTES>
             <ATT name="DecisionKind">ExclusiveDecision</ATT>
             <ATT name="DecisionInputBehavior"></ATT>
@@ -50,7 +50,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="d6226d7d-0bbb-4cca-a51f-b4a6635a0de9"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="c5d10e04-5b45-4452-b746-8d06c52f6438"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[Elegida búsqueda por servicio]]></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -60,13 +60,13 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Búsqueda por servicio" mc="Standard.OpaqueAction" uid="5fc685ff-d5c1-4bcc-94c7-4b509a1c2cc5"/>
+                      <ID name="Búsqueda por servicio" mc="Standard.OpaqueAction" uid="10c79968-9240-47c2-92ac-14fbf985818d"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="4be68bdf-fb14-440c-b623-9581a4f05cca"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="e1b4605c-385a-4a40-8db5-6e72b62d035a"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[Elegida búsqueda por empresa]]></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -76,7 +76,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Búsqueda por empresa" mc="Standard.OpaqueAction" uid="602175bb-25dd-4979-8bf9-cfa03ff247e2"/>
+                      <ID name="Búsqueda por empresa" mc="Standard.OpaqueAction" uid="f4743b52-e4f1-4a18-92f1-7ea9668a5628"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -85,7 +85,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Búsqueda por empresa" mc="Standard.OpaqueAction" uid="602175bb-25dd-4979-8bf9-cfa03ff247e2"/>
+          <ID name="Búsqueda por empresa" mc="Standard.OpaqueAction" uid="f4743b52-e4f1-4a18-92f1-7ea9668a5628"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -96,7 +96,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="d8e95a32-2683-4ab0-befa-2209e8fbca21"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="563351a5-6a90-41be-9bd3-319e427f3b56"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -106,7 +106,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Introducción del nombre de empresa como parámetro de búsqueda" mc="Standard.OpaqueAction" uid="3f918458-5f1e-44bb-b139-b936d1ade7c2"/>
+                      <ID name="Introducción del nombre de empresa como parámetro de búsqueda" mc="Standard.OpaqueAction" uid="f4c09490-8032-48ce-b1d5-0ff76c65f23a"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -115,7 +115,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Introducción del nombre de servicio como parámetro de búsqueda" mc="Standard.OpaqueAction" uid="4b83e73a-8c69-4cb4-b725-5eeddde4d8fa"/>
+          <ID name="Introducción del nombre de servicio como parámetro de búsqueda" mc="Standard.OpaqueAction" uid="b0caff93-ee08-4ba2-8bea-7e9665247f81"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -126,7 +126,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="5183bbcc-137c-4faa-8cb6-b448a687cc43"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="b88cfc17-9749-4bc0-a8b6-0c90ff85525b"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -136,7 +136,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Fork/Join" mc="Standard.ForkJoinNode" uid="67bd52ac-15a1-472c-908a-d1cc18acbaa8"/>
+                      <ID name="Fork/Join" mc="Standard.ForkJoinNode" uid="5df5c47b-e7e7-4894-b2c8-31da0191b223"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -145,7 +145,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Introducción del nombre de empresa como parámetro de búsqueda" mc="Standard.OpaqueAction" uid="3f918458-5f1e-44bb-b139-b936d1ade7c2"/>
+          <ID name="Introducción del nombre de empresa como parámetro de búsqueda" mc="Standard.OpaqueAction" uid="f4c09490-8032-48ce-b1d5-0ff76c65f23a"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -156,7 +156,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="a4f604e8-126b-4ced-a81f-991302c21919"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="c61eb027-1f98-45b5-9a90-76c41aae067b"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -166,7 +166,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Fork/Join" mc="Standard.ForkJoinNode" uid="67bd52ac-15a1-472c-908a-d1cc18acbaa8"/>
+                      <ID name="Fork/Join" mc="Standard.ForkJoinNode" uid="5df5c47b-e7e7-4894-b2c8-31da0191b223"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -175,7 +175,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Búsqueda por servicio" mc="Standard.OpaqueAction" uid="5fc685ff-d5c1-4bcc-94c7-4b509a1c2cc5"/>
+          <ID name="Búsqueda por servicio" mc="Standard.OpaqueAction" uid="10c79968-9240-47c2-92ac-14fbf985818d"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -186,7 +186,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="4547e23e-4ec9-476e-9cdb-c78bf131274c"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="979d5633-3912-4730-a96e-45d8c74baac7"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -196,7 +196,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Introducción del nombre de servicio como parámetro de búsqueda" mc="Standard.OpaqueAction" uid="4b83e73a-8c69-4cb4-b725-5eeddde4d8fa"/>
+                      <ID name="Introducción del nombre de servicio como parámetro de búsqueda" mc="Standard.OpaqueAction" uid="b0caff93-ee08-4ba2-8bea-7e9665247f81"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -205,7 +205,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Fork/Join" mc="Standard.ForkJoinNode" uid="67bd52ac-15a1-472c-908a-d1cc18acbaa8"/>
+          <ID name="Fork/Join" mc="Standard.ForkJoinNode" uid="5df5c47b-e7e7-4894-b2c8-31da0191b223"/>
           <ATTRIBUTES>
             <ATT name="IsCombineDuplicate">true</ATT>
             <ATT name="JoinSpec"><![CDATA[and]]></ATT>
@@ -215,7 +215,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="6f7d50e6-5f71-44b2-8188-0d5abfeb345d"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="84b70bf3-4190-4bb2-9b95-86ec04f0f068"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -225,7 +225,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Mostrar resultados de búsqueda de acuerdo a los parámetros" mc="Standard.OpaqueAction" uid="64431504-c825-4270-b432-69205194eb48"/>
+                      <ID name="Mostrar resultados de búsqueda de acuerdo a los parámetros" mc="Standard.OpaqueAction" uid="3f758407-8fdb-410c-8777-5b37f717621f"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -234,7 +234,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Mostrar resultados de búsqueda de acuerdo a los parámetros" mc="Standard.OpaqueAction" uid="64431504-c825-4270-b432-69205194eb48"/>
+          <ID name="Mostrar resultados de búsqueda de acuerdo a los parámetros" mc="Standard.OpaqueAction" uid="3f758407-8fdb-410c-8777-5b37f717621f"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -245,7 +245,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="d327aa56-ec51-48a4-943a-0cf1f3b60420"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="31fc8220-0791-4a84-978c-c0f1c006ba1f"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -255,7 +255,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Decision-Merge1" mc="Standard.DecisionMergeNode" uid="f1064c59-3c64-405e-a4ed-07a3d153c9eb"/>
+                      <ID name="Decision-Merge1" mc="Standard.DecisionMergeNode" uid="599ac788-995a-4da5-8922-f71da93192a2"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -264,7 +264,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Contactar con la empresa" mc="Standard.OpaqueAction" uid="49ae3f1c-2a4c-4f83-92c9-44894762b739"/>
+          <ID name="Contactar con la empresa" mc="Standard.OpaqueAction" uid="75fb5d7a-d3a7-4564-8f26-92c2648dd4e6"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -275,7 +275,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="e23d8045-3a1b-4826-b99b-169d9bdd284a"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="49de36e4-adeb-4d69-9021-560a60fad4b7"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -285,7 +285,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Fork/Join1" mc="Standard.ForkJoinNode" uid="8f1132f6-da36-4a81-8f8a-e9067e0b0ced"/>
+                      <ID name="Fork/Join1" mc="Standard.ForkJoinNode" uid="f2e12459-96e8-4663-8846-5744b7a99b1a"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -294,7 +294,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Decision-Merge1" mc="Standard.DecisionMergeNode" uid="f1064c59-3c64-405e-a4ed-07a3d153c9eb"/>
+          <ID name="Decision-Merge1" mc="Standard.DecisionMergeNode" uid="599ac788-995a-4da5-8922-f71da93192a2"/>
           <ATTRIBUTES>
             <ATT name="DecisionKind">ExclusiveDecision</ATT>
             <ATT name="DecisionInputBehavior"></ATT>
@@ -304,7 +304,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="09ba128b-a56e-4be2-8fb9-a9d17fc614af"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="b22bba40-89f0-4f58-ad90-0f9a2cb6ec00"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[Elegida opción de contratación]]></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -314,13 +314,13 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Contactar con la empresa" mc="Standard.OpaqueAction" uid="49ae3f1c-2a4c-4f83-92c9-44894762b739"/>
+                      <ID name="Contactar con la empresa" mc="Standard.OpaqueAction" uid="75fb5d7a-d3a7-4564-8f26-92c2648dd4e6"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="cf1e1d33-e735-41a5-8c0c-44fdc6664e8e"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="6964fd50-d370-43d7-8551-dc325c02db19"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[Volver a mostrar los datos de búsqueda]]></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -330,13 +330,13 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Fork/Join" mc="Standard.ForkJoinNode" uid="67bd52ac-15a1-472c-908a-d1cc18acbaa8"/>
+                      <ID name="Fork/Join" mc="Standard.ForkJoinNode" uid="5df5c47b-e7e7-4894-b2c8-31da0191b223"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="27604488-2a43-471e-aaa6-1b98b01b5a7e"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="1c4d2576-be98-491d-8a8d-771748a9cbd7"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"><![CDATA[Terminar ejecución]]></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -346,7 +346,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="b1d2fdc0-c5c1-4a6a-adea-165f401c8290"/>
+                      <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="f52efebd-253d-4663-8606-8767fa7c66d4"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -355,7 +355,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="b1d2fdc0-c5c1-4a6a-adea-165f401c8290"/>
+          <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="f52efebd-253d-4663-8606-8767fa7c66d4"/>
           <ATTRIBUTES>
             <ATT name="Name"><![CDATA[Activity Final Node]]></ATT>
             <ATT name="status">1970354901745664</ATT>
@@ -363,7 +363,7 @@
           <DEPENDENCIES></DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Fork/Join1" mc="Standard.ForkJoinNode" uid="8f1132f6-da36-4a81-8f8a-e9067e0b0ced"/>
+          <ID name="Fork/Join1" mc="Standard.ForkJoinNode" uid="f2e12459-96e8-4663-8846-5744b7a99b1a"/>
           <ATTRIBUTES>
             <ATT name="IsCombineDuplicate">true</ATT>
             <ATT name="JoinSpec"><![CDATA[and]]></ATT>
@@ -373,7 +373,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="c17acf09-8cae-4779-8395-8083b606cc26"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="8bc05201-29e9-4f13-8479-2069521d0406"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -383,13 +383,13 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Enviar SMS" mc="Standard.OpaqueAction" uid="c5511256-1d75-425b-8e88-95a574872f2f"/>
+                      <ID name="Enviar SMS" mc="Standard.OpaqueAction" uid="60f98e1e-4597-4ac7-baaf-3e1b0bbd493e"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="8ea6ad10-1a10-4698-ba60-bf31ab253d15"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="c45d2a28-f857-4f2a-b17c-3cd596a75b29"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -399,7 +399,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Envir eMail" mc="Standard.OpaqueAction" uid="758ce898-18d0-4937-b7c7-c7cafe8afe4d"/>
+                      <ID name="Envir eMail" mc="Standard.OpaqueAction" uid="767845f1-4fa2-4a1f-b18f-703ba3fd64b8"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -408,7 +408,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Enviar SMS" mc="Standard.OpaqueAction" uid="c5511256-1d75-425b-8e88-95a574872f2f"/>
+          <ID name="Enviar SMS" mc="Standard.OpaqueAction" uid="60f98e1e-4597-4ac7-baaf-3e1b0bbd493e"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -419,7 +419,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="18151f07-c243-4898-9973-451b2aa552b4"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="3a5c5824-414b-461f-8b33-d0325d02df2f"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -429,7 +429,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Fork/Join2" mc="Standard.ForkJoinNode" uid="bba25f2a-0276-4f16-9f63-ab300c4b555d"/>
+                      <ID name="Fork/Join2" mc="Standard.ForkJoinNode" uid="35c5564f-5f92-4805-9298-1e89086101e6"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -438,7 +438,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Envir eMail" mc="Standard.OpaqueAction" uid="758ce898-18d0-4937-b7c7-c7cafe8afe4d"/>
+          <ID name="Envir eMail" mc="Standard.OpaqueAction" uid="767845f1-4fa2-4a1f-b18f-703ba3fd64b8"/>
           <ATTRIBUTES>
             <ATT name="Body"></ATT>
             <ATT name="IsMultipleInstance">false</ATT>
@@ -449,7 +449,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="d4b5c7d6-acd2-4a85-b291-f8dbfbc4c74e"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="06415d3b-0cbb-4cd5-bf88-ca0bfb1d02d4"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -459,7 +459,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Fork/Join2" mc="Standard.ForkJoinNode" uid="bba25f2a-0276-4f16-9f63-ab300c4b555d"/>
+                      <ID name="Fork/Join2" mc="Standard.ForkJoinNode" uid="35c5564f-5f92-4805-9298-1e89086101e6"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -468,7 +468,7 @@
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="Fork/Join2" mc="Standard.ForkJoinNode" uid="bba25f2a-0276-4f16-9f63-ab300c4b555d"/>
+          <ID name="Fork/Join2" mc="Standard.ForkJoinNode" uid="35c5564f-5f92-4805-9298-1e89086101e6"/>
           <ATTRIBUTES>
             <ATT name="IsCombineDuplicate">true</ATT>
             <ATT name="JoinSpec"><![CDATA[and]]></ATT>
@@ -478,7 +478,7 @@
           <DEPENDENCIES>
             <COMP relation="Outgoing">
               <OBJECT>
-                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="d26ade40-78da-4b25-83b0-439e9628e505"/>
+                <ID name="ControlFlow" mc="Standard.ControlFlow" uid="5281ecf5-346e-4322-88bf-4767de3a1b5f"/>
                 <ATTRIBUTES>
                   <ATT name="Guard"></ATT>
                   <ATT name="Weight"><![CDATA[1]]></ATT>
@@ -488,7 +488,7 @@
                 <DEPENDENCIES>
                   <LINK relation="Target">
                     <REFOBJ>
-                      <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="b1d2fdc0-c5c1-4a6a-adea-165f401c8290"/>
+                      <ID name="Activity Final Node" mc="Standard.ActivityFinalNode" uid="f52efebd-253d-4663-8606-8767fa7c66d4"/>
                     </REFOBJ>
                   </LINK>
                 </DEPENDENCIES>
@@ -499,7 +499,7 @@
       </COMP>
       <COMP relation="OwnedCollaboration">
         <OBJECT>
-          <ID name="locals" mc="Standard.Collaboration" uid="b9b0449c-a200-4a0f-93be-c96ccd319080"/>
+          <ID name="locals" mc="Standard.Collaboration" uid="77d41090-2008-4d40-9bdf-c2079ad8d6a7"/>
           <ATTRIBUTES>
             <ATT name="IsConcurrent">false</ATT>
             <ATT name="IsAbstract">false</ATT>
@@ -513,7 +513,7 @@
         </OBJECT>
       </COMP>
       <COMP relation="Product">
-        <COMPID name="Diagrama de Actividad de Contratacion de Publicidad" mc="Standard.ActivityDiagram" uid="614518dc-b986-4b3e-b2b9-f9b14dd9c408"/>
+        <COMPID name="Diagrama de Actividad de Contratacion de Publicidad" mc="Standard.ActivityDiagram" uid="c6a37e9c-fe24-4132-b71f-424543269e4a"/>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>
