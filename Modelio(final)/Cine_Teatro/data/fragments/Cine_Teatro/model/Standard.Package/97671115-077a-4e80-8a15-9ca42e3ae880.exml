@@ -1,0 +1,133 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Diagrama clases subsistema transporte" version="4">
+  <OBJECT>
+    <ID name="Diagrama clases subsistema transporte" mc="Standard.Package" uid="97671115-077a-4e80-8a15-9ca42e3ae880"/>
+    <PID name="Subsistema Transporte" mc="Standard.Package" uid="74292e0e-1dd1-4888-9abc-4bdaa02bbec9"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Diagrama clases subsistema transporte]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Viaje" mc="Standard.Class" uid="3caef164-5a35-4f5d-bee0-be38df514039"/>
+        <OBJECT>
+          <ID name="Medio" mc="Standard.Enumeration" uid="9758203e-3f86-4f8c-95be-3dd7f7b6f6db"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[Medio]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Value">
+              <OBJECT>
+                <ID name="avion" mc="Standard.EnumerationLiteral" uid="c570c7fd-07eb-4c69-8b60-ef65aa885601"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[avion]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="autobus" mc="Standard.EnumerationLiteral" uid="1c51b726-2f72-4edf-aeff-0872ca00bf38"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[autobus]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="tren" mc="Standard.EnumerationLiteral" uid="ccd7c60d-8baa-4011-9457-ea7797b636a5"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[tren]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaEnumeration" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="f7f57408-0b71-4b4d-86da-92857639283d"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[<Enter note text here>]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Clase" mc="Standard.Enumeration" uid="d7b94799-9bcb-4f1d-926d-3e101bd48a1d"/>
+          <ATTRIBUTES>
+            <ATT name="IsElementary">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="IsLeaf">false</ATT>
+            <ATT name="IsRoot">false</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="Name"><![CDATA[Clase]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Value">
+              <OBJECT>
+                <ID name="economica" mc="Standard.EnumerationLiteral" uid="00862a25-a6f4-4971-933e-af1f20a226ae"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[economica]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="business" mc="Standard.EnumerationLiteral" uid="c81a1e65-171a-44f3-94d4-a624a738f2d5"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[business]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="vip" mc="Standard.EnumerationLiteral" uid="95f6899e-dfe7-4575-b57c-5986809faa7c"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"><![CDATA[vip]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaEnumeration" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0262-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <COMPID name="Persona" mc="Standard.Class" uid="993941a9-52b7-4783-85a6-628bbbd404e2"/>
+        <COMPID name="ReservaBillete" mc="Standard.Class" uid="10b29cda-3613-4172-8eb6-80ae0dd186cb"/>
+        <COMPID name="GestionReserva" mc="Standard.Class" uid="a8305687-19e1-4ce5-b72f-2a3db2ec99de"/>
+        <COMPID name="DatosBancarios" mc="Standard.Class" uid="40196f34-4dbe-4b4e-bac4-e87df7194861"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Product">
+        <COMPID name="Diagrama clases subsistema transporte" mc="Standard.ClassDiagram" uid="d2a8d5d5-981d-49ad-b92f-54b8891639ab"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
