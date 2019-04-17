@@ -1,4 +1,6 @@
-package presentacion.vistas.subsistemasGUI;
+package presentacion.vistas.subsistemasGUI.transporte;
+
+import presentacion.vistas.subsistemasGUI.GUI;
 
 public class TransporteImpGUI implements GUI {
     public static final int CODE = 2;

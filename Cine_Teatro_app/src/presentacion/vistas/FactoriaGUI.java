@@ -1,6 +1,14 @@
 package presentacion.vistas;
 
-import presentacion.vistas.subsistemasGUI.*;
+import presentacion.vistas.subsistemasGUI.GUI;
+import presentacion.vistas.subsistemasGUI.actores.MainActoresImpGUI;
+import presentacion.vistas.subsistemasGUI.audiovisuales.AudiovisualesImpGUI;
+import presentacion.vistas.subsistemasGUI.catering.CateringImpGUI;
+import presentacion.vistas.subsistemasGUI.obras.ObrasImpGUI;
+import presentacion.vistas.subsistemasGUI.publicidad.PublicidadImpGUI;
+import presentacion.vistas.subsistemasGUI.reserva.ReservaImpGUI;
+import presentacion.vistas.subsistemasGUI.transporte.TransporteImpGUI;
+import presentacion.vistas.subsistemasGUI.vestimenta.VestimentaImpGUI;
 
 public class FactoriaGUI {
 
@@ -25,8 +33,8 @@ public class FactoriaGUI {
             case ObrasImpGUI.CODE:
                 gui = new ObrasImpGUI();
                 break;
-            case ActoresImpGUI.CODE:
-                gui = new ActoresImpGUI();
+            case MainActoresImpGUI.CODE:
+                gui = new MainActoresImpGUI();
                 break;
             case AudiovisualesImpGUI.CODE:
                 gui = new AudiovisualesImpGUI();

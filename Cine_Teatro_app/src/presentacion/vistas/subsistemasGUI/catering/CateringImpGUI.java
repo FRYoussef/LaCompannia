@@ -1,4 +1,6 @@
-package presentacion.vistas.subsistemasGUI;
+package presentacion.vistas.subsistemasGUI.catering;
+
+import presentacion.vistas.subsistemasGUI.GUI;
 
 public class CateringImpGUI implements GUI {
     public static final int CODE = 3;

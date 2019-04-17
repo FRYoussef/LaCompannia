@@ -1,4 +1,6 @@
-package presentacion.vistas.subsistemasGUI;
+package presentacion.vistas.subsistemasGUI.reserva;
+
+import presentacion.vistas.subsistemasGUI.GUI;
 
 public class ReservaImpGUI implements GUI {
     public static final int CODE = 0;
