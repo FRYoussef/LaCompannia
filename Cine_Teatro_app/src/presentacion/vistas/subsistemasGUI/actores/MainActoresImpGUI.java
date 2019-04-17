@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import presentacion.controladores.actores.Inicializador;
 import presentacion.vistas.subsistemasGUI.GUI;
 
 import java.io.IOException;
@@ -42,12 +43,17 @@ public class MainActoresImpGUI implements GUI {
     /**
      * Cambia la pantalla actual a otra que se le pase
      * @param pantalla ruta del fxml
+     * @param controlador controlador de la pantalla
      */
-    public void cambiaPantalla(String pantalla) {
-        AnchorPane root = null;
+    public void cambiaPantalla(String pantalla, Inicializador controlador) {
+        Stage primaryStage = getStage();
         try {
-            root = FXMLLoader.load(getClass().getResource(pantalla));
-            Scene scene = new Scene(root);
+            AnchorPane root = new AnchorPane();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(pantalla));
+            fxmlLoader.setRoot(root);
+            fxmlLoader.setController(controlador);
+            Scene scene = new Scene(fxmlLoader.load());
+            controlador.iniciar();
             primaryStage.setTitle("");
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
