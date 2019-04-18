@@ -7,9 +7,19 @@ public class Bundle {
     public static final int OBRA = 3;
 
     private int contexto = -1;
+    private Object obj = null;
 
     public Bundle(int contexto) {
         this.contexto = contexto;
+    }
+
+    public Bundle(int contexto, Object obj) {
+        this.contexto = contexto;
+        this.obj = obj;
+    }
+
+    public Object getObj() {
+        return obj;
     }
 
     public int getContexto() {

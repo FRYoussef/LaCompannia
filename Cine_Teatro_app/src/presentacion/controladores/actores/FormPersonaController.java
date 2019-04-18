@@ -3,6 +3,9 @@ package presentacion.controladores.actores;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import negocio.sistemas_aplicacion.ActoresSA;
+import negocio.transfers.PersonaEspectaculo;
+import negocio.transfers.PersonaEspectaculoRol;
 import presentacion.vistas.subsistemasGUI.actores.MainActoresImpGUI;
 
 import java.util.Optional;
@@ -31,16 +34,35 @@ public class FormPersonaController implements Inicializador {
     private Label _lbTitulo;
 
     private int contexto = -1;
+    private PersonaEspectaculo persona = null;
 
     public FormPersonaController(Bundle bundle) {
         contexto = bundle.getContexto();
+        if(bundle.getObj() != null)
+            persona = (PersonaEspectaculo) bundle.getObj();
     }
 
     @Override
     public void iniciar() {
+        annadeDatosTransfer();
         onClickAceptar();
         onClickCancelar();
         onBlurName();
+    }
+
+    private void annadeDatosTransfer() {
+        if(persona != null){
+            Platform.runLater(()->{
+                _lbTitulo.setText("Datos de " + persona.getNombre());
+                _tfNombre.setText(persona.getNombre());
+                _tfApellidos.setText(persona.getApellidos());
+                _tfDni.setText(persona.getDni());
+                _tfEmail.setText(persona.getEmail());
+                _tfTelefono.setText(Integer.toString(persona.getTelefono()));
+                _taBibliografia.setText(persona.getBibliografia());
+                _taPremios.setText(persona.getPremios());
+            });
+        }
     }
 
     private void onBlurName() {
@@ -58,21 +80,40 @@ public class FormPersonaController implements Inicializador {
             relleno = relleno && !apellidos.isEmpty();
             String dni = _tfDni.getText();
             relleno = relleno && !dni.isEmpty();
-            String telefono = _tfTelefono.getText();
-            relleno = relleno && !telefono.isEmpty();
+            int telefono = Integer.parseInt(_tfTelefono.getText());
+            relleno = relleno && !_tfTelefono.getText().isEmpty();
             String email = _tfEmail.getText();
             relleno = relleno && !email.isEmpty();
+            String biblio = _taBibliografia.getText();
+            String premios = _taPremios.getText();
+
             if(!relleno){
                 alertInfo();
                 return;
             }
-            String premios = _taPremios.getText();
-            String biblio = _taBibliografia.getText();
+            PersonaEspectaculoRol rol = PersonaEspectaculoRol.ACTOR;
+            if(contexto == Bundle.DIRECTOR)
+                rol = PersonaEspectaculoRol.DIRECTOR;
+            else if (contexto == Bundle.PRODUCTOR)
+                rol = PersonaEspectaculoRol.PRODUCTOR;
+
+            if(persona == null)
+                persona = new PersonaEspectaculo(nombre, apellidos, dni, telefono, email, premios, biblio, rol);
+            else{
+                persona.setRol(rol);
+                persona.setNombre(nombre);
+                persona.setApellidos(apellidos);
+                persona.setDni(dni);
+                persona.setEmail(email);
+                persona.setTelefono(telefono);
+                persona.setPremios(premios);
+                persona.setBibliografia(biblio);
+            }
             if(!alertConfirmarCambios()){
                 return;
             }
-            //TODO Crear transfer y pasarlo a SA
-
+            ActoresSA sa = ActoresSA.getInstancia();
+            sa.modificaTransfer(contexto, persona);
             cambiaPantalla();
         }));
     }

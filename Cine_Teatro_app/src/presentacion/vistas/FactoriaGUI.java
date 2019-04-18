@@ -12,6 +12,7 @@ import presentacion.vistas.subsistemasGUI.vestimenta.VestimentaImpGUI;
 
 public class FactoriaGUI {
 
+
     public GUI creaGUI(int codigo) throws Exception{
         GUI gui = null;
         switch (codigo){

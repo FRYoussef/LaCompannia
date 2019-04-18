@@ -5,8 +5,10 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import negocio.sistemas_aplicacion.ActoresSA;
 import presentacion.vistas.subsistemasGUI.actores.MainActoresImpGUI;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 public class ListarController implements Inicializador{
@@ -22,10 +24,7 @@ public class ListarController implements Inicializador{
 
     private ButtonType _btAlertEditar = new ButtonType("Editar");
     private ButtonType _btAlertBorrar = new ButtonType("Borrar");
-    private ObservableList<String> datos = FXCollections.observableArrayList(
-            "chocolate", "salmon", "gold", "coral", "darkorchid",
-            "darkgoldenrod", "lightsalmon", "black", "rosybrown", "blue",
-            "blueviolet", "brown");
+    private ObservableList<String> datos = null;
 
     private int contexto = -1;
 
@@ -54,6 +53,11 @@ public class ListarController implements Inicializador{
     }
 
     private void actualizaLista(){
+        ActoresSA sa = ActoresSA.getInstancia();
+        ArrayList<String> alDatos = sa.getData(contexto);
+        if(alDatos == null)
+            return;
+        datos = FXCollections.observableArrayList(alDatos);
         _lvEntidades.setItems(datos);
     }
 
@@ -62,22 +66,24 @@ public class ListarController implements Inicializador{
     }
 
     public void onClickNuevo() {
-        _btNuevo.setOnMouseClicked(event -> siguientePantalla());
+        _btNuevo.setOnMouseClicked(event -> siguientePantalla(new Bundle(contexto)));
     }
 
     private void onClickListItem(){
         Platform.runLater(()-> _lvEntidades.setOnMouseClicked(event -> {
             int index = _lvEntidades.getSelectionModel().getSelectedIndex();
             String seleccion = datos.get(index);
-
+            ActoresSA sa = ActoresSA.getInstancia();
             int accion = dialogoAccion(seleccion);
+
             if (accion == EDITAR) {
-                // TODO Falta recibir de SA el transfer
-                siguientePantalla();
+                Bundle bundle = new Bundle(contexto, sa.getObjetoSeleccionado(seleccion, contexto));
+                siguientePantalla(bundle);
 
             } else if (accion == BORRAR) {
                 if (dialogoConfirmarBorrar(seleccion)) {
-                    // TODO llamar al servicio de app y actualizar lista
+                    sa.borrarObjetoSeleccionado(seleccion, contexto);
+                    actualizaLista();
                 }
             }
         }));
@@ -109,9 +115,8 @@ public class ListarController implements Inicializador{
             return false;
     }
 
-    private void siguientePantalla(){
+    private void siguientePantalla(Bundle bundle){
         MainActoresImpGUI app = new MainActoresImpGUI();
-        Bundle bundle = new Bundle(contexto);
         Inicializador controller;
         String pantalla;
         if(contexto == Bundle.OBRA) {
