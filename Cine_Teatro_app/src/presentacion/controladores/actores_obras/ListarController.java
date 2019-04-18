@@ -1,12 +1,12 @@
-package presentacion.controladores.actores;
+package presentacion.controladores.actores_obras;
 
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import negocio.sistemas_aplicacion.ActoresSA;
-import presentacion.vistas.subsistemasGUI.actores.MainActoresImpGUI;
+import negocio.sistemas_aplicacion.ActoresObrasSA;
+import presentacion.vistas.subsistemasGUI.actores_obras.MainActoresObrasImpGUI;
 
 import java.util.ArrayList;
 import java.util.Optional;
@@ -53,7 +53,7 @@ public class ListarController implements Inicializador{
     }
 
     private void actualizaLista(){
-        ActoresSA sa = ActoresSA.getInstancia();
+        ActoresObrasSA sa = ActoresObrasSA.getInstancia();
         ArrayList<String> alDatos = sa.getData(contexto);
         if(alDatos == null)
             return;
@@ -72,8 +72,10 @@ public class ListarController implements Inicializador{
     private void onClickListItem(){
         Platform.runLater(()-> _lvEntidades.setOnMouseClicked(event -> {
             int index = _lvEntidades.getSelectionModel().getSelectedIndex();
+            if(index == -1)
+                return;
             String seleccion = datos.get(index);
-            ActoresSA sa = ActoresSA.getInstancia();
+            ActoresObrasSA sa = ActoresObrasSA.getInstancia();
             int accion = dialogoAccion(seleccion);
 
             if (accion == EDITAR) {
@@ -116,7 +118,7 @@ public class ListarController implements Inicializador{
     }
 
     private void siguientePantalla(Bundle bundle){
-        MainActoresImpGUI app = new MainActoresImpGUI();
+        MainActoresObrasImpGUI app = new MainActoresObrasImpGUI();
         Inicializador controller;
         String pantalla;
         if(contexto == Bundle.OBRA) {

@@ -1,16 +1,16 @@
-package presentacion.controladores.actores;
+package presentacion.controladores.actores_obras;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import negocio.sistemas_aplicacion.ActoresSA;
+import negocio.sistemas_aplicacion.ActoresObrasSA;
 import negocio.transfers.PersonaEspectaculo;
 import negocio.transfers.PersonaEspectaculoRol;
-import presentacion.vistas.subsistemasGUI.actores.MainActoresImpGUI;
+import presentacion.vistas.subsistemasGUI.actores_obras.MainActoresObrasImpGUI;
 
 import java.util.Optional;
 
-public class FormPersonaController implements Inicializador {
+public class FormPersonaController extends FormController implements Inicializador {
 
     @FXML
     private TextField _tfNombre;
@@ -46,11 +46,11 @@ public class FormPersonaController implements Inicializador {
     public void iniciar() {
         annadeDatosTransfer();
         onClickAceptar();
-        onClickCancelar();
-        onBlurName();
+        onClickCancelar(_btCancelar, contexto);
+        onKeyPressedTitulo(_tfNombre, _lbTitulo);
     }
 
-    private void annadeDatosTransfer() {
+    void annadeDatosTransfer() {
         if(persona != null){
             Platform.runLater(()->{
                 _lbTitulo.setText("Datos de " + persona.getNombre());
@@ -65,13 +65,7 @@ public class FormPersonaController implements Inicializador {
         }
     }
 
-    private void onBlurName() {
-        _tfNombre.setOnKeyReleased(event ->
-                Platform.runLater(()->
-                        _lbTitulo.setText("Datos de " + _tfNombre.getText())));
-    }
-
-    private void onClickAceptar(){
+    void onClickAceptar(){
         _btAceptar.setOnMouseClicked(event -> Platform.runLater(()->{
             boolean relleno = true;
             String nombre = _tfNombre.getText();
@@ -80,7 +74,9 @@ public class FormPersonaController implements Inicializador {
             relleno = relleno && !apellidos.isEmpty();
             String dni = _tfDni.getText();
             relleno = relleno && !dni.isEmpty();
-            int telefono = Integer.parseInt(_tfTelefono.getText());
+            int telefono = 0;
+            if(!_tfTelefono.getText().isEmpty())
+                telefono = Integer.parseInt(_tfTelefono.getText());
             relleno = relleno && !_tfTelefono.getText().isEmpty();
             String email = _tfEmail.getText();
             relleno = relleno && !email.isEmpty();
@@ -112,40 +108,9 @@ public class FormPersonaController implements Inicializador {
             if(!alertConfirmarCambios()){
                 return;
             }
-            ActoresSA sa = ActoresSA.getInstancia();
+            ActoresObrasSA sa = ActoresObrasSA.getInstancia();
             sa.modificaTransfer(contexto, persona);
-            cambiaPantalla();
+            cambiaPantalla(contexto);
         }));
-    }
-
-    private void onClickCancelar(){
-        _btCancelar.setOnMouseClicked(event -> cambiaPantalla());
-    }
-
-    private void alertInfo(){
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Information Dialog");
-        alert.setHeaderText("Error en los campos");
-        alert.setContentText("Por favor, rellena todos los campos de la sección de información");
-        alert.showAndWait();
-    }
-
-    private boolean alertConfirmarCambios(){
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Confirmación de acción");
-        alert.setHeaderText("¿Estas seguro del cambio?");
-        Optional<ButtonType> result = alert.showAndWait();
-        if(result.get() == ButtonType.OK)
-            return true;
-        else
-            return false;
-    }
-
-    private void cambiaPantalla(){
-        MainActoresImpGUI app = new MainActoresImpGUI();
-        Bundle bundle = new Bundle(contexto);
-        Inicializador controller = new ListarController(bundle);
-        String pantalla = "listar.fxml";
-        app.cambiaPantalla(pantalla, controller);
     }
 }

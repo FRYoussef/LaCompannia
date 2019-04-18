@@ -1,15 +1,15 @@
-package presentacion.vistas.subsistemasGUI.actores;
+package presentacion.vistas.subsistemasGUI.actores_obras;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import presentacion.controladores.actores.Inicializador;
+import presentacion.controladores.actores_obras.Inicializador;
 import presentacion.vistas.subsistemasGUI.GUI;
 
 import java.io.IOException;
 
-public class MainActoresImpGUI implements GUI {
+public class MainActoresObrasImpGUI implements GUI {
     public static final int CODE = 6;
     private static Stage primaryStage = null;
 
@@ -29,9 +29,9 @@ public class MainActoresImpGUI implements GUI {
         Stage primaryStage = getStage();
         AnchorPane root = null;
         try {
-            root = FXMLLoader.load(getClass().getResource("main_actores_GUI.fxml"));
+            root = FXMLLoader.load(getClass().getResource("main_actores_obras_GUI.fxml"));
             Scene scene = new Scene(root);
-            primaryStage.setTitle("Módulo actores, directores, obras, ...");
+            primaryStage.setTitle("Módulo actores_obras, directores, obras, ...");
             primaryStage.setScene(scene);
             primaryStage.setResizable(false);
             primaryStage.show();

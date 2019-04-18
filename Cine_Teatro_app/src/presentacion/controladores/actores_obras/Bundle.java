@@ -1,4 +1,4 @@
-package presentacion.controladores.actores;
+package presentacion.controladores.actores_obras;
 
 public class Bundle {
     public static final int ACTOR = 0;
