@@ -2,6 +2,7 @@ package integracion.reservas;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -15,6 +16,8 @@ import negocio.transfers.Pago;
 import negocio.transfers.TipoPago;
 
 public class DAOPagoImp implements DAOPago {
+	
+	private static final String ruta = new File("src/integracion/reservas/ficheros/pagos.txt").getAbsolutePath();
 
 	@Override
 	public boolean altaPago(Pago tPago) {
@@ -68,7 +71,7 @@ public class DAOPagoImp implements DAOPago {
 	
 	
 	private boolean writeData(ArrayList<Pago> tPagoArray) {
-		try(BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("pagos.txt"), "ISO-8859-15"))){
+		try(BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(ruta), "ISO-8859-15"))){
 			out.write("Pagos_Cine/Teatro" + System.lineSeparator());
 			for(Pago tPago : tPagoArray) {
 				out.write("$" + System.lineSeparator());
@@ -85,7 +88,7 @@ public class DAOPagoImp implements DAOPago {
 	
 	private ArrayList<Pago> loadData(){
 		ArrayList<Pago> inData = new ArrayList<Pago>();
-		try(BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream("pagos.txt"), "ISO-8859-15"))){
+		try(BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(ruta), "ISO-8859-15"))){
 			if(!in.readLine().trim().equals("Pagos_Cine/Teatro")) throw new IOException("Fichero mal formado");
 			String line = in.readLine().trim();
 			while(!line.equals("#")) {

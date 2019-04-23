@@ -2,6 +2,7 @@ package integracion.reservas;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -14,6 +15,8 @@ import negocio.reservas.IntervaloTiempo;
 import negocio.transfers.Lugar;
 
 public class DAOLugarImp implements DAOLugar {
+	
+	private static final String ruta = new File("src/integracion/reservas/ficheros/lugares.txt").getAbsolutePath();
 
 	@Override
 	public boolean altaLugar(Lugar tLugar) {
@@ -77,7 +80,7 @@ public class DAOLugarImp implements DAOLugar {
 	}
 	
 	private boolean writeData(ArrayList<Lugar> tLugarArray) {
-		try(BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("lugares.txt"), "ISO-8859-15"))){
+		try(BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(ruta), "ISO-8859-15"))){
 			out.write("Lugares_Cine/Teatro" + System.lineSeparator());
 			for(Lugar tLugar : tLugarArray) {
 				out.write("$" + System.lineSeparator());
@@ -94,7 +97,7 @@ public class DAOLugarImp implements DAOLugar {
 	
 	private ArrayList<Lugar> loadData(){
 		ArrayList<Lugar> inData = new ArrayList<Lugar>();
-		try(BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream("lugares.txt"), "ISO-8859-15"))){
+		try(BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(ruta), "ISO-8859-15"))){
 			if(!in.readLine().trim().equals("Lugares_Cine/Teatro")) throw new IOException("Fichero mal formado");
 			String line = in.readLine().trim();
 			while(!line.equals("#")) {

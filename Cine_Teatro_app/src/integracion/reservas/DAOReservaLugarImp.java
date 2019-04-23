@@ -2,6 +2,7 @@ package integracion.reservas;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -15,6 +16,8 @@ import negocio.transfers.TipoCompra;
 
 public class DAOReservaLugarImp implements DAOReservaLugar {
 
+	private static final String ruta = new File("src/integracion/reservas/ficheros/resLugares.txt").getAbsolutePath();
+	
 	@Override
 	public boolean altaReserva(ReservaLugar tRes) {
 		ArrayList<ReservaLugar> in = loadData();
@@ -52,7 +55,7 @@ public class DAOReservaLugarImp implements DAOReservaLugar {
 
 	
 	private boolean writeData(ArrayList<ReservaLugar> tResArray) {
-		try(BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("resLugares.txt"), "ISO-8859-15"))){
+		try(BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(ruta), "ISO-8859-15"))){
 			out.write("ReservaLugares_Cine/Teatro" + System.lineSeparator());
 			for(ReservaLugar tRes : tResArray) {
 				out.write("$" + System.lineSeparator());
@@ -69,7 +72,7 @@ public class DAOReservaLugarImp implements DAOReservaLugar {
 	
 	private ArrayList<ReservaLugar> loadData(){
 		ArrayList<ReservaLugar> inData = new ArrayList<ReservaLugar>();
-		try(BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream("resLugares.txt"), "ISO-8859-15"))){
+		try(BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(ruta), "ISO-8859-15"))){
 			if(!in.readLine().trim().equals("ReservaLugares_Cine/Teatro")) throw new IOException("Fichero mal formado");
 			String line = in.readLine().trim();
 			while(!line.equals("#")) {

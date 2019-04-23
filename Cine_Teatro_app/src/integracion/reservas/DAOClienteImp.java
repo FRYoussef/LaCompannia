@@ -2,6 +2,7 @@ package integracion.reservas;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -14,6 +15,8 @@ import negocio.transfers.DatosBancarios;
 
 public class DAOClienteImp implements DAOCliente {
 
+	private static final String ruta = new File("src/integracion/reservas/ficheros/clientes.txt").getAbsolutePath();
+	
 	@Override
 	public boolean altaCliente(Cliente tCli) {
 		ArrayList<Cliente> in = loadData();
@@ -65,7 +68,7 @@ public class DAOClienteImp implements DAOCliente {
 	}
 	
 	private boolean writeData(ArrayList<Cliente> tCliArray) {
-		try(BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("clientes.txt"), "ISO-8859-15"))){
+		try(BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(ruta), "ISO-8859-15"))){
 			out.write("Clientes_Cine/Teatro" + System.lineSeparator());
 			for(Cliente tCli : tCliArray) {
 				out.write("$" + System.lineSeparator());
@@ -82,7 +85,7 @@ public class DAOClienteImp implements DAOCliente {
 	
 	private ArrayList<Cliente> loadData(){
 		ArrayList<Cliente> inData = new ArrayList<Cliente>();
-		try(BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream("clientes.txt"), "ISO-8859-15"))){
+		try(BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(ruta), "ISO-8859-15"))){
 			if(!in.readLine().trim().equals("Clientes_Cine/Teatro")) throw new IOException("Fichero mal formado");
 			String line = in.readLine().trim();
 			while(!line.equals("#")) {
