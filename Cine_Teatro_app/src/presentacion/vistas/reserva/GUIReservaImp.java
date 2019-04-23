@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
@@ -63,6 +64,7 @@ public class GUIReservaImp extends GUIReserva{
 		north.add(title);
 		frameGui.add(north, BorderLayout.NORTH);
 		
+		frameGui.setLocationRelativeTo(null);
 		frameGui.setVisible(true);
 		frameGui.pack();
 	}
@@ -136,8 +138,12 @@ public class GUIReservaImp extends GUIReserva{
 	@Override
 	public void exitAction() {
 		GUIReservaImp.super.reset();
-		//Se cambiara por volver al menu pricipal de subsistemas
-		System.exit(0);
+		if(frameRes != null) {
+			frameRes.dispose();
+			frameRes = null;
+		}
+		frameGui.setVisible(false);
+		frameGui.dispose();
 	}
 
 }

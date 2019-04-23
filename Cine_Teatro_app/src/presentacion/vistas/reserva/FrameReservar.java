@@ -16,14 +16,7 @@ import javax.swing.JPanel;
 import negocio.transfers.Cliente;
 import presentacion.controladores.reservas.ControladorReserva;
 
-/*************************************************************************************************
-* Archivo		: FrameReservar.java
-*
-* Descripcion	: JFrame que representa el caso de uso de listado y reserva de un lugar, especificado en SRES_ResLug.
-* 				  Para cada pantalla del caso de uso se utiliza un JPanel, y se agupan en un CardLayout 
-* 
-* Autor			: Daniel Alfaro Miranda
-*********************************************************************************************/
+
 @SuppressWarnings("serial")
 public class FrameReservar extends JFrame implements CardLayoutInterface{
 	private PanelControl ctrPanel;
@@ -79,6 +72,7 @@ public class FrameReservar extends JFrame implements CardLayoutInterface{
 		this.add(cards, BorderLayout.CENTER);
 		
 		this.pack();
+		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 	}
 	
