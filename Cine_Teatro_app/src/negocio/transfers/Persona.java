@@ -9,6 +9,10 @@ public class Persona implements Serializable {
     private String dni;
     private int telefono;
     private String email;
+    private String pais, ciudad, calle, codPostal;
+    private DatosBancarios datosBancarios;
+    
+    public Persona() {}
 
     public Persona(int id, String nombre, String apellidos, String dni, int telefono, String email) {
         this.id = id;
@@ -75,4 +79,46 @@ public class Persona implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
+
+	public String getPais() {
+		return pais;
+	}
+
+	public void setPais(String pais) {
+		this.pais = pais;
+	}
+
+	public String getCiudad() {
+		return ciudad;
+	}
+
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
+	}
+
+	public String getCalle() {
+		return calle;
+	}
+
+	public void setCalle(String calle) {
+		this.calle = calle;
+	}
+
+	public String getCodPostal() {
+		return codPostal;
+	}
+
+	public void setCodPostal(String codPostal) {
+		this.codPostal = codPostal;
+	}
+
+	public DatosBancarios getDatosBancarios() {
+		return datosBancarios;
+	}
+
+	public void setDatosBancarios(DatosBancarios datosBancarios) {
+		this.datosBancarios = datosBancarios;
+	}
+    
+    
 }

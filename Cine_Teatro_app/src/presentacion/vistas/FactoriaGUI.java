@@ -6,7 +6,7 @@ import presentacion.vistas.audiovisuales.AudiovisualesImpGUI;
 import presentacion.vistas.catering.CateringImpGUI;
 import presentacion.vistas.obras.ObrasImpGUI;
 import presentacion.vistas.publicidad.PublicidadImpGUI;
-import presentacion.vistas.reserva.ReservaImpGUI;
+import presentacion.vistas.reserva.GUIReserva;
 import presentacion.vistas.transporte.TransporteImpGUI;
 import presentacion.vistas.vestimenta.VestimentaImpGUI;
 
@@ -16,8 +16,8 @@ public class FactoriaGUI {
     public GUI creaGUI(int codigo) throws Exception{
         GUI gui = null;
         switch (codigo){
-            case ReservaImpGUI.CODE:
-                gui = new ReservaImpGUI();
+            case GUIReserva.CODE:
+                gui = GUIReserva.getInstancia();
                 break;
             case PublicidadImpGUI.CODE:
                 gui = new PublicidadImpGUI();

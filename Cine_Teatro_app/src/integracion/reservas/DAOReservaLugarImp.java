@@ -1,0 +1,103 @@
+package integracion.reservas;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+
+import negocio.reservas.IntervaloTiempo;
+import negocio.transfers.Reserva;
+import negocio.transfers.ReservaLugar;
+
+public class DAOReservaLugarImp implements DAOReservaLugar {
+
+	@Override
+	public boolean altaReserva(ReservaLugar tRes) {
+		ArrayList<ReservaLugar> in = loadData();
+		if(in != null) {
+			in.add(tRes);
+			return writeData(in);
+		}
+		return false;
+	}
+
+	@Override
+	public boolean elimReserva(String idCompra) {
+		ArrayList<ReservaLugar> in = loadData();
+		if(in != null) {
+			for(int i = 0; i < in.size(); ++i) {
+				if(in.get(i).getIdCompra().equals(idCompra)) {
+					in.remove(i);
+					return writeData(in);
+				}
+			}
+		}
+		return false;
+	}
+
+	@Override
+	public ReservaLugar consultaReserva(String idCompra) {
+		ArrayList<ReservaLugar> in = loadData();
+		if(in != null) {
+			for(ReservaLugar tRes : in) {
+				if(tRes.getIdCompra().equals(idCompra)) return tRes;
+			}
+		}
+		return null;
+	}
+
+	
+	private boolean writeData(ArrayList<ReservaLugar> tResArray) {
+		try(BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("resLugares.txt"), "ISO-8859-15"))){
+			out.write("ReservaLugares_Cine/Teatro" + System.lineSeparator());
+			for(ReservaLugar tRes : tResArray) {
+				out.write("$" + System.lineSeparator());
+				writeTransfer(out, tRes);
+			}
+			out.write("#" + System.lineSeparator());
+			out.flush();
+		} catch (IOException e) {
+			return false;
+		}
+		return true;
+	}
+	
+	
+	private ArrayList<ReservaLugar> loadData(){
+		ArrayList<ReservaLugar> inData = new ArrayList<ReservaLugar>();
+		try(BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream("resLugares.txt"), "ISO-8859-15"))){
+			if(!in.readLine().trim().equals("ReservaLugares_Cine/Teatro")) throw new IOException("Fichero mal formado");
+			String line = in.readLine().trim();
+			while(!line.equals("#")) {
+				inData.add(loadTransfer(in));
+				line = in.readLine().trim();
+			}
+		} catch (IOException | NumberFormatException e) {
+			return null;
+		}
+		return inData;
+	}
+	
+	private ReservaLugar loadTransfer(BufferedReader in) throws IOException, NumberFormatException {
+		ReservaLugar tRes = new ReservaLugar();
+		tRes.setIdCompra(in.readLine().trim());
+		tRes.setIdLugar(in.readLine().trim());
+		String[] intervalo = in.readLine().trim().split("-");
+		if(intervalo.length != 2) throw new NumberFormatException("Intervalo mal definido");
+		IntervaloTiempo duracion = IntervaloTiempo.parseInterval(intervalo[0], intervalo[1]);
+		if(duracion == null) throw new NumberFormatException("Intervalo mal definido");
+		tRes.setDuracion(duracion);
+		return tRes;
+	}
+	
+	private void writeTransfer(BufferedWriter out, ReservaLugar tRes) throws IOException {
+		out.write(tRes.getIdCompra() + System.lineSeparator());
+		out.write(tRes.getIdLugar() + System.lineSeparator());
+		out.write(tRes.getDuracion() + System.lineSeparator());
+	}
+	
+}
