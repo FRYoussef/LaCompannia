@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="600.0" stylesheets="@actores_obras_stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="presentacion.controladores.actores_obras.ActoresObrasMainController">
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <children>
+      <Label alignment="CENTER" layoutX="4.0" layoutY="4.0" prefHeight="21.0" prefWidth="593.0" text="Menú Principal: " textFill="#4d4a4a">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="39.0" prefHeight="21.0" prefWidth="593.0" text="Selecciona un módulo para trabajar" textFill="#4d4a4a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lb_actor" alignment="CENTER" layoutX="48.0" layoutY="133.0" onMouseClicked="#onClickShow" prefHeight="130.0" prefWidth="180.0" styleClass="main-label" text="Actor" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="120.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label fx:id="ld_obra" alignment="CENTER" layoutX="154.0" layoutY="310.0" onMouseClicked="#onClickShow" prefHeight="150.0" prefWidth="200.0" styleClass="main-label" text="Obras de teatro o Películas" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="265.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label fx:id="lb_productor" alignment="CENTER" layoutX="400.0" layoutY="135.0" onMouseClicked="#onClickShow" prefHeight="130.0" prefWidth="180.0" styleClass="main-label" text="Productor" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="120.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label fx:id="lb_director" alignment="CENTER" layoutX="217.0" layoutY="135.0" onMouseClicked="#onClickShow" prefHeight="130.0" prefWidth="180.0" styleClass="main-label" text="Director" AnchorPane.leftAnchor="205.0" AnchorPane.topAnchor="120.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <ImageView fx:id="iv_editActor" fitHeight="25.0" fitWidth="25.0" layoutX="160.0" layoutY="125.0" onMouseClicked="#onClickEdit" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="153.0" AnchorPane.topAnchor="130.0">
+         <image>
+            <Image url="@../../../resources/edit.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iv_editDirector" fitHeight="25.0" fitWidth="25.0" layoutX="358.0" layoutY="135.0" onMouseClicked="#onClickEdit" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="130.0">
+         <image>
+            <Image url="@../../../resources/edit.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iv_editProductor" fitHeight="25.0" fitWidth="25.0" layoutX="368.0" layoutY="145.0" onMouseClicked="#onClickEdit" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="545.0" AnchorPane.topAnchor="130.0">
+         <image>
+            <Image url="@../../../resources/edit.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iv_editObra" fitHeight="25.0" fitWidth="25.0" layoutX="378.0" layoutY="155.0" onMouseClicked="#onClickEdit" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="545.0" AnchorPane.topAnchor="277.0">
+         <image>
+            <Image url="@../../../resources/edit.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

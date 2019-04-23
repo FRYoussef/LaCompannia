@@ -3,10 +3,10 @@ package presentacion.controladores.actores_obras;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import negocio.sistemas_aplicacion.ActoresObrasSA;
+import negocio.actores_obras.sistemas_aplicacion.ActoresObrasSA;
 import negocio.transfers.PersonaEspectaculo;
 import negocio.transfers.PersonaEspectaculoRol;
-import presentacion.vistas.subsistemasGUI.actores_obras.MainActoresObrasImpGUI;
+import presentacion.vistas.actores_obras.MainActoresObrasImpGUI;
 
 import java.util.Optional;
 

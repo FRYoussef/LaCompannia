@@ -2,7 +2,7 @@ package presentacion.controladores.actores_obras;
 
 import javafx.application.Platform;
 import javafx.scene.control.*;
-import presentacion.vistas.subsistemasGUI.actores_obras.MainActoresObrasImpGUI;
+import presentacion.vistas.actores_obras.MainActoresObrasImpGUI;
 
 import java.util.Optional;
 

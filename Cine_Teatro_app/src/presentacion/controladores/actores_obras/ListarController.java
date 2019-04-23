@@ -5,8 +5,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import negocio.sistemas_aplicacion.ActoresObrasSA;
-import presentacion.vistas.subsistemasGUI.actores_obras.MainActoresObrasImpGUI;
+import negocio.actores_obras.sistemas_aplicacion.ActoresObrasSA;
+import presentacion.vistas.actores_obras.MainActoresObrasImpGUI;
 
 import java.util.ArrayList;
 import java.util.Optional;

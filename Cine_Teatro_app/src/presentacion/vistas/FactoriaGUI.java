@@ -1,14 +1,14 @@
 package presentacion.vistas;
 
-import presentacion.vistas.subsistemasGUI.GUI;
-import presentacion.vistas.subsistemasGUI.actores_obras.MainActoresObrasImpGUI;
-import presentacion.vistas.subsistemasGUI.audiovisuales.AudiovisualesImpGUI;
-import presentacion.vistas.subsistemasGUI.catering.CateringImpGUI;
-import presentacion.vistas.subsistemasGUI.obras.ObrasImpGUI;
-import presentacion.vistas.subsistemasGUI.publicidad.PublicidadImpGUI;
-import presentacion.vistas.subsistemasGUI.reserva.ReservaImpGUI;
-import presentacion.vistas.subsistemasGUI.transporte.TransporteImpGUI;
-import presentacion.vistas.subsistemasGUI.vestimenta.VestimentaImpGUI;
+import presentacion.vistas.GUI;
+import presentacion.vistas.actores_obras.MainActoresObrasImpGUI;
+import presentacion.vistas.audiovisuales.AudiovisualesImpGUI;
+import presentacion.vistas.catering.CateringImpGUI;
+import presentacion.vistas.obras.ObrasImpGUI;
+import presentacion.vistas.publicidad.PublicidadImpGUI;
+import presentacion.vistas.reserva.ReservaImpGUI;
+import presentacion.vistas.transporte.TransporteImpGUI;
+import presentacion.vistas.vestimenta.VestimentaImpGUI;
 
 public class FactoriaGUI {
 

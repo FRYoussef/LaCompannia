@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import presentacion.vistas.subsistemasGUI.actores_obras.MainActoresObrasImpGUI;
+import presentacion.vistas.actores_obras.MainActoresObrasImpGUI;
 
 public class ActoresObrasMainController {
 

@@ -6,7 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import presentacion.vistas.FactoriaGUI;
-import presentacion.vistas.subsistemasGUI.GUI;
+import presentacion.vistas.GUI;
 
 public class MainController {
 
