@@ -5,13 +5,15 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 
-import integracion.FactoriaDAO;
 import integracion.reservas.DAOLugar;
+import integracion.reservas.FactoriaDAO;
 import negocio.transfers.Cliente;
 import negocio.transfers.DatosBancarios;
 import negocio.transfers.Lugar;
 import negocio.transfers.Pago;
 import negocio.transfers.ReservaLugar;
+import negocio.transfers.TipoCompra;
+import negocio.transfers.TipoPago;
 
 public class SAReservaImp implements SAReserva {
 	@Override
@@ -134,6 +136,7 @@ public class SAReservaImp implements SAReserva {
 		tRes.setIdLugar(idLugar);
 		tRes.setFechaIni(duracion.getIni());
 		tRes.setFechaFin(duracion.getFin());
+		tRes.setTipoCompra(TipoCompra.RESERVA);
 		return tRes;
 	}
 	
@@ -143,7 +146,6 @@ public class SAReservaImp implements SAReserva {
 		transfPago.setDescripcion(descripcion);
 		transfPago.setFechaIni(fechaInicio);
 		transfPago.setTipoPago(tipoPago);
-		transfPago.setTipoCompra(TipoCompra.RESERVA);
 		transfPago.setIdCompra(getIdCompra(fechaInicio));
 		ArrayList<Float> pagos = calcularPlanPago(deuda, tipoPago.getMesesDuracion());
 		ArrayList<Date> fechasCobro = new ArrayList<Date>();

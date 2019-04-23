@@ -5,6 +5,7 @@ import java.util.Date;
 
 import negocio.transfers.Cliente;
 import negocio.transfers.Lugar;
+import negocio.transfers.TipoPago;
 
 public interface SAReserva {
 	

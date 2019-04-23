@@ -1,7 +1,5 @@
 package negocio.transfers;
 
-import negocio.reservas.TipoCompra;
-
 public abstract class Compra {
 	
 	protected String idCompra;

@@ -3,14 +3,10 @@ package negocio.transfers;
 import java.util.ArrayList;
 import java.util.Date;
 
-import negocio.reservas.TipoCompra;
-import negocio.reservas.TipoPago;
-
 public class Pago {
 	private String idCompra, dniCliente, descripcion;
 	private float dineroCobrado, dineroAdeudado;
 	private TipoPago tipoPago;
-	private TipoCompra tipoCompra;
 	private Date fechaIni;
 	private ArrayList<Date> fechasCobro;
 	
@@ -76,14 +72,6 @@ public class Pago {
 	
 	public void setFechasCobro(ArrayList<Date> fechasCobro) {
 		this.fechasCobro = fechasCobro;
-	}
-
-	public TipoCompra getTipoCompra() {
-		return tipoCompra;
-	}
-
-	public void setTipoCompra(TipoCompra tipoCompra) {
-		this.tipoCompra = tipoCompra;
 	}
 	
 }

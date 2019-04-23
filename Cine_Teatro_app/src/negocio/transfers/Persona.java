@@ -3,7 +3,8 @@ package negocio.transfers;
 import java.io.Serializable;
 
 public class Persona implements Serializable {
-    private int id;
+	private static final long serialVersionUID = -6196546139830550085L;
+	private int id;
     private String nombre;
     private String apellidos;
     private String dni;

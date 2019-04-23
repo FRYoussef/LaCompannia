@@ -1,4 +1,4 @@
-package negocio.reservas;
+package negocio.transfers;
 
 public enum TipoCompra {
 	RESERVA;

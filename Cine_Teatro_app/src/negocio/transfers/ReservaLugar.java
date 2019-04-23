@@ -11,6 +11,4 @@ public class ReservaLugar extends Reserva{
 		this.idLugar = idLugar;
 	}
 	
-	
-	
 }

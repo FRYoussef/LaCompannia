@@ -16,8 +16,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 import negocio.reservas.IntervaloTiempo;
-import negocio.reservas.TipoPago;
 import negocio.transfers.Lugar;
+import negocio.transfers.TipoPago;
 import presentacion.controladores.reservas.ControladorReserva;
 
 @SuppressWarnings("serial")

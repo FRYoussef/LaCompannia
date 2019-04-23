@@ -11,9 +11,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import negocio.reservas.IntervaloTiempo;
-import negocio.reservas.TipoCompra;
-import negocio.reservas.TipoPago;
 import negocio.transfers.Pago;
+import negocio.transfers.TipoPago;
 
 public class DAOPagoImp implements DAOPago {
 
@@ -108,8 +107,6 @@ public class DAOPagoImp implements DAOPago {
 		tPago.setDineroAdeudado(Float.parseFloat(in.readLine().trim()));
 		tPago.setTipoPago(TipoPago.getValue(in.readLine().trim()));
 		if(tPago.getTipoPago() == null) throw new NumberFormatException("Tipo pago mal definido");
-		tPago.setTipoCompra(TipoCompra.getValue(in.readLine().trim()));
-		if(tPago.getTipoCompra() == null) throw new NumberFormatException("Tipo compra mal definido");
 		tPago.setFechaIni(IntervaloTiempo.parseDate(in.readLine().trim()));
 		if(tPago.getFechaIni() == null) throw new NumberFormatException("Fecha de inicio mal definida");
 		String[] fechas = in.readLine().trim().split(" ");
@@ -127,7 +124,6 @@ public class DAOPagoImp implements DAOPago {
 		out.write(tPago.getDineroCobrado() + System.lineSeparator());
 		out.write(tPago.getDineroAdeudado() + System.lineSeparator());
 		out.write(tPago.getTipoPago().name() + System.lineSeparator());
-		out.write(tPago.getTipoCompra().name() + System.lineSeparator());
 		out.write(IntervaloTiempo.formatDate(tPago.getFechaIni()) + System.lineSeparator());
 		ArrayList<Date> fechasCobro = tPago.getFechasCobro();
 		for(Date fecha : fechasCobro) {

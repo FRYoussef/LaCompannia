@@ -1,4 +1,4 @@
-package negocio.reservas;
+package negocio.transfers;
 
 public enum TipoPago {
 	COMPLETO(1), TRIMESTRAL(3), SEMESTRAL(6);

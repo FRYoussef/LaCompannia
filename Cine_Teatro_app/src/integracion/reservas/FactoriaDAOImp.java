@@ -1,13 +1,4 @@
-package integracion;
-
-import integracion.reservas.DAOCliente;
-import integracion.reservas.DAOClienteImp;
-import integracion.reservas.DAOLugar;
-import integracion.reservas.DAOLugarImp;
-import integracion.reservas.DAOPago;
-import integracion.reservas.DAOPagoImp;
-import integracion.reservas.DAOReservaLugar;
-import integracion.reservas.DAOReservaLugarImp;
+package integracion.reservas;
 
 public class FactoriaDAOImp extends FactoriaDAO {
 

@@ -98,6 +98,7 @@ public class DAOClienteImp implements DAOCliente {
 	private Cliente loadTransfer(BufferedReader in) throws IOException {
 		Cliente tCli = new Cliente();
 		tCli.setDatosBancarios(null);
+		tCli.setId(Integer.parseInt(in.readLine().trim()));
 		tCli.setDni(in.readLine().trim());
 		tCli.setNombre(in.readLine().trim());
 		tCli.setApellidos(in.readLine().trim());
@@ -119,6 +120,7 @@ public class DAOClienteImp implements DAOCliente {
 	}
 	
 	private void writeTransfer(BufferedWriter out, Cliente tCli) throws IOException {
+		out.write(tCli.getId() + System.lineSeparator());
 		out.write(tCli.getDni() + System.lineSeparator());
 		out.write(tCli.getNombre() + System.lineSeparator());
 		out.write(tCli.getApellidos() + System.lineSeparator());

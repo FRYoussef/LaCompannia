@@ -2,7 +2,7 @@ package negocio.transfers;
 
 import java.util.Date;
 
-public class Reserva extends Compra{
+public abstract class Reserva extends Compra{
 	
 	protected Date fechaIni;
 	protected Date fechaFin;

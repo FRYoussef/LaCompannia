@@ -10,8 +10,8 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 import negocio.reservas.IntervaloTiempo;
-import negocio.transfers.Reserva;
 import negocio.transfers.ReservaLugar;
+import negocio.transfers.TipoCompra;
 
 public class DAOReservaLugarImp implements DAOReservaLugar {
 
@@ -85,19 +85,20 @@ public class DAOReservaLugarImp implements DAOReservaLugar {
 	private ReservaLugar loadTransfer(BufferedReader in) throws IOException, NumberFormatException {
 		ReservaLugar tRes = new ReservaLugar();
 		tRes.setIdCompra(in.readLine().trim());
+		tRes.setTipoCompra(TipoCompra.getValue(in.readLine().trim()));
 		tRes.setIdLugar(in.readLine().trim());
-		String[] intervalo = in.readLine().trim().split("-");
-		if(intervalo.length != 2) throw new NumberFormatException("Intervalo mal definido");
-		IntervaloTiempo duracion = IntervaloTiempo.parseInterval(intervalo[0], intervalo[1]);
-		if(duracion == null) throw new NumberFormatException("Intervalo mal definido");
-		tRes.setDuracion(duracion);
+		tRes.setFechaIni(IntervaloTiempo.parseDate(in.readLine().trim()));
+		tRes.setFechaFin(IntervaloTiempo.parseDate(in.readLine().trim()));
+		if(tRes.getFechaIni() == null || tRes.getFechaFin() == null) throw new NumberFormatException("Intervalo mal definido");
 		return tRes;
 	}
 	
 	private void writeTransfer(BufferedWriter out, ReservaLugar tRes) throws IOException {
 		out.write(tRes.getIdCompra() + System.lineSeparator());
+		out.write(tRes.getTipoCompra() + System.lineSeparator());
 		out.write(tRes.getIdLugar() + System.lineSeparator());
-		out.write(tRes.getDuracion() + System.lineSeparator());
+		out.write(IntervaloTiempo.formatDate(tRes.getFechaIni()) + System.lineSeparator());
+		out.write(IntervaloTiempo.formatDate(tRes.getFechaFin()) + System.lineSeparator());
 	}
 	
 }

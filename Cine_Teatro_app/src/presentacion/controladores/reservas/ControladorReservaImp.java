@@ -6,9 +6,9 @@ import java.util.Date;
 import negocio.FactoriaSA;
 import negocio.reservas.FiltroBusquedaLugar;
 import negocio.reservas.IntervaloTiempo;
-import negocio.reservas.TipoPago;
 import negocio.transfers.Cliente;
 import negocio.transfers.Lugar;
+import negocio.transfers.TipoPago;
 
 public class ControladorReservaImp extends ControladorReserva {
 
