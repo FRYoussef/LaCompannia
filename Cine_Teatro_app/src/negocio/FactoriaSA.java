@@ -1,6 +1,5 @@
 package negocio;
 
-import negocio.catering.SAPedido_GC;
 import negocio.reservas.SAReserva;
 
 public abstract class FactoriaSA {
@@ -14,8 +13,6 @@ public abstract class FactoriaSA {
 	}
 	
 	
-	
-	public abstract SAPedido_GC getSAPedido(); 
 	
 	public abstract SAReserva getSAReserva();
 }
