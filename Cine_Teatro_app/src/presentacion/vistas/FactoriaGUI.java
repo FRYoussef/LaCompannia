@@ -1,6 +1,6 @@
 package presentacion.vistas;
 
-import presentacion.vistas.GUI;
+import presentacion.recursosAudiovisuales.RecursosAudiovisuales;
 import presentacion.vistas.actores_obras.MainActoresObrasImpGUI;
 import presentacion.vistas.audiovisuales.AudiovisualesImpGUI;
 import presentacion.vistas.obras.ObrasImpGUI;
@@ -34,7 +34,7 @@ public class FactoriaGUI {
                 gui = new MainActoresObrasImpGUI();
                 break;
             case AudiovisualesImpGUI.CODE:
-                gui = new AudiovisualesImpGUI();
+                gui = RecursosAudiovisuales.getInstance();
                 break;
             default:
                 throw new Exception("Codigo de GUI no valido: " + codigo);
