@@ -4,7 +4,7 @@ import presentacion.recursosAudiovisuales.RecursosAudiovisuales;
 import presentacion.vistas.actores_obras.MainActoresObrasImpGUI;
 import presentacion.vistas.audiovisuales.AudiovisualesImpGUI;
 import presentacion.vistas.obras.ObrasImpGUI;
-import presentacion.vistas.publicidad.PublicidadImpGUI;
+import presentacion.vistas.publicidad.PublicidadGUI;
 import presentacion.vistas.reserva.GUIReserva;
 import presentacion.vistas.transporte.TransporteImpGUI;
 import presentacion.vistas.vestimenta.VestimentaImpGUI;
@@ -18,8 +18,8 @@ public class FactoriaGUI {
             case GUIReserva.CODE:
                 gui = GUIReserva.getInstancia();
                 break;
-            case PublicidadImpGUI.CODE:
-                gui = new PublicidadImpGUI();
+            case PublicidadGUI.CODE:
+                gui = PublicidadGUI.getInstance();
                 break;
             case TransporteImpGUI.CODE:
                 gui = new TransporteImpGUI();
