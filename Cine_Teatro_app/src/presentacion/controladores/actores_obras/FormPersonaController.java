@@ -3,12 +3,9 @@ package presentacion.controladores.actores_obras;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import negocio.actores_obras.sistemas_aplicacion.ActoresObrasSA;
+import negocio.actores_obras.ActoresObrasSA;
 import negocio.transfers.PersonaEspectaculo;
 import negocio.transfers.PersonaEspectaculoRol;
-import presentacion.vistas.actores_obras.MainActoresObrasImpGUI;
-
-import java.util.Optional;
 
 public class FormPersonaController extends FormController implements Inicializador {
 

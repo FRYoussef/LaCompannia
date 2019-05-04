@@ -1,4 +1,4 @@
-package negocio.actores_obras.sistemas_aplicacion;
+package negocio.actores_obras;
 
 import negocio.transfers.Obra;
 import negocio.transfers.PersonaEspectaculo;

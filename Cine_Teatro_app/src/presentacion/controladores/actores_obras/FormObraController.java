@@ -1,17 +1,14 @@
 package presentacion.controladores.actores_obras;
 
 import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import negocio.actores_obras.sistemas_aplicacion.ActoresObrasSA;
+import negocio.actores_obras.ActoresObrasSA;
 import negocio.transfers.Obra;
 import negocio.transfers.ObraGenero;
 import negocio.transfers.PersonaEspectaculo;
 import negocio.transfers.PersonaEspectaculoRol;
-import presentacion.vistas.actores_obras.MainActoresObrasImpGUI;
 
 import java.util.ArrayList;
 
