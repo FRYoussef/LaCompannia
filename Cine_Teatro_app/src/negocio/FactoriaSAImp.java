@@ -1,5 +1,7 @@
 package negocio;
 
+import negocio.catering.FactoriaSA_GC;
+import negocio.catering.SAPedido_GC;
 import negocio.reservas.SAReserva;
 import negocio.reservas.SAReservaImp;
 
@@ -10,5 +12,10 @@ public class FactoriaSAImp extends FactoriaSA {
 	@Override
 	public SAReserva getSAReserva() {
 		return new SAReservaImp();
+	}
+
+	@Override
+	public SAPedido_GC getSACatering() {
+		return FactoriaSA_GC.getInstancia();
 	}
 }

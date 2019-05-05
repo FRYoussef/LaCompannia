@@ -3,6 +3,7 @@ package presentacion.vistas;
 import presentacion.recursosAudiovisuales.RecursosAudiovisuales;
 import presentacion.vistas.actores_obras.MainActoresObrasImpGUI;
 import presentacion.vistas.audiovisuales.AudiovisualesImpGUI;
+import presentacion.vistas.catering.CateringImpGUI;
 import presentacion.vistas.obras.ObrasImpGUI;
 import presentacion.vistas.publicidad.PublicidadGUI;
 import presentacion.vistas.reserva.GUIReserva;
@@ -23,6 +24,9 @@ public class FactoriaGUI {
                 break;
             case TransporteImpGUI.CODE:
                 gui = new TransporteImpGUI();
+                break;
+            case CateringImpGUI.CODE:
+                gui = CateringImpGUI.getInstancia();
                 break;
             case VestimentaImpGUI.CODE:
                 gui = new VestimentaImpGUI();
