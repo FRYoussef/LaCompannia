@@ -1,6 +1,8 @@
-package presentacion.recursosAudiovisuales;
+package presentacion.controladores.recursosAudiovisuales;
 
 import negocio.recursosAudiovisuales.*;
+import presentacion.recursosAudiovisuales.ComprarRecursosView;
+import presentacion.recursosAudiovisuales.Controller;
 
 public class ComprarRecursosController implements Controller {
 

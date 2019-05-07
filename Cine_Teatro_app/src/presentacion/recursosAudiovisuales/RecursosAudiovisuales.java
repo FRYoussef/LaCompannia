@@ -8,6 +8,7 @@ import com.j256.ormlite.logger.LocalLog;
 import com.j256.ormlite.support.ConnectionSource;
 
 import negocio.recursosAudiovisuales.*;
+import presentacion.controladores.recursosAudiovisuales.RecursosAudiovisualesController;
 import presentacion.vistas.*;
 
 public class RecursosAudiovisuales implements GUI{

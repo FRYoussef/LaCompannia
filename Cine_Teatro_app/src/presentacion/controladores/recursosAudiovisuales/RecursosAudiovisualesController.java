@@ -1,10 +1,16 @@
-package presentacion.recursosAudiovisuales;
+package presentacion.controladores.recursosAudiovisuales;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 import integracion.recursosAudiovisuales.*;
 import negocio.recursosAudiovisuales.*;
+import presentacion.recursosAudiovisuales.ComprarRecursosView;
+import presentacion.recursosAudiovisuales.ConsultarAveriasView;
+import presentacion.recursosAudiovisuales.ConsultarRecursosView;
+import presentacion.recursosAudiovisuales.Controller;
+import presentacion.recursosAudiovisuales.RecursosAudiovisualesView;
+import presentacion.recursosAudiovisuales.RegistrarAveriaView;
 
 public class RecursosAudiovisualesController implements Controller {
 

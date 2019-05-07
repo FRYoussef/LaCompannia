@@ -2,7 +2,6 @@ package presentacion.recursosAudiovisuales;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.io.File;
 
 import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;

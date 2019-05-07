@@ -1,8 +1,10 @@
-package presentacion.recursosAudiovisuales;
+package presentacion.controladores.recursosAudiovisuales;
 
 import javax.swing.JOptionPane;
 
 import negocio.recursosAudiovisuales.*;
+import presentacion.recursosAudiovisuales.Controller;
+import presentacion.recursosAudiovisuales.RegistrarAveriaView;
 
 public class registrarAveriaController implements Controller {
 
