@@ -4,6 +4,8 @@ import negocio.catering.FactoriaSA_GC;
 import negocio.catering.SAPedido_GC;
 import negocio.reservas.SAReserva;
 import negocio.reservas.SAReservaImp;
+import negocio.transporte.SATransporte;
+import negocio.transporte.SATransporteImp;
 
 public class FactoriaSAImp extends FactoriaSA {
 
@@ -17,5 +19,9 @@ public class FactoriaSAImp extends FactoriaSA {
 	@Override
 	public SAPedido_GC getSACatering() {
 		return FactoriaSA_GC.getInstancia();
+	}
+	
+	public SATransporte getSATransporte() {
+		return new SATransporteImp();
 	}
 }

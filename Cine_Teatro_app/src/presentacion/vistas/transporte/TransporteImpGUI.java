@@ -7,6 +7,6 @@ public class TransporteImpGUI implements GUI {
 
     @Override
     public void ejecutar() {
-
+    	GUITransporte.getInstancia();
     }
 }
