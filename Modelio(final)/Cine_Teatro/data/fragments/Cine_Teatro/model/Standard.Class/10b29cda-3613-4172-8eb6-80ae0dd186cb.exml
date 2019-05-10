@@ -186,7 +186,7 @@ this.Equipaje = value;]]></ATT>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="getNAsiento" mc="Standard.Operation" uid="3f4f7be5-e228-4ff8-8d6b-215796ad8c18"/>
+          <ID name="getTotal" mc="Standard.Operation" uid="3f4f7be5-e228-4ff8-8d6b-215796ad8c18"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -194,7 +194,7 @@ this.Equipaje = value;]]></ATT>
             <ATT name="Visibility">PackageVisibility</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[getNAsiento]]></ATT>
+            <ATT name="Name"><![CDATA[getTotal]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -235,7 +235,7 @@ this.Equipaje = value;]]></ATT>
                 <DEPENDENCIES>
                   <LINK relation="DependsOn">
                     <REFOBJ>
-                      <ID name="NAsiento" mc="Standard.Attribute" uid="480d8ee7-3c2c-40c1-a570-7ce668cacfde"/>
+                      <ID name="Total" mc="Standard.Attribute" uid="480d8ee7-3c2c-40c1-a570-7ce668cacfde"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="Extension">
@@ -262,7 +262,7 @@ this.Equipaje = value;]]></ATT>
               <OBJECT>
                 <ID name="" mc="Infrastructure.Note" uid="c0e3de04-07a0-4d30-bf3d-94430af4c95c"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return this.NAsiento;]]></ATT>
+                  <ATT name="Content"><![CDATA[return this.Total;]]></ATT>
                   <ATT name="MimeType"></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -277,7 +277,7 @@ this.Equipaje = value;]]></ATT>
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="setNAsiento" mc="Standard.Operation" uid="788b9daf-be39-4a7f-8ad7-da8c0b08a9af"/>
+          <ID name="setTotal" mc="Standard.Operation" uid="788b9daf-be39-4a7f-8ad7-da8c0b08a9af"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -285,7 +285,7 @@ this.Equipaje = value;]]></ATT>
             <ATT name="Visibility">PackageVisibility</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[setNAsiento]]></ATT>
+            <ATT name="Name"><![CDATA[setTotal]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -326,7 +326,7 @@ this.Equipaje = value;]]></ATT>
                 <DEPENDENCIES>
                   <LINK relation="DependsOn">
                     <REFOBJ>
-                      <ID name="NAsiento" mc="Standard.Attribute" uid="480d8ee7-3c2c-40c1-a570-7ce668cacfde"/>
+                      <ID name="Total" mc="Standard.Attribute" uid="480d8ee7-3c2c-40c1-a570-7ce668cacfde"/>
                     </REFOBJ>
                   </LINK>
                   <LINK relation="Extension">
@@ -340,7 +340,176 @@ this.Equipaje = value;]]></ATT>
                 <ID name="" mc="Infrastructure.Note" uid="012a0c91-2b98-44e0-a0cc-0fe53d116c49"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.
-this.NAsiento = value;]]></ATT>
+this.Total = value;]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="Infrastructure.NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="getIdReserva" mc="Standard.Operation" uid="1b3a2f8a-5180-47d7-bb73-da9720da0d38"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">PackageVisibility</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getIdReserva]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Standard.Parameter" uid="0a2b8b59-8eeb-48f4-b92d-439a6ee8d1d2"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaGetter" mc="Infrastructure.Stereotype" uid="01ec25e8-0000-00f0-0000-000000000000"/>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Dependency" uid="c98fbbad-e168-460e-8ace-e7fad2eede62"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="IdReserva" mc="Standard.Attribute" uid="00845a14-035f-4f28-8dac-c7b41b65ffa6"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="Extension">
+                    <FOREIGNID name="JavaGetter" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-012b-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="84cf729c-fcf3-4390-b890-5aaf75b2fa8f"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="Infrastructure.NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="aab285e0-c938-4310-b5eb-abea33ae9a72"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return this.IdReserva;]]></ATT>
+                  <ATT name="MimeType"></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="Infrastructure.NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="setIdReserva" mc="Standard.Operation" uid="26322de8-05d6-4554-92a2-8927ca4f17e6"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">PackageVisibility</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[setIdReserva]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="value" mc="Standard.Parameter" uid="8f3365dd-3740-4340-99de-cffb2487a196"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[value]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="JavaSetter" mc="Infrastructure.Stereotype" uid="01ec25e8-0000-00f5-0000-000000000000"/>
+            </LINK>
+            <COMP relation="DependsOnDependency">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Dependency" uid="c9ea76e8-027e-4601-be7d-7dd52019cdcd"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="DependsOn">
+                    <REFOBJ>
+                      <ID name="IdReserva" mc="Standard.Attribute" uid="00845a14-035f-4f28-8dac-c7b41b65ffa6"/>
+                    </REFOBJ>
+                  </LINK>
+                  <LINK relation="Extension">
+                    <FOREIGNID name="JavaSetter" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0130-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="8743456d-8310-4b0a-9ebc-4abd4bc9f223"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[// Automatically generated method. Please delete this comment before entering specific code.
+this.IdReserva = value;]]></ATT>
                   <ATT name="MimeType"></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -357,7 +526,7 @@ this.NAsiento = value;]]></ATT>
       </COMP>
       <COMP relation="OwnedAttribute">
         <OBJECT>
-          <ID name="NAsiento" mc="Standard.Attribute" uid="480d8ee7-3c2c-40c1-a570-7ce668cacfde"/>
+          <ID name="Total" mc="Standard.Attribute" uid="480d8ee7-3c2c-40c1-a570-7ce668cacfde"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -371,7 +540,7 @@ this.NAsiento = value;]]></ATT>
             <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[NAsiento]]></ATT>
+            <ATT name="Name"><![CDATA[Total]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -424,7 +593,7 @@ this.NAsiento = value;]]></ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Type">
-              <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
+              <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
