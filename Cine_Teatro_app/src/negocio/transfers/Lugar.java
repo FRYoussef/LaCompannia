@@ -9,6 +9,7 @@ public class Lugar {
 	private int aforo;
 	private float tarifa;
 	private ArrayList<IntervaloTiempo> ocupacion; //Array ordenado con numero par de fechas indicando intervalos de tiempo
+	private String pathFoto;
 	
 	public String getIdLugar() {
 		return idLugar;
@@ -89,7 +90,17 @@ public class Lugar {
 
 	public void setAforo(int aforo) {
 		this.aforo = aforo;
+	}
+
+	public String getPathFoto() {
+		return pathFoto;
+	}
+
+	public void setPathFoto(String pathFoto) {
+		this.pathFoto = pathFoto;
 	} 
+	
+	
 	
 	
 }

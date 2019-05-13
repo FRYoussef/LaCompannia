@@ -71,7 +71,7 @@ public class DAOPagoImp implements DAOPago {
 	
 	
 	private boolean writeData(ArrayList<Pago> tPagoArray) {
-		try(BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(ruta), "ISO-8859-15"))){
+		try(BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(ruta), "UTF-8"))){
 			out.write("Pagos_Cine/Teatro" + System.lineSeparator());
 			for(Pago tPago : tPagoArray) {
 				out.write("$" + System.lineSeparator());
@@ -88,7 +88,7 @@ public class DAOPagoImp implements DAOPago {
 	
 	private ArrayList<Pago> loadData(){
 		ArrayList<Pago> inData = new ArrayList<Pago>();
-		try(BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(ruta), "ISO-8859-15"))){
+		try(BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(ruta), "UTF-8"))){
 			if(!in.readLine().trim().equals("Pagos_Cine/Teatro")) throw new IOException("Fichero mal formado");
 			String line = in.readLine().trim();
 			while(!line.equals("#")) {
@@ -114,8 +114,11 @@ public class DAOPagoImp implements DAOPago {
 		if(tPago.getFechaIni() == null) throw new NumberFormatException("Fecha de inicio mal definida");
 		String[] fechas = in.readLine().trim().split(" ");
 		ArrayList<Date> fechasCobro = new ArrayList<Date>();
-		for(String str : fechas) 
-			fechasCobro.add(IntervaloTiempo.parseDate(str));
+		for(String str : fechas) {
+			Date d = IntervaloTiempo.parseDate(str);
+			if(d == null) throw new NumberFormatException("Fecha " + str + " mal definida");
+			fechasCobro.add(d);
+		}
 		tPago.setFechasCobro(fechasCobro);
 		return tPago;
 	}

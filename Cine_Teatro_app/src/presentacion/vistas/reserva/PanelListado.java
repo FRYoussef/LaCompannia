@@ -22,6 +22,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
+import com.toedter.calendar.JDateChooser;
+
 import negocio.reservas.FiltroBusquedaLugar;
 import negocio.reservas.IntervaloTiempo;
 import negocio.transfers.Lugar;
@@ -30,7 +32,8 @@ import presentacion.controladores.reservas.ControladorReserva;
 @SuppressWarnings("serial")
 public class PanelListado extends JPanel{
 	
-	private JTextField tfFechaIni, tfFechaFin, tfPrecioMin, tfPrecioMax, tfCiudad; 
+	private JTextField tfPrecioMin, tfPrecioMax, tfCiudad; 
+	private JDateChooser dCFechaIni, dCFechaFin;
 	private JButton butBuscar;
 	private JPanel pLugares;
 	private Consumer<ActionEvent> reserveButtonAction;
@@ -99,14 +102,16 @@ public class PanelListado extends JPanel{
 		//Panel con las fechas
 		JPanel pFechas = new JPanel(new FlowLayout(FlowLayout.LEFT));
 		Date actualDate = new Date();
-		tfFechaIni = new JTextField(IntervaloTiempo.formatDate(actualDate));
-		tfFechaIni.setEditable(true);
-		tfFechaFin = new JTextField(IntervaloTiempo.formatDate(IntervaloTiempo.addDayToDate(actualDate)));
-		tfFechaFin.setEditable(true);
+		dCFechaIni = new JDateChooser(actualDate);
+		dCFechaIni.setDateFormatString(IntervaloTiempo.dateFormat);
+		dCFechaIni.setPreferredSize(new Dimension(90, 20));
+		dCFechaFin = new JDateChooser(IntervaloTiempo.addDayToDate(actualDate));
+		dCFechaFin.setDateFormatString(IntervaloTiempo.dateFormat);
+		dCFechaFin.setPreferredSize(new Dimension(90, 20));
 		pFechas.add(new JLabel("Fechas: "));
-		pFechas.add(tfFechaIni);
-		pFechas.add(new JLabel(" hasta "));
-		pFechas.add(tfFechaFin);
+		pFechas.add(dCFechaIni);
+		pFechas.add(new JLabel("hasta"));
+		pFechas.add(dCFechaFin);
 		pFechas.setBackground(color);
 		
 		//Panel con los precios
@@ -127,7 +132,7 @@ public class PanelListado extends JPanel{
 		JPanel pCiudad = new JPanel(new FlowLayout(FlowLayout.LEFT));
 		tfCiudad = new JTextField("");
 		tfCiudad.setEditable(true);
-		tfCiudad.setPreferredSize(new Dimension(175, 20));
+		tfCiudad.setPreferredSize(new Dimension(140, 20));
 		pCiudad.add(new JLabel("Ciudad: "));
 		pCiudad.add(tfCiudad);
 		pCiudad.setBackground(color);
@@ -171,8 +176,8 @@ public class PanelListado extends JPanel{
 	
 	private FiltroBusquedaLugar getFiltro() throws IllegalArgumentException{
 		FiltroBusquedaLugar filtro = new FiltroBusquedaLugar();
-		IntervaloTiempo interval = IntervaloTiempo.parseInterval(tfFechaIni.getText().trim(), tfFechaFin.getText().trim());
-		if(interval == null || interval.getDaysInBetween() == 0) throw new IllegalArgumentException("Fechas invalidas.");
+		IntervaloTiempo interval = new IntervaloTiempo(dCFechaIni.getDate(), dCFechaFin.getDate());
+		if(interval.getDaysInBetween() == 0) throw new IllegalArgumentException("Fechas invalidas.");
 		filtro.setIntervalo(interval);
 		filtro.setCiudad(tfCiudad.getText().trim().toLowerCase());
 		try {
@@ -185,7 +190,7 @@ public class PanelListado extends JPanel{
 	}
 	
 	public void reservarButtonAction(ActionEvent e) {
-		if(IntervaloTiempo.parseInterval(tfFechaIni.getText().trim(), tfFechaFin.getText().trim()) == null) 
+		if(!fechasOk()) 
 			JOptionPane.showMessageDialog(this, "Las fechas de reserva seleccionadas son incorrectas", "Informacion", JOptionPane.INFORMATION_MESSAGE);
 		else reserveButtonAction.accept(e);
 	}
@@ -198,8 +203,19 @@ public class PanelListado extends JPanel{
 		return lugarSeleccionado;
 	}
 	
+	private boolean fechasOk(){
+		try {
+			IntervaloTiempo interval = new IntervaloTiempo(dCFechaIni.getDate(), dCFechaFin.getDate());
+			if(interval.getDaysInBetween() == 0) throw new IllegalArgumentException("Fechas invalidas.");
+		}catch(IllegalArgumentException ex){
+			return false;
+		}
+		return true;
+	}
+	
 	public IntervaloTiempo getFechasReserva() {
-		return IntervaloTiempo.parseInterval(tfFechaIni.getText().trim(), tfFechaFin.getText().trim());
+		if(!fechasOk()) return null;
+		return new IntervaloTiempo(dCFechaIni.getDate(), dCFechaFin.getDate());
 	}
 
 	

@@ -124,7 +124,9 @@ public class FrameReservar extends JFrame implements CardLayoutInterface{
 								"Confirmacion", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opciones, opciones[0]);
 						if(sel <= 0) returnAction.run();
 						else if(sel == 1) actualCard = cardNameListado;
-						//TODO descargar factura
+						else {
+							JOptionPane.showMessageDialog(this, "Funcionalidad sin implementar", "Información", JOptionPane.INFORMATION_MESSAGE);
+						}
 					}catch(IllegalArgumentException ex) {
 						JOptionPane.showMessageDialog(this, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 					}

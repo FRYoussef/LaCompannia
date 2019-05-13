@@ -3,6 +3,7 @@ package presentacion.vistas.reserva;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
@@ -12,8 +13,10 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 
 import negocio.transfers.Lugar;
 
@@ -23,6 +26,7 @@ public class PanelLugar extends JPanel{
 	private JTextField nombre, descripcion, direccion;
 	private JButton masInfo, verDisp, reservar;
 	private Lugar lugarAsociado;
+	private DialogInfoLugar infoLug;
 	
 	public PanelLugar(PanelListado listado, Lugar lugar) {
 		lugarAsociado = lugar;
@@ -34,6 +38,7 @@ public class PanelLugar extends JPanel{
 				listado.reservarButtonAction(arg0);
 			}
 		});
+		
 		
 	}
 	
@@ -76,12 +81,25 @@ public class PanelLugar extends JPanel{
 		
 		JPanel botonera = new JPanel();
 		botonera.setLayout(new BoxLayout(botonera, BoxLayout.X_AXIS));
+		infoLug = new DialogInfoLugar((Frame) SwingUtilities.windowForComponent(this), lugarAsociado);
 		masInfo = new JButton("Mas Info");
 		masInfo.setAlignmentX(JButton.LEFT_ALIGNMENT);
+		masInfo.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				infoLug.setVisible(true);
+			}
+		});
 		botonera.add(masInfo);
 		botonera.add(Box.createHorizontalGlue());
 		verDisp = new JButton("Ver Disponibilidad");
 		verDisp.setAlignmentX(JButton.CENTER_ALIGNMENT);
+		verDisp.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				JOptionPane.showMessageDialog(PanelLugar.this, "Funcionalidad sin implementar", "Información", JOptionPane.INFORMATION_MESSAGE);
+			}
+		});
 		botonera.add(verDisp);
 		botonera.add(Box.createHorizontalGlue());
 		reservar = new JButton("Reservar");

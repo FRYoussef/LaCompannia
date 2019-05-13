@@ -80,7 +80,7 @@ public class DAOLugarImp implements DAOLugar {
 	}
 	
 	private boolean writeData(ArrayList<Lugar> tLugarArray) {
-		try(BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(ruta), "ISO-8859-15"))){
+		try(BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(ruta), "UTF-8"))){
 			out.write("Lugares_Cine/Teatro" + System.lineSeparator());
 			for(Lugar tLugar : tLugarArray) {
 				out.write("$" + System.lineSeparator());
@@ -97,7 +97,7 @@ public class DAOLugarImp implements DAOLugar {
 	
 	private ArrayList<Lugar> loadData(){
 		ArrayList<Lugar> inData = new ArrayList<Lugar>();
-		try(BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(ruta), "ISO-8859-15"))){
+		try(BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(ruta), "UTF-8"))){
 			if(!in.readLine().trim().equals("Lugares_Cine/Teatro")) throw new IOException("Fichero mal formado");
 			String line = in.readLine().trim();
 			while(!line.equals("#")) {
@@ -121,6 +121,7 @@ public class DAOLugarImp implements DAOLugar {
 		tLugar.setCalle(in.readLine().trim());
 		tLugar.setAforo(Integer.parseInt(in.readLine().trim()));
 		tLugar.setTarifa(Float.parseFloat(in.readLine().trim()));
+		tLugar.setPathFoto(in.readLine().trim());
 		String[] fechas = in.readLine().trim().split(" ");
 		ArrayList<IntervaloTiempo> ocupacion = new ArrayList<IntervaloTiempo>();
 		if(!fechas[0].equals("")) {
@@ -146,6 +147,7 @@ public class DAOLugarImp implements DAOLugar {
 		out.write(tLugar.getCalle() + System.lineSeparator());
 		out.write(tLugar.getAforo() + System.lineSeparator());
 		out.write(tLugar.getTarifa() + System.lineSeparator());
+		out.write(tLugar.getPathFoto() + System.lineSeparator());
 		ArrayList<IntervaloTiempo> ocupacion = tLugar.getOcupacion();
 		for(IntervaloTiempo inter : ocupacion) {
 			out.write(inter + " ");

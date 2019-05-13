@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         BorderPane root = FXMLLoader.load(getClass().getResource("vistas/main_view.fxml"));
         Scene scene = new Scene(root);
-        primaryStage.setTitle("Gestión Películas/Obras");
+        primaryStage.setTitle("GestiÃ³n PelÃ­culas/Obras");
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();

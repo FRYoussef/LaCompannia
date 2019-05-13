@@ -11,7 +11,7 @@ public class IntervaloTiempo implements Comparable<IntervaloTiempo> {
 	public static final String dateFormat = "dd/MM/yyyy";
 	
 	public IntervaloTiempo(Date ini, Date fin) {
-		if(ini.compareTo(fin) > 0) throw new IllegalArgumentException("Fechas invalidas");
+		if(ini == null || fin == null || ini.compareTo(fin) > 0) throw new IllegalArgumentException("Fechas invalidas");
 		this.ini = ini;
 		this.fin = fin;
 	}
@@ -54,6 +54,7 @@ public class IntervaloTiempo implements Comparable<IntervaloTiempo> {
 	
 	
 	public static String formatDate(Date d) {
+		if(d == null) return new String();
 		SimpleDateFormat formater = new SimpleDateFormat(dateFormat);
 		return formater.format(d);
 	}
@@ -68,6 +69,7 @@ public class IntervaloTiempo implements Comparable<IntervaloTiempo> {
 	}
 	
 	public static Date addMonthToDate(Date d) {
+		if(d == null) return null;
 		Calendar Cal = Calendar.getInstance();
 	    Cal.setTime(d);    
 	    Cal.add(Calendar.MONTH, 1);    
@@ -75,6 +77,7 @@ public class IntervaloTiempo implements Comparable<IntervaloTiempo> {
 	}
 	
 	public static Date addDayToDate(Date d) {
+		if(d == null) return null;
 		Calendar Cal = Calendar.getInstance();
 	    Cal.setTime(d);    
 	    Cal.add(Calendar.DATE, 1);    

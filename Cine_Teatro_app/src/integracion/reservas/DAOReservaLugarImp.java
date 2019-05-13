@@ -55,7 +55,7 @@ public class DAOReservaLugarImp implements DAOReservaLugar {
 
 	
 	private boolean writeData(ArrayList<ReservaLugar> tResArray) {
-		try(BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(ruta), "ISO-8859-15"))){
+		try(BufferedWriter out = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(ruta), "UTF-8"))){
 			out.write("ReservaLugares_Cine/Teatro" + System.lineSeparator());
 			for(ReservaLugar tRes : tResArray) {
 				out.write("$" + System.lineSeparator());
@@ -72,7 +72,7 @@ public class DAOReservaLugarImp implements DAOReservaLugar {
 	
 	private ArrayList<ReservaLugar> loadData(){
 		ArrayList<ReservaLugar> inData = new ArrayList<ReservaLugar>();
-		try(BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(ruta), "ISO-8859-15"))){
+		try(BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(ruta), "UTF-8"))){
 			if(!in.readLine().trim().equals("ReservaLugares_Cine/Teatro")) throw new IOException("Fichero mal formado");
 			String line = in.readLine().trim();
 			while(!line.equals("#")) {
