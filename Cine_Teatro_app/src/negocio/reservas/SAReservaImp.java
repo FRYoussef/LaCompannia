@@ -66,7 +66,7 @@ public class SAReservaImp implements SAReserva {
 		return FactoriaDAO.getInstancia().nuevoDAOCliente().modCliente(tCli);
 	}
 	
-
+	//Metodo principal del CU reserva general del lugar, lanza excepcion con mensaje en caso de error
 	@Override
 	public void reservarLugar(String idLugar, Cliente tCli, IntervaloTiempo fechasReserva, 
 			TipoPago tipoPago, boolean paypal) throws IllegalArgumentException {
@@ -76,6 +76,7 @@ public class SAReservaImp implements SAReserva {
 		if(!actualizarDatosCliente(tCli)) 
 			throw new IllegalArgumentException("Error al actualizar los datos del cliente");
 		
+		//Se carga el lugar seleccionado y se comprueba que su disponibilidad no ha cambiado
 		DAOLugar daoLugar = FactoriaDAO.getInstancia().nuevoDAOLugar();
 		Lugar lugarSel = daoLugar.consultaLugar(idLugar);
 		
@@ -84,6 +85,7 @@ public class SAReservaImp implements SAReserva {
 		if(lugarOcupado(lugarSel, fechasReserva)) 
 			throw new IllegalArgumentException("El lugar seleccionado ya no esta disponible");
 		
+		//Se le añade la ocupacio al lugar y se modifica en fichero
 		ArrayList<IntervaloTiempo> ocupacion = lugarSel.getOcupacion();
 		ocupacion.add(fechasReserva);
 		Collections.sort(ocupacion);
@@ -92,6 +94,7 @@ public class SAReservaImp implements SAReserva {
 		if(!daoLugar.modLugar(lugarSel)) 
 			throw new IllegalArgumentException("Error al actualizar los datos del lugar");
 		
+		//Se crea el pago y la reserva del lugar y se escriben en fichero
 		Pago tPago = crearPagoReserva(tCli.getDni(), lugarSel.getTarifa() * fechasReserva.getDaysInBetween(), tipoPago,
 				"Reserva del lugar " + lugarSel.getNombre() + " en fechas " + fechasReserva, new Date()); //fecha de inicio del pago actual
 		ReservaLugar tReserva = crearReservaLugar(tPago.getIdCompra(), lugarSel.getIdLugar(), fechasReserva);
@@ -101,7 +104,7 @@ public class SAReservaImp implements SAReserva {
 		if(!FactoriaDAO.getInstancia().nuevoDAOReservaLugar().altaReserva(tReserva))
 			throw new IllegalArgumentException("Error al añadir la nueva reserva"); 
 		
-		
+		//Se realiza el cobro del primer pago y se envia email al propietario del lugar y al cliente
 		realizarCobro(tCli.getDatosBancarios(), tPago.getDineroCobrado(), paypal);
 		enviarEmail(FactoriaDAO.getInstancia().nuevoDAOCliente().consultaCliente(lugarSel.getDniPropietario()).getEmail(), 
 				"Su lugar " + lugarSel.getNombre() + " ha sido reservado, para mas informacion consulte su cuenta.");

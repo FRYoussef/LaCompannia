@@ -9,11 +9,16 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-@SuppressWarnings("serial")
+/***************************************************************************************************
+ * Fichero		: PanelControl.java
+ *
+ * Descripcion	: Clase JPanel para controlar el avance entre las distintas etapas de un caso de uso (que implemente cardLyoutInterface)
+ *
+ * Autor		: Daniel Alfaro Miranda
+ **************************************************************************************************/
 public class PanelControl extends JPanel {
-
-	JButton returnButton, advanceButton, menuButton;
-	
+	private static final long serialVersionUID = 212994921075857925L;
+	private JButton returnButton, advanceButton, menuButton;
 	
 	public PanelControl(CardLayoutInterface father) {
 		initGUI();

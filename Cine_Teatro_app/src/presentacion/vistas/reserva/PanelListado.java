@@ -8,6 +8,8 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.function.Consumer;
@@ -15,6 +17,7 @@ import java.util.function.Consumer;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -29,31 +32,38 @@ import negocio.reservas.IntervaloTiempo;
 import negocio.transfers.Lugar;
 import presentacion.controladores.reservas.ControladorReserva;
 
-@SuppressWarnings("serial")
+/***************************************************************************************************
+ * Fichero		: PanelListado.java
+ *
+ * Descripcion	: Clase JPanel que recoje el listado de los lugares y su filtrado
+ *
+ * Autor		: Daniel Alfaro Miranda
+ **************************************************************************************************/
 public class PanelListado extends JPanel{
-	
+	private static final long serialVersionUID = -7862963048005945610L;
 	private JTextField tfPrecioMin, tfPrecioMax, tfCiudad; 
+	private JCheckBox cbCiudad;
 	private JDateChooser dCFechaIni, dCFechaFin;
 	private JButton butBuscar;
-	private JPanel pLugares;
-	private Consumer<ActionEvent> reserveButtonAction;
+	private JPanel pLugares; // Panel con los PanelLugar
+	
+	//Atributo que guarda la referencia al metodo advanceButtonAction del cardlayoutInterface que creo el panel
+	private Consumer<ActionEvent> reserveButtonAction; 
 	public static final String reserveButtonActionCommand = CardLayoutInterface.advanceButtonActionCommand;
-	private Lugar lugarSeleccionado;
+	
+	private Lugar lugarSeleccionado; //Lugar seleccionado por el boton reservar
+	private FiltroBusquedaLugar filtroActual; //Filtro usado en la seleccion del lugar
 	
 	public PanelListado(CardLayoutInterface father) {
 		lugarSeleccionado = null;
 		initGUI();
 		butBuscar.addActionListener(new ActionListener() {
 			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				updateLugares(pLugares);
-			}
+			public void actionPerformed(ActionEvent arg0) { updateLugares(pLugares); }
 		});
 		reserveButtonAction = new Consumer<ActionEvent>() {
 			@Override
-			public void accept(ActionEvent arg0) {
-				father.advanceButtonAction(arg0);
-			}
+			public void accept(ActionEvent arg0) { father.advanceButtonAction(arg0); }
 		};
 	}
 	
@@ -72,9 +82,11 @@ public class PanelListado extends JPanel{
 		
 	}
 	
+	//Busqueda y actualizacion de los lugares del fichero filtrados
 	private void updateLugares(JPanel container) {
 		try {
-			ArrayList<Lugar> lugares = ControladorReserva.getInstancia().listarLugaresDisponibles(getFiltro());
+			filtroActual = getFiltro();
+			ArrayList<Lugar> lugares = ControladorReserva.getInstancia().listarLugaresDisponibles(filtroActual);
 			if(lugares == null) 
 				JOptionPane.showMessageDialog(this, "Ocurrio un error en la carga de lugares", "Error", JOptionPane.ERROR_MESSAGE);
 			else {
@@ -85,7 +97,7 @@ public class PanelListado extends JPanel{
 					for(Lugar lugar : lugares) 
 						container.add(new PanelLugar(this, lugar));
 				}
-				else container.add(createPanelInfo("No hay lugares disponibles para los filtros indicados, pruebe otra consulta"));
+				else container.add(createPanelInfo(this, "No hay lugares disponibles para los filtros indicados, pruebe otra consulta"));
 				container.add(Box.createVerticalGlue());
 			}
 		}
@@ -119,7 +131,7 @@ public class PanelListado extends JPanel{
 		tfPrecioMin = new JTextField("0");
 		tfPrecioMin.setEditable(true);
 		tfPrecioMin.setPreferredSize(new Dimension(70, 20));
-		tfPrecioMax = new JTextField("1000");
+		tfPrecioMax = new JTextField("2000");
 		tfPrecioMax.setEditable(true);
 		tfPrecioMax.setPreferredSize(new Dimension(70, 20));
 		pDinero.add(new JLabel("Precio:  "));
@@ -132,9 +144,19 @@ public class PanelListado extends JPanel{
 		JPanel pCiudad = new JPanel(new FlowLayout(FlowLayout.LEFT));
 		tfCiudad = new JTextField("");
 		tfCiudad.setEditable(true);
-		tfCiudad.setPreferredSize(new Dimension(140, 20));
+		tfCiudad.setPreferredSize(new Dimension(110, 20));
 		pCiudad.add(new JLabel("Ciudad: "));
 		pCiudad.add(tfCiudad);
+		cbCiudad = new JCheckBox();
+		cbCiudad.setBackground(color);
+		cbCiudad.addItemListener(new ItemListener() {
+			@Override
+			public void itemStateChanged(ItemEvent arg0) {
+				tfCiudad.setEditable(!cbCiudad.isSelected());
+			}
+		});
+		cbCiudad.setSelected(true);
+		pCiudad.add(cbCiudad);
 		pCiudad.setBackground(color);
 		
 		//Panel con el boton buscar
@@ -160,26 +182,26 @@ public class PanelListado extends JPanel{
 		return pFiltrado;
 	}
 	
-	private JPanel createPanelInfo(String info) {
+	//Formato para un panel de informacion
+	private static JPanel createPanelInfo(JPanel comp, String info) {
 		JPanel pInfo = new JPanel(new FlowLayout());
 		JTextArea tAreaInfo = new JTextArea(20, 39);
 		tAreaInfo.setEditable(false);
 		tAreaInfo.setLineWrap(true);
 		tAreaInfo.setText(info);
 		tAreaInfo.setFont(new Font("", Font.BOLD, 12));
-		tAreaInfo.setBackground(this.getBackground());
+		tAreaInfo.setBackground(comp.getBackground());
 		pInfo.add(tAreaInfo);
 		return pInfo;
 	}
 	
-	
-	
+	//Parseo de los datos del filtro de busqueda
 	private FiltroBusquedaLugar getFiltro() throws IllegalArgumentException{
 		FiltroBusquedaLugar filtro = new FiltroBusquedaLugar();
 		IntervaloTiempo interval = new IntervaloTiempo(dCFechaIni.getDate(), dCFechaFin.getDate());
 		if(interval.getDaysInBetween() == 0) throw new IllegalArgumentException("Fechas invalidas.");
 		filtro.setIntervalo(interval);
-		filtro.setCiudad(tfCiudad.getText().trim().toLowerCase());
+		if(!cbCiudad.isSelected()) filtro.setCiudad(tfCiudad.getText().trim().toLowerCase());
 		try {
 			filtro.setDineroMax(Integer.parseInt(tfPrecioMax.getText()));
 			filtro.setDineroMin(Integer.parseInt(tfPrecioMin.getText()));
@@ -189,10 +211,14 @@ public class PanelListado extends JPanel{
 		return filtro;
 	}
 	
+	//Funcion llamada desde el PanelLugar seleccionado al pulsar reservar
 	public void reservarButtonAction(ActionEvent e) {
-		if(!fechasOk()) 
-			JOptionPane.showMessageDialog(this, "Las fechas de reserva seleccionadas son incorrectas", "Informacion", JOptionPane.INFORMATION_MESSAGE);
-		else reserveButtonAction.accept(e);
+		try{
+			if(!getFiltro().equals(filtroActual)) throw new IllegalArgumentException("Filtros distrintos");
+			else reserveButtonAction.accept(e);
+		}catch(IllegalArgumentException ex) {
+			JOptionPane.showMessageDialog(this, "El lugar seleccionado corresponde a otro filtro de busqueda, pulse buscar para actualizar los resultados", "Informacion", JOptionPane.INFORMATION_MESSAGE);
+		}	
 	}
 	
 	public void setLugarSeleccionado(Lugar lugar) {
@@ -203,19 +229,8 @@ public class PanelListado extends JPanel{
 		return lugarSeleccionado;
 	}
 	
-	private boolean fechasOk(){
-		try {
-			IntervaloTiempo interval = new IntervaloTiempo(dCFechaIni.getDate(), dCFechaFin.getDate());
-			if(interval.getDaysInBetween() == 0) throw new IllegalArgumentException("Fechas invalidas.");
-		}catch(IllegalArgumentException ex){
-			return false;
-		}
-		return true;
-	}
-	
 	public IntervaloTiempo getFechasReserva() {
-		if(!fechasOk()) return null;
-		return new IntervaloTiempo(dCFechaIni.getDate(), dCFechaFin.getDate());
+		return filtroActual.getIntervalo();
 	}
 
 	

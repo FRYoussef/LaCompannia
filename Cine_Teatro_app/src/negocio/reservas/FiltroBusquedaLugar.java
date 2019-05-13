@@ -4,7 +4,13 @@ import java.util.ArrayList;
 
 import negocio.transfers.Lugar;
 
-
+/***************************************************************************************************
+ * Fichero		: FiltroBusquedaLugar.java
+ *
+ * Descripcion	: Clase de utilidad que implementa un filtro para los lugares
+ *
+ * Autor		: Daniel Alfaro Miranda
+ **************************************************************************************************/
 public class FiltroBusquedaLugar {
 	private String ciudad;
 	private int dineroMin, dineroMax;
@@ -50,8 +56,9 @@ public class FiltroBusquedaLugar {
 		this.intervalo = intervalo;
 	}
 	
+	//Comprobar si un lugar entra dentro de este filtro
 	public boolean isInFilter(Lugar tLugar) {
-		if(!ciudad.equals("") && !ciudad.equals(tLugar.getCiudad().toLowerCase())) return false;
+		if(ciudad != null && !ciudad.equals("") && !ciudad.equals(tLugar.getCiudad().toLowerCase())) return false;
 		if(tLugar.getTarifa() < dineroMin || tLugar.getTarifa() > dineroMax) return false;
 		if(intervalo != null) {
 			ArrayList<IntervaloTiempo> ocupacion = tLugar.getOcupacion();
@@ -61,4 +68,29 @@ public class FiltroBusquedaLugar {
 		}
 		return true;
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) return true;
+		if (obj == null) return false;
+		if (getClass() != obj.getClass()) return false;
+		FiltroBusquedaLugar other = (FiltroBusquedaLugar) obj;
+		if (ciudad == null) {
+			if (other.ciudad != null)
+				return false;
+		} else if (!ciudad.equals(other.ciudad))
+			return false;
+		if (dineroMax != other.dineroMax)
+			return false;
+		if (dineroMin != other.dineroMin)
+			return false;
+		if (intervalo == null) {
+			if (other.intervalo != null)
+				return false;
+		} else if (!intervalo.equals(other.intervalo))
+			return false;
+		return true;
+	}
+	
+	
 }

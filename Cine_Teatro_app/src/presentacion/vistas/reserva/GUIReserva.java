@@ -16,8 +16,8 @@ public abstract class GUIReserva implements GUI{
 		instancia = null;
 	}
 	
-	public abstract void onActionEnded();
+	public abstract void onActionEnded(); //Funcion que representa el retorno al menu de CU,s del subsistema reserva
 	
-	public abstract void exitAction();
+	public abstract void exitAction(); //Funcion que representa el retorno al menu principal de subsistemas
 	
 }

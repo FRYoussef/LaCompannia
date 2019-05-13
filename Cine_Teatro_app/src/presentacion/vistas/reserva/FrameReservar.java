@@ -16,9 +16,16 @@ import javax.swing.JPanel;
 import negocio.transfers.Cliente;
 import presentacion.controladores.reservas.ControladorReserva;
 
-
-@SuppressWarnings("serial")
+/***************************************************************************************************
+ * Fichero		: FrameReservar.java
+ *
+ * Descripcion	: Clase JFrame que representa el caso de uso de reserva de lugar
+ *
+ * Autor		: Daniel Alfaro Miranda
+ **************************************************************************************************/
 public class FrameReservar extends JFrame implements CardLayoutInterface{
+	private static final long serialVersionUID = 7233103508355797450L;
+	//Paneles de control y etapas del caso de uso
 	private PanelControl ctrPanel;
 	private PanelListado listado;
 	private PanelResumenReserva resumen;
@@ -30,7 +37,7 @@ public class FrameReservar extends JFrame implements CardLayoutInterface{
 	public static final String cardNameResumen = "RESUMEN";
 	public static final String cardNamePago = "PAGO";
 	
-	private Runnable returnAction; //Variable que guarda el metodo de onActionEnded() de la GUIReserva
+	private Runnable onActionEnded; //Atributo que guarda la llamada al metodo onActioneEnded de GUIReserva
 	
 	public FrameReservar(GUIReserva father){
 		super("Reservar Lugar");
@@ -39,15 +46,11 @@ public class FrameReservar extends JFrame implements CardLayoutInterface{
 		initGUI();
 		
 		this.addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent e) {
-				father.exitAction();
-			}
+			public void windowClosing(WindowEvent e) { father.exitAction(); }
 		});
-		returnAction = new Runnable() {
+		onActionEnded = new Runnable() {
 			@Override
-			public void run() {
-				father.onActionEnded();
-			}
+			public void run() { father.onActionEnded(); }
 		};
 	}
 	
@@ -76,13 +79,12 @@ public class FrameReservar extends JFrame implements CardLayoutInterface{
 		this.setVisible(true);
 	}
 	
-
+	//Metodo llamado desde los paneles de cada etapa del CU cuando quieren volver a la anterior
 	@Override
 	public void returnButtonAction(ActionEvent e) {
-		//Si el caption es volver tal si menu salir
 		if(e.getActionCommand().equals(menuButtonActionCommand) || 
 				e.getActionCommand().equals(returnButtonActionCommand) && actualCard.equals(cardNameListado)) {
-			returnAction.run();
+			onActionEnded.run();
 		}
 		else {
 			CardLayout cly = (CardLayout) cards.getLayout();
@@ -95,9 +97,9 @@ public class FrameReservar extends JFrame implements CardLayoutInterface{
 		}		
 	}
 
+	//Metodo llamado desde los paneles de cada etapa del CU cuando quieren avanzar a la siguiente
 	@Override
 	public void advanceButtonAction(ActionEvent e) {
-		//Si el caption es pagar se avanza al siguiente si continuar vuelve al inicio
 		if(e.getActionCommand().equals(advanceButtonActionCommand)) {
 			CardLayout cly = (CardLayout) cards.getLayout();
 			
@@ -122,10 +124,11 @@ public class FrameReservar extends JFrame implements CardLayoutInterface{
 						String[] opciones = {"Menú", "Listado", "Descargar factura"};
 						int sel = JOptionPane.showOptionDialog(this, "Reserva realizada con exito,\nse le enviara una notificacion al email", 
 								"Confirmacion", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opciones, opciones[0]);
-						if(sel <= 0) returnAction.run();
-						else if(sel == 1) actualCard = cardNameListado;
+						if(sel <= 0) onActionEnded.run(); //Vuelta al menu
+						else if(sel == 1) actualCard = cardNameListado; //Vuelta al listado
 						else {
 							JOptionPane.showMessageDialog(this, "Funcionalidad sin implementar", "Información", JOptionPane.INFORMATION_MESSAGE);
+							onActionEnded.run();
 						}
 					}catch(IllegalArgumentException ex) {
 						JOptionPane.showMessageDialog(this, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
@@ -136,6 +139,7 @@ public class FrameReservar extends JFrame implements CardLayoutInterface{
 			cly.show(cards, actualCard);
 		}		
 	}
+	
 	
 	
 }

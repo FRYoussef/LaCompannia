@@ -20,12 +20,18 @@ import negocio.transfers.Lugar;
 import negocio.transfers.TipoPago;
 import presentacion.controladores.reservas.ControladorReserva;
 
-@SuppressWarnings("serial")
+/***************************************************************************************************
+ * Fichero		: PanelResumenReserva.java
+ *
+ * Descripcion	: Clase JPanel para visualizar un resumen de la reserva a realizar asi como recoger las fechas de pago
+ *
+ * Autor		: Daniel Alfaro Miranda
+ **************************************************************************************************/
 public class PanelResumenReserva extends JPanel{
-	
+	private static final long serialVersionUID = 307899184378424207L;
 	private JComboBox<String> cBoxTipoPago;
 	private JTextArea txAreaResumen;
-	private PanelLugar pLugar;
+	private PanelLugar pLugar; //Panel de informacion del lugar seleccionado
 	private IntervaloTiempo fechasReserva;
 	
 	public PanelResumenReserva() {
@@ -46,12 +52,14 @@ public class PanelResumenReserva extends JPanel{
 		JPanel pResumen = new JPanel();
 		pResumen.setLayout(new FlowLayout());
 		
+		//Panel con el tipo de pago
 		JPanel pTipoPago = new JPanel(new FlowLayout(FlowLayout.LEFT));
 		cBoxTipoPago = new JComboBox<String>(TipoPago.getStringValues());
 		pTipoPago.add(new JLabel("Metodo de pago: "));
 		pTipoPago.add(cBoxTipoPago);
 		pTipoPago.setPreferredSize(new Dimension(480,33));
 		
+		//Panel con el area de texto
 		JPanel pTextArea = new JPanel(new FlowLayout());
 		txAreaResumen = new JTextArea(15, 43);
 		txAreaResumen.setEditable(false);
@@ -69,6 +77,7 @@ public class PanelResumenReserva extends JPanel{
 		this.add(pResumen, BorderLayout.CENTER);
 	}
 	
+	//Metodo para cambiar la informacion del PanelLugar
 	public void setLugarSeleccionado(Lugar lugar, IntervaloTiempo fechasReserva) {
 		if(pLugar != null) pLugar.setVisible(false);
 		BorderLayout layout = (BorderLayout) this.getLayout();

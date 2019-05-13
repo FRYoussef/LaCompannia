@@ -19,14 +19,22 @@ import javax.swing.JTextField;
 import negocio.transfers.Cliente;
 import negocio.transfers.DatosBancarios;
 
-@SuppressWarnings("serial")
+/***************************************************************************************************
+ * Fichero		: PanelPago.java
+ *
+ * Descripcion	: Clase JPanel para visualizar y recojer la informacion de pago del cliente
+ *
+ * Autor		: Daniel Alfaro Miranda
+ **************************************************************************************************/
 public class PanelPago extends JPanel{
-
+	private static final long serialVersionUID = 3884114118277576308L;
 	private JTextField tfNombre, tfApellidos, tfPais, tfCiudad, tfCalle, tfTelef, tfEmail, tfCodPos;
 	private JTextField tfNumTarjeta, tfNombreTarjeta, tfPaisCuenta;
 	private JRadioButton rButtTarjeta, rButtPaypal;
-	private Cliente actualCli;
 	
+	private Cliente actualCli; //Cliente visualizado 
+	
+	//Expresion regular para parsear el email
 	private static final Pattern EMAIL_REGEX = Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
 	
 	public PanelPago() {
@@ -84,6 +92,7 @@ public class PanelPago extends JPanel{
 		return null;
 	}
 	
+	//Comprobacion de los datos del formulario mediante expresiones regulares
 	private boolean comprobarDatos() {
 		if(tfNombre.getText().matches(".*\\d.*")) return false;
 		if(tfApellidos.getText().matches(".*\\d.*")) return false;
