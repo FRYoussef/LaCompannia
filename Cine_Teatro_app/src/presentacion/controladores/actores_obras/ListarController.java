@@ -24,6 +24,7 @@ public class ListarController implements Inicializador{
 
     private ButtonType _btAlertEditar = new ButtonType("Editar");
     private ButtonType _btAlertBorrar = new ButtonType("Borrar");
+    private ButtonType _btAlertCancelar = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
     private ObservableList<String> datos = null;
 
     private int contexto = -1;
@@ -95,7 +96,7 @@ public class ListarController implements Inicializador{
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirmación de acción");
         alert.setHeaderText("¿Qué quieres hacer con " + text + "?");
-        alert.getButtonTypes().setAll(_btAlertEditar, _btAlertBorrar);
+        alert.getButtonTypes().setAll(_btAlertEditar, _btAlertBorrar, _btAlertCancelar);
         Optional<ButtonType> result = alert.showAndWait();
         int accion = -1;
         if(result.get() == _btAlertEditar)

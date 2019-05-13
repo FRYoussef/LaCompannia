@@ -120,9 +120,15 @@ public class FormObraController extends FormController implements Inicializador 
             String pais = _tfPais.getText();
             relleno = relleno && !pais.isEmpty();
             int anno = 0;
-            if(!_tfAnno.getText().isEmpty())
-                anno = Integer.parseInt(_tfAnno.getText());
-            relleno = relleno && !_tfAnno.getText().isEmpty();
+            if(!_tfAnno.getText().isEmpty()) {
+                try{
+                    anno = Integer.parseInt(_tfAnno.getText());
+                } catch (Exception e) {
+                    System.out.println("Año tiene que ser un int");
+                    Platform.runLater(()-> _tfAnno.setText(""));
+                    relleno = false;
+                }
+            }
             ObraGenero genero = ObraGenero.Aventuras;
             if(_cbGenero.getValue() != null)
                 genero = ObraGenero.valueOf(_cbGenero.getValue().toString());

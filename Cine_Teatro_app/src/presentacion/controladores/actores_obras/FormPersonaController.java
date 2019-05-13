@@ -72,9 +72,15 @@ public class FormPersonaController extends FormController implements Inicializad
             String dni = _tfDni.getText();
             relleno = relleno && !dni.isEmpty();
             int telefono = 0;
-            if(!_tfTelefono.getText().isEmpty())
-                telefono = Integer.parseInt(_tfTelefono.getText());
-            relleno = relleno && !_tfTelefono.getText().isEmpty();
+            if(!_tfTelefono.getText().isEmpty()){
+                try{
+                    telefono = Integer.parseInt(_tfTelefono.getText());
+                } catch (Exception e) {
+                    System.out.println("Telefono tiene que ser un int");
+                    Platform.runLater(()-> _tfTelefono.setText(""));
+                    relleno = false;
+                }
+            }
             String email = _tfEmail.getText();
             relleno = relleno && !email.isEmpty();
             String biblio = _taBibliografia.getText();
