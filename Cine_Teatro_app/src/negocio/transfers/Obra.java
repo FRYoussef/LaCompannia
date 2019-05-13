@@ -14,7 +14,8 @@ public class Obra implements Serializable {
     private ArrayList<PersonaEspectaculo> actores;
     private ArrayList<PersonaEspectaculo> directores;
     private ArrayList<PersonaEspectaculo> productores;
-
+    private boolean esDestacada;
+    
     public Obra(int id, String titulo, String pais, int anno, ObraGenero obraGenero, String premios, String sinopsis, ArrayList<PersonaEspectaculo> actores, ArrayList<PersonaEspectaculo> directores, ArrayList<PersonaEspectaculo> productores) {
         this.id = id;
         this.titulo = titulo;
@@ -26,6 +27,7 @@ public class Obra implements Serializable {
         this.actores = actores;
         this.directores = directores;
         this.productores = productores;
+        this.esDestacada = false;
     }
 
     public Obra(String titulo, String pais, int anno, ObraGenero obraGenero, String premios, String sinopsis, ArrayList<PersonaEspectaculo> actores, ArrayList<PersonaEspectaculo> directores, ArrayList<PersonaEspectaculo> productores) {
@@ -39,6 +41,7 @@ public class Obra implements Serializable {
         this.actores = actores;
         this.directores = directores;
         this.productores = productores;
+        this.esDestacada = false;
     }
 
     public Obra(String titulo, String pais, int anno, ObraGenero obraGenero) {
@@ -47,8 +50,20 @@ public class Obra implements Serializable {
         this.pais = pais;
         this.anno = anno;
         this.obraGenero = obraGenero;
+        this.esDestacada = false;
     }
 
+    public Obra(String titulo, String pais, int anno, ObraGenero obraGenero, String sinopsis, boolean destacada) {
+    	this.id = (int) Math.floor(Math.random()*1000000);
+    	this.titulo = titulo;
+    	this.pais = pais;
+    	this.anno = anno;
+    	this.obraGenero = obraGenero;
+    	this.sinopsis = sinopsis;
+    	this.esDestacada = destacada;
+    }
+
+    
     public int getId() {
         return id;
     }
@@ -127,5 +142,23 @@ public class Obra implements Serializable {
 
     public void setProductores(ArrayList<PersonaEspectaculo> productores) {
         this.productores = productores;
+    }
+    
+    public boolean getDestacada() {
+        return this.esDestacada;
+    }
+
+    public void setDestacada(boolean d) {
+        this.esDestacada = d;
+    }
+    
+    public String toString() {
+    	String a = "";
+    	a += this.titulo + "\n";
+    	a += this.pais + "\n";
+    	a += this.anno + "\n";
+    	a += this.sinopsis + "\n";
+    	
+    	return a;
     }
 }
