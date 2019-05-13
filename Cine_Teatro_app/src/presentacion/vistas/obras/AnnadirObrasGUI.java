@@ -46,7 +46,7 @@ public class AnnadirObrasGUI extends JFrame{
 		Dimension size = new Dimension(600, 600);
 		this.setMaximumSize(size);
 		this.setMinimumSize(size);
-		this.setTitle("Añadir Obra");
+		this.setTitle("Aï¿½adir Obra");
 		
 		JPanel panel = new JPanel();
 		this.add(panel);
@@ -59,24 +59,24 @@ public class AnnadirObrasGUI extends JFrame{
 		this.titulo = new JTextField(20);
 		tPanel.add(titulo); tPanel.add(this.titulo);
 		
-		//Año		
+		//Aï¿½o		
 		JPanel aPanel = new JPanel();
 		panel.add(aPanel);
-		JLabel anno = new JLabel("Año: ");
+		JLabel anno = new JLabel("Aï¿½o: ");
 		this.anno = new JTextField(4);
 		aPanel.add(anno); aPanel.add(this.anno);
 		
 		//Pais
 		JPanel pPanel = new JPanel();
 		panel.add(pPanel);
-		JLabel pais= new JLabel("País: ");
+		JLabel pais= new JLabel("Paï¿½s: ");
 		this.pais = new JTextField(15);
 		pPanel.add(pais); pPanel.add(this.pais);
 		
 		//Genero
 		JPanel gPanel = new JPanel();
 		panel.add(gPanel);
-		JLabel genero = new JLabel("Género: ");
+		JLabel genero = new JLabel("Gï¿½nero: ");
 		this.genero = new JTextField(10);
 		gPanel.add(genero); gPanel.add(this.genero);///////////////////////////////////////////////////////////////////////////
 		
@@ -123,8 +123,8 @@ public class AnnadirObrasGUI extends JFrame{
 					String ti = "";
 					ti = AnnadirObrasGUI.this.titulo.getText();
 					String a =  AnnadirObrasGUI.this.anno.getText();
-					int año = 0;
-					año = Integer.parseInt(a);
+					int anno = 0;
+					anno = Integer.parseInt(a);
 					String pais = "";
 					pais = AnnadirObrasGUI.this.pais.getText();
 					String genero = "";
@@ -134,9 +134,9 @@ public class AnnadirObrasGUI extends JFrame{
 					String sinop = "";
 					sinop = AnnadirObrasGUI.this.sinopsis.getText();
 					ObraGenero g = AnnadirObrasGUI.this.getGenero(genero);
-					Obra o = new Obra(ti, pais, año, g, sinop, des);
+					Obra o = new Obra(ti, pais, anno, g, sinop, des);
 					AnnadirObrasGUI.this.obras.addObra(o);
-					JOptionPane.showMessageDialog(AnnadirObrasGUI.this, "Obra añadida a la base de datos correctamente", "Obra", 1);
+					JOptionPane.showMessageDialog(AnnadirObrasGUI.this, "Obra aï¿½adida a la base de datos correctamente", "Obra", 1);
 					AnnadirObrasGUI.this.dispose();
 				}
 				catch(Exception exc) {
@@ -187,7 +187,7 @@ public class AnnadirObrasGUI extends JFrame{
 		//boolean close = false;
 		can.addActionListener(new ActionListener() {			
 			public void actionPerformed(ActionEvent e) {	
-				int c = JOptionPane.showConfirmDialog(null, "¿Cancelar añadir la nueva obra?", "Cancelar", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+				int c = JOptionPane.showConfirmDialog(null, "ï¿½Cancelar aï¿½adir la nueva obra?", "Cancelar", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
 				if (c == 0) {
 					AnnadirObrasGUI.this.dispose();
 				}				
