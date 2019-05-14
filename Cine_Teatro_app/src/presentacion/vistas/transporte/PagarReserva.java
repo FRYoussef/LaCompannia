@@ -8,6 +8,8 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
@@ -49,6 +51,17 @@ public class PagarReserva  extends JFrame implements ActionListener {
 		pagarReserva = new JFrame("Pago de Reserva");
 		pagarReserva.setPreferredSize(new Dimension(600, 600));
 		pagarReserva.setLocation(650, 100);
+		pagarReserva.addWindowListener
+		(
+			new WindowAdapter()
+			{
+				public void windowClosing(WindowEvent e)
+				{
+					JOptionPane.showMessageDialog(PagarReserva.this.pagarReserva, "Saliendo Subsistema Transporte", "Subsistema Transporte", JOptionPane.INFORMATION_MESSAGE);
+					PagarReserva.this.pagarReserva.dispose();
+					//deleteInstance();
+				}
+			});
 		
 		//*********PANEL DE TITULO
 		JPanel panel = new JPanel(new BorderLayout());
