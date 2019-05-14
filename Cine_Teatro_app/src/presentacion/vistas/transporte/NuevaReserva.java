@@ -50,6 +50,7 @@ import javax.swing.event.ChangeListener;
 
 import presentacion.controladores.transporte.ControladorTransporte;
 import presentacion.controladores.transporte.Eventos;
+import presentacion.vistas.publicidad.PublicidadGUIImp;
 
 import com.toedter.calendar.JCalendar;
 import com.toedter.calendar.JDateChooser;
@@ -88,16 +89,18 @@ public class NuevaReserva extends JFrame implements ActionListener {
 	private void ejecutar() {
 		nuevaReserva = new JFrame("Menu Nueva Reserva de Billete");
 		nuevaReserva.setPreferredSize(new Dimension(600, 600));
-		//this.setDefaultCloseOperation(nuevaReserva.DO_NOTHING_ON_CLOSE);
-		/*nuevaReserva.addWindowListener(new WindowAdapter() {
-			public void windowClosing(WindowEvent e) {
-				int n = JOptionPane.showOptionDialog(new JPanel(), "Estas seguro de que deseas salir?", 
-						"Salir", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
-				if(n == JOptionPane.YES_OPTION){
-					System.exit(0);
+		nuevaReserva.addWindowListener
+		(
+			new WindowAdapter()
+			{
+				public void windowClosing(WindowEvent e)
+				{
+					JOptionPane.showMessageDialog(NuevaReserva.this.nuevaReserva, "Saliendo Subsistema Transporte", "Subsistema Transporte", JOptionPane.INFORMATION_MESSAGE);
+					NuevaReserva.this.nuevaReserva.dispose();
+					//deleteInstance();
 				}
 			}
-		});*/
+		);
 		//nuevaReserva.setLocationRelativeTo(null);
 		
 		//*********PANEL DE TITULO
@@ -255,20 +258,19 @@ public class NuevaReserva extends JFrame implements ActionListener {
 		
 		//********PANEL INFERIOR DE BOTONES
 		inferior = new JPanel(new FlowLayout());
-		volver = new JButton("Volver");
+		//volver = new JButton("Volver");
 		verdisp = new JButton("Ver disponibilidad");
-		inferior.add(volver);
-		volver.addActionListener(new ActionListener(){
+		//inferior.add(volver);
+		/*volver.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				nuevaReserva.setEnabled(false);
 				new GUITransporteImp();
 			}
-		});
+		});*/
 		
 		inferior.add(verdisp);
 		verdisp.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				pagar.setVisible(true);
 				if(dateida.getDate() == null || origenr.getText().equals("") || destinor.getText().equals("") || (datevuelta.getDate() == null && datevuelta.isEnabled()) || (equipajer.getText().equals("0")) || (equipajer.getText().equals(""))){
 						ControladorTransporte.getInstancia().accionCampo(true, viaje);
 				}
@@ -276,6 +278,7 @@ public class NuevaReserva extends JFrame implements ActionListener {
 				/*if (ControladorTransporte.getInstancia().accionFecha(v)){
 				}*/
 				else {
+					pagar.setVisible(true);
 					/*HashMap<String, String>campos = new HashMap<String, String>();
 					campos.put("origen", origenr.getText());
 					campos.put("destino", destinor.getText());
@@ -363,20 +366,25 @@ public class NuevaReserva extends JFrame implements ActionListener {
 		pagar.setVisible(false);
 		pagar.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
-				boolean seg = seguro.isSelected();
-				int equip = Integer.parseInt(equipajer.getText());
-				String prec = viaje.getPrecio();
-				int result = Integer.parseInt(prec);
-				int nper = Integer.parseInt(npersonasr.getValue().toString());
-				
-				//Para calcular el total del importe
-				int total = ControladorTransporte.getInstancia().importeTotal(seg, equip, result, nper);
-				//Se procede a crear una nueva reserva
-				reserva = ControladorTransporte.getInstancia().nuevaReserva(viaje, total, equip, seg);
-				
-				new PagarReserva(viaje,reserva);
-				pagar.setEnabled(false);
-				confirmar.setVisible(true);
+				if(viaje.gethoraSalida().equals("") || viaje.gethoraSalida().equals("")) {
+					JOptionPane.showMessageDialog(null, "Debe seleccionar un viaje entre los disponibles"); 
+				}
+				else {				
+					boolean seg = seguro.isSelected();
+					int equip = Integer.parseInt(equipajer.getText());
+					String prec = viaje.getPrecio();
+					int result = Integer.parseInt(prec);
+					int nper = Integer.parseInt(npersonasr.getValue().toString());
+					
+					//Para calcular el total del importe
+					int total = ControladorTransporte.getInstancia().importeTotal(seg, equip, result, nper);
+					//Se procede a crear una nueva reserva
+					reserva = ControladorTransporte.getInstancia().nuevaReserva(viaje, total, equip, seg);
+					
+					new PagarReserva(viaje,reserva);
+					pagar.setEnabled(false);
+					confirmar.setVisible(true);
+				}
 				
 			}
 		});

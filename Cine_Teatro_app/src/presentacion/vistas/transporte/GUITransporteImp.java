@@ -27,6 +27,18 @@ public class GUITransporteImp extends GUITransporte {
 	public GUITransporteImp()	{
 		principal = new JFrame("Menu Subsistema Transporte");
 		principal.setPreferredSize(new Dimension(600,600));
+		principal.addWindowListener
+		(
+			new WindowAdapter()
+			{
+				public void windowClosing(WindowEvent e)
+				{
+					JOptionPane.showMessageDialog(GUITransporteImp.this.principal, "Saliendo Subsistema Transporte", "Subsistema Transporte", JOptionPane.INFORMATION_MESSAGE);
+					GUITransporteImp.this.principal.dispose();
+					deleteInstance();
+				}
+			}
+		);
 		//principal.setBounds(600,600,900,500);
 		ejecutar();
 	}

@@ -11,9 +11,10 @@ public abstract class GUITransporte {
 		return instancia;
 	}
 	
-	static public void eliminarInstancia() {
-		instancia = null;
-	}
+    public static void deleteInstance()
+    {
+    	instancia = null;
+    }
 	
 
 }

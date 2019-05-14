@@ -185,7 +185,10 @@ public class PagarReserva  extends JFrame implements ActionListener {
 				datosbancarios = nuevaP.getDatosBancarios();
 				//Se habilitan los JTextField para rellenar el resto de los datos
 				String dni = nuevaP.getDni();
-				if(dninuevo.equals(dni)){
+				if (dnir.getText().equals("")) {
+					JOptionPane.showMessageDialog(null, "Campo DNI está vacío");
+				}
+				else if (dninuevo.equals(dni)){
 					//Se autocompletan los valores
 					nombrer.setText(nuevaP.getNombre());
 					apellidor.setText(nuevaP.getApellidos());
