@@ -8,6 +8,7 @@ import presentacion.vistas.obras.ObrasImpGUI;
 import presentacion.vistas.publicidad.PublicidadGUI;
 import presentacion.vistas.reserva.GUIReserva;
 import presentacion.vistas.transporte.TransporteImpGUI;
+import presentacion.vistas.vestimenta.VestimentaGUIImp;
 import presentacion.vistas.vestimenta.VestimentaImpGUI;
 
 public class FactoriaGUI {
@@ -28,8 +29,8 @@ public class FactoriaGUI {
             case CateringImpGUI.CODE:
                 gui = CateringImpGUI.getInstancia();
                 break;
-            case VestimentaImpGUI.CODE:
-                gui = new VestimentaImpGUI();
+            case VestimentaGUIImp.CODE:
+                gui = VestimentaGUIImp.getInstance();
                 break;
             case ObrasImpGUI.CODE:
                 gui = new ObrasImpGUI();
